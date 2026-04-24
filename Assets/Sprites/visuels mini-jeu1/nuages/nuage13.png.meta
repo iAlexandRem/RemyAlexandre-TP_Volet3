@@ -1,0 +1,1066 @@
+fileFormatVersion: 2
+guid: 335676265ab724b60b3e23f74ece1f1e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -808134319810029393
+    second: nuage13_0
+  - first:
+      213: 635686674888325459
+    second: nuage13_1
+  - first:
+      213: -5227907187190499068
+    second: nuage13_2
+  - first:
+      213: -7361766747949187212
+    second: nuage13_3
+  - first:
+      213: -3747666146212621292
+    second: nuage13_4
+  - first:
+      213: 6346669798526880459
+    second: nuage13_5
+  - first:
+      213: 8350886146140021622
+    second: nuage13_6
+  - first:
+      213: 7147497069556283124
+    second: nuage13_7
+  - first:
+      213: 2707123086274288133
+    second: nuage13_8
+  - first:
+      213: 3217825154132946962
+    second: nuage13_9
+  - first:
+      213: -6907597415234118840
+    second: nuage13_10
+  - first:
+      213: 4005773571094895579
+    second: nuage13_11
+  - first:
+      213: -3431010938627894428
+    second: nuage13_12
+  - first:
+      213: 6731516033820822248
+    second: nuage13_13
+  - first:
+      213: -8737879142240172853
+    second: nuage13_14
+  - first:
+      213: -7585523281751601944
+    second: nuage13_15
+  - first:
+      213: -5304307369687570851
+    second: nuage13_16
+  - first:
+      213: 8479459665027353384
+    second: nuage13_17
+  - first:
+      213: 2960072312113775857
+    second: nuage13_18
+  - first:
+      213: -5080953776388501329
+    second: nuage13_19
+  - first:
+      213: 338915925098072267
+    second: nuage13_20
+  - first:
+      213: -2090693299225110615
+    second: nuage13_21
+  - first:
+      213: -7358799312784606386
+    second: nuage13_22
+  - first:
+      213: -571992633783090028
+    second: nuage13_23
+  - first:
+      213: 395572877444176670
+    second: nuage13_24
+  - first:
+      213: -7531381899235809098
+    second: nuage13_25
+  - first:
+      213: 6981787446267028355
+    second: nuage13_26
+  - first:
+      213: -3168018706489303258
+    second: nuage13_27
+  - first:
+      213: -7822132705344843382
+    second: nuage13_28
+  - first:
+      213: 5290801471761193017
+    second: nuage13_29
+  - first:
+      213: -3903870066441000171
+    second: nuage13_30
+  - first:
+      213: 7752503668524591923
+    second: nuage13_31
+  - first:
+      213: -1753059168657133336
+    second: nuage13_32
+  - first:
+      213: 8171308985414111769
+    second: nuage13_33
+  - first:
+      213: 1305159772379460784
+    second: nuage13_34
+  - first:
+      213: 5630732283153432881
+    second: nuage13_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nuage13_0
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 735
+        width: 349
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa8dbe82e1ee8c4f0800000000000000
+      internalID: -808134319810029393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_1
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 1046
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 359fa2da9a962d800800000000000000
+      internalID: 635686674888325459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_2
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1058
+        width: 46
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4097cc4ac1eb277b0800000000000000
+      internalID: -5227907187190499068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_3
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 1036
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47fb435a520c5d990800000000000000
+      internalID: -7361766747949187212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9
+        width: 1252
+        height: 722
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4145d3afe7d9dfbc0800000000000000
+      internalID: -3747666146212621292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_5
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 473
+        width: 72
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bca05ef3e86e31850800000000000000
+      internalID: 6346669798526880459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_6
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 503
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 673286c74be44e370800000000000000
+      internalID: 8350886146140021622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_7
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 483
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f63c0837b2013360800000000000000
+      internalID: 7147497069556283124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_8
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 473
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a53a0aa12a19520800000000000000
+      internalID: 2707123086274288133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_9
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 326
+        width: 138
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 210396dcde208ac20800000000000000
+      internalID: 3217825154132946962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_10
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 414
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84b5095bfb84320a0800000000000000
+      internalID: -6907597415234118840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_11
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 296
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdb52c3e6dd579730800000000000000
+      internalID: 4005773571094895579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_12
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 215
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 463da96cab99260d0800000000000000
+      internalID: -3431010938627894428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_13
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 221
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ea8cbbea262b6d50800000000000000
+      internalID: 6731516033820822248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_14
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 228
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc4ca742731dcb680800000000000000
+      internalID: -8737879142240172853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_15
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 217
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec8dbbd3cecab690800000000000000
+      internalID: -7585523281751601944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_16
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 195
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d56294afc805366b0800000000000000
+      internalID: -5304307369687570851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_17
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 222
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82b4535a3a71da570800000000000000
+      internalID: 8479459665027353384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_18
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 234
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f4c201b51a441920800000000000000
+      internalID: 2960072312113775857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_19
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 164
+        width: 97
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa01f2ed573dc79b0800000000000000
+      internalID: -5080953776388501329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_20
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 267
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc8813cfc3214b400800000000000000
+      internalID: 338915925098072267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_21
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 221
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a7d565758d5cf2e0800000000000000
+      internalID: -2090693299225110615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_22
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 212
+        width: 25
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4bb51c730b40e990800000000000000
+      internalID: -7358799312784606386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_23
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 186
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4940839eabfdf08f0800000000000000
+      internalID: -571992633783090028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_24
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 166
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1bd6daaf6b5d7500800000000000000
+      internalID: 395572877444176670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_25
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 9
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b82e3cc0182b7790800000000000000
+      internalID: -7531381899235809098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_26
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 9
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3832708f0ba44e060800000000000000
+      internalID: 6981787446267028355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_27
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 9
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62f99e575cfe804d0800000000000000
+      internalID: -3168018706489303258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_28
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 9
+        width: 49
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8194f77fb3327390800000000000000
+      internalID: -7822132705344843382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_29
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 31
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 938907d18e3bc6940800000000000000
+      internalID: 5290801471761193017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_30
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 9
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51be080bbdaa2d9c0800000000000000
+      internalID: -3903870066441000171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_31
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 19
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33b2252130d669b60800000000000000
+      internalID: 7752503668524591923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_32
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 9
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e033f569f1eba7e0800000000000000
+      internalID: -1753059168657133336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_33
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 0
+        width: 35
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 912d0919a32566170800000000000000
+      internalID: 8171308985414111769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_34
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 10
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b4becfd5ebdc1210800000000000000
+      internalID: 1305159772379460784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuage13_35
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 9
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1314faabd21642e40800000000000000
+      internalID: 5630732283153432881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      nuage13_0: -808134319810029393
+      nuage13_1: 635686674888325459
+      nuage13_10: -6907597415234118840
+      nuage13_11: 4005773571094895579
+      nuage13_12: -3431010938627894428
+      nuage13_13: 6731516033820822248
+      nuage13_14: -8737879142240172853
+      nuage13_15: -7585523281751601944
+      nuage13_16: -5304307369687570851
+      nuage13_17: 8479459665027353384
+      nuage13_18: 2960072312113775857
+      nuage13_19: -5080953776388501329
+      nuage13_2: -5227907187190499068
+      nuage13_20: 338915925098072267
+      nuage13_21: -2090693299225110615
+      nuage13_22: -7358799312784606386
+      nuage13_23: -571992633783090028
+      nuage13_24: 395572877444176670
+      nuage13_25: -7531381899235809098
+      nuage13_26: 6981787446267028355
+      nuage13_27: -3168018706489303258
+      nuage13_28: -7822132705344843382
+      nuage13_29: 5290801471761193017
+      nuage13_3: -7361766747949187212
+      nuage13_30: -3903870066441000171
+      nuage13_31: 7752503668524591923
+      nuage13_32: -1753059168657133336
+      nuage13_33: 8171308985414111769
+      nuage13_34: 1305159772379460784
+      nuage13_35: 5630732283153432881
+      nuage13_4: -3747666146212621292
+      nuage13_5: 6346669798526880459
+      nuage13_6: 8350886146140021622
+      nuage13_7: 7147497069556283124
+      nuage13_8: 2707123086274288133
+      nuage13_9: 3217825154132946962
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

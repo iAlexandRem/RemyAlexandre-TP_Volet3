@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: 112e1b3883f48451093608459a43710e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7402582339776929895
+    second: ref nombre a droite_0
+  - first:
+      213: -2149846954966087371
+    second: ref nombre a droite_1
+  - first:
+      213: 2374243433607946886
+    second: ref nombre a droite_2
+  - first:
+      213: 1025253648768239171
+    second: ref nombre a droite_3
+  - first:
+      213: -7306101761811062961
+    second: ref nombre a droite_4
+  - first:
+      213: 4853502272095241250
+    second: ref nombre a droite_5
+  - first:
+      213: -9042489245247135498
+    second: ref nombre a droite_6
+  - first:
+      213: -7983768113011239288
+    second: ref nombre a droite_7
+  - first:
+      213: 2738891047045569520
+    second: ref nombre a droite_8
+  - first:
+      213: -8223630929343216593
+    second: ref nombre a droite_9
+  - first:
+      213: 3444488038927511401
+    second: ref nombre a droite_10
+  - first:
+      213: 455988658828561480
+    second: ref nombre a droite_11
+  - first:
+      213: -7931331145865867383
+    second: ref nombre a droite_12
+  - first:
+      213: -2127629179772170920
+    second: ref nombre a droite_13
+  - first:
+      213: -7219688699381714644
+    second: ref nombre a droite_14
+  - first:
+      213: -4611623841254809234
+    second: ref nombre a droite_15
+  - first:
+      213: 2926402932804640992
+    second: ref nombre a droite_16
+  - first:
+      213: -5992277064902757714
+    second: ref nombre a droite_17
+  - first:
+      213: 1709251866665021477
+    second: ref nombre a droite_18
+  - first:
+      213: 6271475923884725872
+    second: ref nombre a droite_19
+  - first:
+      213: 8486947162927723325
+    second: ref nombre a droite_20
+  - first:
+      213: -3788314470880956607
+    second: ref nombre a droite_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ref nombre a droite_0
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 948
+        width: 572
+        height: 466
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99f1401259eb44990800000000000000
+      internalID: -7402582339776929895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref nombre a droite_1
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1412
+        width: 48
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5398ac7b5953a22e0800000000000000
+      internalID: -2149846954966087371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref nombre a droite_2
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 1412
+        width: 279
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6826186d2d103f020800000000000000
+      internalID: 2374243433607946886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref nombre a droite_3
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 948
+        width: 572
+        height: 466
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3460183f2ce6a3e00800000000000000
+      internalID: 1025253648768239171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref nombre a droite_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 452
+        width: 44
+        height: 476
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4f556238238b9a90800000000000000
+      internalID: -7306101761811062961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref nombre a droite_5
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 927
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 224c9ccf99a1b5340800000000000000
+      internalID: 4853502272095241250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref nombre a droite_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 1312
+        height: 1060
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f021cbc0ff928280800000000000000
+      internalID: -9042489245247135498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref nombre a droite_7
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 170
+        width: 1073
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 886dfd67335f33190800000000000000
+      internalID: -7983768113011239288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref nombre a droite_8
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 452
+        width: 52
+        height: 497
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fb16a165ee720620800000000000000
+      internalID: 2738891047045569520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref nombre a droite_9
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 405
+        width: 20
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f24059c8d3bcfdd80800000000000000
+      internalID: -8223630929343216593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref nombre a droite_10
+      rect:
+        serializedVersion: 2
+        x: 1505
+        y: 391
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96f2b592f974dcf20800000000000000
+      internalID: 3444488038927511401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref nombre a droite_11
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 407
+        width: 19
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84c451fe44ff35600800000000000000
+      internalID: 455988658828561480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref nombre a droite_12
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 391
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98f4ca648504ee190800000000000000
+      internalID: -7931331145865867383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref nombre a droite_13
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 380
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85d8ced98842972e0800000000000000
+      internalID: -2127629179772170920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref nombre a droite_14
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 380
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c21737421638ecb90800000000000000
+      internalID: -7219688699381714644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref nombre a droite_15
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 346
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e61e840cc883000c0800000000000000
+      internalID: -4611623841254809234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref nombre a droite_16
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 335
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e06b7f66fbac9820800000000000000
+      internalID: 2926402932804640992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref nombre a droite_17
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 335
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea230c602c727dca0800000000000000
+      internalID: -5992277064902757714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref nombre a droite_18
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 346
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 520fd38448b78b710800000000000000
+      internalID: 1709251866665021477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref nombre a droite_19
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 326
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07650940022c80750800000000000000
+      internalID: 6271475923884725872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref nombre a droite_20
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 272
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d33f0d99a71b7c570800000000000000
+      internalID: 8486947162927723325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ref nombre a droite_21
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 272
+        width: 41
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14f2ba16f043d6bc0800000000000000
+      internalID: -3788314470880956607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ref nombre a droite_0: -7402582339776929895
+      ref nombre a droite_1: -2149846954966087371
+      ref nombre a droite_10: 3444488038927511401
+      ref nombre a droite_11: 455988658828561480
+      ref nombre a droite_12: -7931331145865867383
+      ref nombre a droite_13: -2127629179772170920
+      ref nombre a droite_14: -7219688699381714644
+      ref nombre a droite_15: -4611623841254809234
+      ref nombre a droite_16: 2926402932804640992
+      ref nombre a droite_17: -5992277064902757714
+      ref nombre a droite_18: 1709251866665021477
+      ref nombre a droite_19: 6271475923884725872
+      ref nombre a droite_2: 2374243433607946886
+      ref nombre a droite_20: 8486947162927723325
+      ref nombre a droite_21: -3788314470880956607
+      ref nombre a droite_3: 1025253648768239171
+      ref nombre a droite_4: -7306101761811062961
+      ref nombre a droite_5: 4853502272095241250
+      ref nombre a droite_6: -9042489245247135498
+      ref nombre a droite_7: -7983768113011239288
+      ref nombre a droite_8: 2738891047045569520
+      ref nombre a droite_9: -8223630929343216593
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
