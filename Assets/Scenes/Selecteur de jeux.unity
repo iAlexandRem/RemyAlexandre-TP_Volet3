@@ -1089,7 +1089,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 9af021ddb88b34c208986c7ed68c602b, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.67
   m_Pitch: 1
@@ -1189,6 +1189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LeJeu
   vocalMessageDebut: {fileID: 8300000, guid: 168df32aa188e4bbb9352e060c540114, type: 3}
   vocalInstructionsDebut: {fileID: 0}
+  hoverBoutons: {fileID: 2138428137}
 --- !u!4 &1288979032
 Transform:
   m_ObjectHideFlags: 0
@@ -2555,9 +2556,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 374b0f02a3d3c42cb9d97d3105f561b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HoverBoutons
+  hoverUI: 0
   visuelHover: {fileID: 225742606}
   visuelActive: {fileID: 25900691}
-  anim: {fileID: 434330863}
   vocalHover: {fileID: 8300000, guid: 78d6f9b434e384c50a717de6cc59e64e, type: 3}
   vocalActive: {fileID: 0}
 --- !u!58 &2138428138

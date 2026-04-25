@@ -7,6 +7,8 @@ public class DansCollider : MonoBehaviour
     public AudioClip vocalMauvaiseDirectionDroite;
     public AudioClip vocalMauvaiseDirectionGauche;
 
+    public LeJeu leJeu; // Pour utiliser le bool vocalInstructionsTerminees
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -43,11 +45,15 @@ public class DansCollider : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("LimiteDroite"))
         {
-            audioSource.PlayOneShot(vocalMauvaiseDirectionDroite); // Je pense qu'on devrait aller à gauche
+            if (leJeu != null && leJeu.vocalInstructionsTerminees) // Attendre que les instructions soient finies
+            {
+                audioSource.PlayOneShot(vocalMauvaiseDirectionDroite); // Je pense qu'on devrait aller à gauche
+            }
         }
         else if (collision.gameObject.CompareTag("LimiteGauche"))
         {
             audioSource.PlayOneShot(vocalMauvaiseDirectionGauche); // Je pense qu'on devrait aller à droite
+
         }
     }
 }
