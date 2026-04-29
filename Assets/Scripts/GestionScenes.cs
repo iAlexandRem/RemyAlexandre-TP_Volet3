@@ -13,10 +13,6 @@ public class GestionScenes : MonoBehaviour
         {
             Invoke("LoadScene2", 0.5f);
         }
-        else if (SceneManager.GetActiveScene().name == "Mini-Jeu1")
-        {
-            Invoke("LoadScene0", 0.5f);
-        }
     }
 
 
@@ -26,10 +22,16 @@ public class GestionScenes : MonoBehaviour
         SceneManager.LoadScene("Selecteur de jeux");
     }
 
-    public void LoadScene2()
+    public void LoadScene2() // jeu : Le Chemin de la Chenille
     {
         Scene sceneCourante = SceneManager.GetActiveScene();
         SceneManager.LoadScene("Mini-Jeu1");
+    }
+
+     public void LoadScene3() // jeu : La Fourmi contre le Labyrinthe
+    {
+        Scene sceneCourante = SceneManager.GetActiveScene();
+        SceneManager.LoadScene("Mini-Jeu2");
     }
 
     public void LoadScene0() // Pour retourner au menu

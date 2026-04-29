@@ -2749,7 +2749,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2138428135}
           m_TargetAssemblyTypeName: GestionScenes, Assembly-CSharp
-          m_MethodName: ChangerScene
+          m_MethodName: LoadScene2
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

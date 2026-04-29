@@ -8,6 +8,7 @@ TagManager:
   - Terre
   - LimiteDroite
   - LimiteGauche
+  - Trou
   layers:
   - Default
   - TransparentFX
