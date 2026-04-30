@@ -9,6 +9,8 @@ TagManager:
   - LimiteDroite
   - LimiteGauche
   - Trou
+  - LimiteHaut
+  - LimiteBas
   layers:
   - Default
   - TransparentFX
