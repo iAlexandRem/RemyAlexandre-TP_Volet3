@@ -36,8 +36,7 @@ public class LeJeu : MonoBehaviour
     void Update()
     {
         // Au premier clic durant le premier mini-jeu
-        if (!premierClickDetecte &&
-            SceneManager.GetActiveScene().name == "Mini-Jeu1" && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+        if (!premierClickDetecte && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
             premierClickDetecte = true;
             audioSource.Stop(); // J'arrête le premier message
@@ -74,7 +73,7 @@ public class LeJeu : MonoBehaviour
                 if (wasHovering)
                 {
                     audioSource.time = 0f;
-                    audioSource.Play(); // Le message rejoue seulement si on sort du hover
+                    audioSource.Play(); // Le message ("Sélectionne un mini-jeu parmi les trois suivants") rejoue seulement si on sort du hover
                 }
             }
             wasHovering = isHovering; // Le bool du passé devient à chaque fois le bool du présent
