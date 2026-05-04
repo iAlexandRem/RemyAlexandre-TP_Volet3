@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: 22070a5d1091f4e74a4cf3700d88e6c8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1362134678231834201
+    second: fourmi idle_spritesheet_0
+  - first:
+      213: 4094192371385294741
+    second: fourmi idle_spritesheet_1
+  - first:
+      213: 9201532451581492825
+    second: fourmi idle_spritesheet_2
+  - first:
+      213: 1887696212047017423
+    second: fourmi idle_spritesheet_3
+  - first:
+      213: 1885311312661339484
+    second: fourmi idle_spritesheet_4
+  - first:
+      213: -6612168505838945568
+    second: fourmi idle_spritesheet_5
+  - first:
+      213: 1601038432113901049
+    second: fourmi idle_spritesheet_6
+  - first:
+      213: 2271688353623869735
+    second: fourmi idle_spritesheet_7
+  - first:
+      213: 7085430850371438536
+    second: fourmi idle_spritesheet_8
+  - first:
+      213: -8641495235314791493
+    second: fourmi idle_spritesheet_9
+  - first:
+      213: -8973742822008541560
+    second: fourmi idle_spritesheet_10
+  - first:
+      213: -8922591704426192581
+    second: fourmi idle_spritesheet_11
+  - first:
+      213: 6722957782133020016
+    second: fourmi idle_spritesheet_12
+  - first:
+      213: -1615979170442534359
+    second: fourmi idle_spritesheet_13
+  - first:
+      213: 595351621161025783
+    second: fourmi idle_spritesheet_14
+  - first:
+      213: 3864902189592885874
+    second: fourmi idle_spritesheet_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fourmi idle_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 3191
+        width: 904
+        height: 617
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95edf30e54647e210800000000000000
+      internalID: 1362134678231834201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fourmi idle_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 3191
+        width: 905
+        height: 617
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59fd882154e71d830800000000000000
+      internalID: 4094192371385294741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fourmi idle_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 2058
+        y: 3191
+        width: 904
+        height: 617
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95e7ebd430962bf70800000000000000
+      internalID: 9201532451581492825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fourmi idle_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 3058
+        y: 3191
+        width: 904
+        height: 617
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc5b9e214b1723a10800000000000000
+      internalID: 1887696212047017423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fourmi idle_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 2191
+        width: 903
+        height: 617
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5d543a66a8f92a10800000000000000
+      internalID: 1885311312661339484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fourmi idle_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 2192
+        width: 902
+        height: 615
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eab176d6cbdc34a0800000000000000
+      internalID: -6612168505838945568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fourmi idle_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 2060
+        y: 2192
+        width: 902
+        height: 615
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fdb5e9a8f7083610800000000000000
+      internalID: 1601038432113901049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fourmi idle_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 2191
+        width: 902
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 729842e8588a68f10800000000000000
+      internalID: 2271688353623869735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fourmi idle_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1191
+        width: 902
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c7cbf471d1845260800000000000000
+      internalID: 7085430850371438536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fourmi idle_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 1192
+        width: 902
+        height: 615
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbbc4da3edd331880800000000000000
+      internalID: -8641495235314791493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fourmi idle_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 2060
+        y: 1192
+        width: 902
+        height: 615
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88e2874c27cd67380800000000000000
+      internalID: -8973742822008541560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fourmi idle_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 1192
+        width: 902
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3164d56e169c2480800000000000000
+      internalID: -8922591704426192581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fourmi idle_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 191
+        width: 901
+        height: 617
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0759cfbab7ebc4d50800000000000000
+      internalID: 6722957782133020016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fourmi idle_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 191
+        width: 903
+        height: 617
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 922a75d9183e299e0800000000000000
+      internalID: -1615979170442534359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fourmi idle_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 2058
+        y: 191
+        width: 904
+        height: 617
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f081c7252d134800800000000000000
+      internalID: 595351621161025783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fourmi idle_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 3058
+        y: 191
+        width: 904
+        height: 617
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27a30567014e2a530800000000000000
+      internalID: 3864902189592885874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fourmi idle_spritesheet_0: 1362134678231834201
+      fourmi idle_spritesheet_1: 4094192371385294741
+      fourmi idle_spritesheet_10: -8973742822008541560
+      fourmi idle_spritesheet_11: -8922591704426192581
+      fourmi idle_spritesheet_12: 6722957782133020016
+      fourmi idle_spritesheet_13: -1615979170442534359
+      fourmi idle_spritesheet_14: 595351621161025783
+      fourmi idle_spritesheet_15: 3864902189592885874
+      fourmi idle_spritesheet_2: 9201532451581492825
+      fourmi idle_spritesheet_3: 1887696212047017423
+      fourmi idle_spritesheet_4: 1885311312661339484
+      fourmi idle_spritesheet_5: -6612168505838945568
+      fourmi idle_spritesheet_6: 1601038432113901049
+      fourmi idle_spritesheet_7: 2271688353623869735
+      fourmi idle_spritesheet_8: 7085430850371438536
+      fourmi idle_spritesheet_9: -8641495235314791493
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
