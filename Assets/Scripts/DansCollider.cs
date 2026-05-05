@@ -27,22 +27,23 @@ public class DansCollider : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "Mini-Jeu1")
         {
-        CaseScript caseScript = collision.GetComponent<CaseScript>(); // Référence au script CaseScript
+            CaseScript caseScript = collision.GetComponent<CaseScript>(); // Référence au script CaseScript
 
-        if (caseScript != null)
-        {
-            caseScript.ActiverCase(); // Déclenchement de la fonction du script CaseScript
+            if (caseScript != null)
+            {
+                caseScript.ActiverCase(); // Déclenchement de la fonction du script CaseScript
+            }
         }
-         }
 
 
-         else if (SceneManager.GetActiveScene().name == "Mini-Jeu2")
+        else if (SceneManager.GetActiveScene().name == "Mini-Jeu2")
         {
-            if(collision.CompareTag("Trou")) {
+            if (collision.CompareTag("Trou"))
+            {
                 Debug.Log("Dans Trou");
             }
-        
-         }
+
+        }
 
     }
 
@@ -50,21 +51,22 @@ public class DansCollider : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Mini-Jeu1")
         {
-        CaseScript caseScript = collision.GetComponent<CaseScript>();
+            CaseScript caseScript = collision.GetComponent<CaseScript>();
 
-        if (caseScript != null)
-        {
-            caseScript.DesactiverCase();
+            if (caseScript != null)
+            {
+                caseScript.DesactiverCase();
+            }
         }
-         }
 
-         else if (SceneManager.GetActiveScene().name == "Mini-Jeu2")
+        else if (SceneManager.GetActiveScene().name == "Mini-Jeu2")
         {
-             if(collision.CompareTag("Trou")) {
+            if (collision.CompareTag("Trou"))
+            {
                 Debug.Log("Hors Trou");
             }
-        
-         }
+
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)

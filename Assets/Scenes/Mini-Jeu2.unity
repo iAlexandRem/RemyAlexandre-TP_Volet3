@@ -10132,70 +10132,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Deplacement
   vitesseDeplacement: 11
   vitesseRotation: 222
-  onDeplacement:
-    m_Name: On Deplacement
+  peutBouger: 1
+  actionDeplacement:
+    m_Name: Action Deplacement
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 15f5c2fd-6307-456f-ba00-0cdc2b5facb0
+    m_Id: 17c8e5b7-bd4f-45b7-8495-84fe466486d4
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 1D Axis
-      m_Id: 1ae30577-c832-463b-8ffe-badef66db554
+      m_Id: dbe5372c-4c2d-46ca-9e07-083f90815c69
       m_Path: 1DAxis
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: On Deplacement
+      m_Action: Action Deplacement
       m_Flags: 4
     - m_Name: negative
-      m_Id: 955c43e5-616f-4402-8592-07505e76a109
+      m_Id: f0d08450-dfb6-4bf9-9856-be677955989b
       m_Path: <Keyboard>/downArrow
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: On Deplacement
+      m_Action: Action Deplacement
       m_Flags: 8
     - m_Name: positive
-      m_Id: 996c74ba-739c-48a0-b53d-8189b21c26ec
+      m_Id: f8e14acf-65d8-4693-94a9-848d8217a085
       m_Path: <Keyboard>/upArrow
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: On Deplacement
+      m_Action: Action Deplacement
       m_Flags: 8
     m_Flags: 0
-  onRotation:
-    m_Name: On Rotation
+  actionRotation:
+    m_Name: Action Rotation
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 59fed017-e876-427a-a78d-78266ed9d89f
+    m_Id: 4199d715-da54-46ba-a26b-e1402de5991d
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 1D Axis
-      m_Id: c9ee10c5-02d6-4308-acbc-06d166c4026a
+      m_Id: 6d3d0335-58e0-487d-afc5-16b9408696f9
       m_Path: 1DAxis
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: On Rotation
+      m_Action: Action Rotation
       m_Flags: 4
     - m_Name: negative
-      m_Id: df3b9ff7-14f9-4a5d-a727-a8e87acfb15e
+      m_Id: a5b38941-c2d4-495f-97e0-464c6ef5c624
       m_Path: <Keyboard>/rightArrow
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: On Rotation
+      m_Action: Action Rotation
       m_Flags: 8
     - m_Name: positive
-      m_Id: 61f53079-1781-48a0-99da-d1a4485ec89e
+      m_Id: 280b1d49-6882-4e05-82be-ad3af823b6bb
       m_Path: <Keyboard>/leftArrow
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: On Rotation
+      m_Action: Action Rotation
       m_Flags: 8
     m_Flags: 0
 --- !u!1 &1639235101
