@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 7d5c183c366f94e028abfb9fba47f6d1
+guid: 6c9222ffbc90c40babec7a5c7f0b55c5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2813278372904320868
-    second: fourmi vectorielle_0
+      213: -5716911533982472627
+    second: texte_DEBUT_0
   - first:
-      213: 7037940529983809183
-    second: fourmi vectorielle_1
+      213: -746641619664509738
+    second: texte_DEBUT_1
   - first:
-      213: -1974780279857569152
-    second: fourmi vectorielle_2
+      213: -1799682002888290576
+    second: texte_DEBUT_2
   - first:
-      213: -6981278760878402663
-    second: fourmi vectorielle_3
+      213: 7726220267998167032
+    second: texte_DEBUT_3
+  - first:
+      213: -2702584726580564564
+    second: texte_DEBUT_4
+  - first:
+      213: 4849373520599791533
+    second: texte_DEBUT_5
+  - first:
+      213: 364409048577226075
+    second: texte_DEBUT_6
+  - first:
+      213: -628502233965357392
+    second: texte_DEBUT_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,13 +134,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fourmi vectorielle_0
+      name: texte_DEBUT_0
       rect:
         serializedVersion: 2
-        x: 61
-        y: 207
-        width: 433
-        height: 585
+        x: 323
+        y: 197
+        width: 60
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c90cfb8a93a35f8d0800000000000000
-      internalID: -2813278372904320868
+      spriteID: d4624a4df3379a0b0800000000000000
+      internalID: -5716911533982472627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fourmi vectorielle_1
+      name: texte_DEBUT_1
       rect:
         serializedVersion: 2
-        x: 363
-        y: 190
-        width: 279
-        height: 618
+        x: 365
+        y: 208
+        width: 20
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f9662089f99cba160800000000000000
-      internalID: 7037940529983809183
+      spriteID: 6d4ef5d176563a5f0800000000000000
+      internalID: -746641619664509738
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fourmi vectorielle_2
+      name: texte_DEBUT_2
       rect:
         serializedVersion: 2
-        x: 627
-        y: 258
-        width: 318
-        height: 480
+        x: 385
+        y: 223
+        width: 8
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 082a4ad5ccb2894e0800000000000000
-      internalID: -1974780279857569152
+      spriteID: 0fe0e25e0ce3607e0800000000000000
+      internalID: -1799682002888290576
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fourmi vectorielle_3
+      name: texte_DEBUT_3
       rect:
         serializedVersion: 2
-        x: 713
-        y: 375
-        width: 248
-        height: 237
+        x: 25
+        y: 26
+        width: 189
+        height: 164
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +215,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9931dd394f38d1f90800000000000000
-      internalID: -6981278760878402663
+      spriteID: 8ff3472066c093b60800000000000000
+      internalID: 7726220267998167032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texte_DEBUT_4
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 26
+        width: 173
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cade4c4928d7e7ad0800000000000000
+      internalID: -2702584726580564564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texte_DEBUT_5
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 26
+        width: 190
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da7398e168f6c4340800000000000000
+      internalID: 4849373520599791533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texte_DEBUT_6
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 24
+        width: 197
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5532655914ae0500800000000000000
+      internalID: 364409048577226075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texte_DEBUT_7
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 26
+        width: 193
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b694f35c8c1747f0800000000000000
+      internalID: -628502233965357392
       vertices: []
       indices: 
       edges: []
@@ -223,10 +323,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fourmi vectorielle_0: -2813278372904320868
-      fourmi vectorielle_1: 7037940529983809183
-      fourmi vectorielle_2: -1974780279857569152
-      fourmi vectorielle_3: -6981278760878402663
+      texte_DEBUT_0: -5716911533982472627
+      texte_DEBUT_1: -746641619664509738
+      texte_DEBUT_2: -1799682002888290576
+      texte_DEBUT_3: 7726220267998167032
+      texte_DEBUT_4: -2702584726580564564
+      texte_DEBUT_5: 4849373520599791533
+      texte_DEBUT_6: 364409048577226075
+      texte_DEBUT_7: -628502233965357392
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

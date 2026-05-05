@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: 7d5c183c366f94e028abfb9fba47f6d1
+guid: 9ecd6000806154ceeac1f8652350cca6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2813278372904320868
-    second: fourmi vectorielle_0
+      213: -467699865396087458
+    second: texte_FIN_0
   - first:
-      213: 7037940529983809183
-    second: fourmi vectorielle_1
+      213: 2758517911476201880
+    second: texte_FIN_1
   - first:
-      213: -1974780279857569152
-    second: fourmi vectorielle_2
-  - first:
-      213: -6981278760878402663
-    second: fourmi vectorielle_3
+      213: -7276674925401775927
+    second: texte_FIN_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fourmi vectorielle_0
+      name: texte_FIN_0
       rect:
         serializedVersion: 2
-        x: 61
-        y: 207
-        width: 433
-        height: 585
+        x: 43
+        y: 616
+        width: 158
+        height: 163
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c90cfb8a93a35f8d0800000000000000
-      internalID: -2813278372904320868
+      spriteID: e55719d43756289f0800000000000000
+      internalID: -467699865396087458
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fourmi vectorielle_1
+      name: texte_FIN_1
       rect:
         serializedVersion: 2
-        x: 363
-        y: 190
-        width: 279
-        height: 618
+        x: 85
+        y: 322
+        width: 65
+        height: 163
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f9662089f99cba160800000000000000
-      internalID: 7037940529983809183
+      spriteID: 899671cdc69384620800000000000000
+      internalID: 2758517911476201880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fourmi vectorielle_2
+      name: texte_FIN_2
       rect:
         serializedVersion: 2
-        x: 627
-        y: 258
-        width: 318
-        height: 480
+        x: 20
+        y: 28
+        width: 196
+        height: 163
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,30 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 082a4ad5ccb2894e0800000000000000
-      internalID: -1974780279857569152
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fourmi vectorielle_3
-      rect:
-        serializedVersion: 2
-        x: 713
-        y: 375
-        width: 248
-        height: 237
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9931dd394f38d1f90800000000000000
-      internalID: -6981278760878402663
+      spriteID: 9c06f6575be040b90800000000000000
+      internalID: -7276674925401775927
       vertices: []
       indices: 
       edges: []
@@ -223,10 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fourmi vectorielle_0: -2813278372904320868
-      fourmi vectorielle_1: 7037940529983809183
-      fourmi vectorielle_2: -1974780279857569152
-      fourmi vectorielle_3: -6981278760878402663
+      texte_FIN_0: -467699865396087458
+      texte_FIN_1: 2758517911476201880
+      texte_FIN_2: -7276674925401775927
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
