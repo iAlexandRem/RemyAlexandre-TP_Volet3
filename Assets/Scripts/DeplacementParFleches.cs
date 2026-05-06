@@ -7,6 +7,8 @@ public class DeplacementParFleches : MonoBehaviour
     SpriteRenderer sr;
     Animator anim;
 
+    public DansCollider scriptCollider; // Pour passer d'un script à l'autre
+
     [Header("Déplacement")]
     float directionDeplacement = 0;
     float directionRotation = 0;
@@ -57,6 +59,11 @@ public class DeplacementParFleches : MonoBehaviour
 
             enDeplacement = directionDeplacement != 0 || directionRotation != 0; // La translation ou la rotation active l'animation Fourmi@Marche
             anim.SetFloat("vitesse", enDeplacement ? 1f : 0f); // dans l'Animator, vitesse de 1f si enDeplacement est true, sinon 0f
+
+            if (enDeplacement) {
+                anim.speed = 1f; // Vitesse normale
+                scriptCollider.peutTomber = true;
+            }
         }
 
     }

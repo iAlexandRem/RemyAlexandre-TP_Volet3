@@ -10,6 +10,8 @@ public class DansCollider : MonoBehaviour
     Vector2 positionDepart;
     public DeplacementParFleches deplacement; // Pour gérer l'arrêt de déplacement par flèches
     public Transform pointRetour; // Un point de retour où le joueur revient
+    public bool peutTomber = true;
+ 
     AudioSource audioSource;
     public AudioClip vocalMauvaiseDirectionDroite;
     public AudioClip vocalMauvaiseDirectionGauche;
@@ -29,7 +31,7 @@ public class DansCollider : MonoBehaviour
 
     void Update()
     {
-        
+      Debug.Log(peutTomber);
     }
 
     void OnTriggerEnter2D(Collider2D collision) // En RENTRANT dans le collider trigger 
@@ -50,7 +52,11 @@ public class DansCollider : MonoBehaviour
         {
             if (collision.CompareTag("Trou"))
             {
-                anim.SetTrigger("estTombee"); // La fourmi tombe dans un trou
+                if (peutTomber) {
+                anim.SetTrigger("estTombee"); // La fourmi tombe dans un trou  
+                }
+                peutTomber = false;  
+                
                 deplacement.peutBouger = false;
 
                 Vector2 dir = ((Vector2)collision.transform.position - (Vector2)transform.position).normalized; // Direction d'un vecteur qui pointe de la fourmi vers le trou
@@ -58,7 +64,8 @@ public class DansCollider : MonoBehaviour
                 rb.linearDamping = 5f; // Force moins brusque
                 //Debug.Log("Dans Trou");
 
-                Invoke("ReviensSurface", 1f);
+              
+                Invoke("ReviensSurface", 0.5f);
             }
         }
     }
@@ -80,7 +87,7 @@ public class DansCollider : MonoBehaviour
             if (collision.CompareTag("Trou"))
             {
                 rb.linearDamping = 25f; // Pour éviter toute flottaison en physique par après
-                anim.speed = 1f;
+ 
                 //Debug.Log("Hors Trou");
             }
         }
@@ -105,7 +112,7 @@ public class DansCollider : MonoBehaviour
 
 
     void ReviensSurface()
-    {
+    {   
         anim.SetTrigger("vaRemonter"); // La fourmi remonte du trou
         deplacement.peutBouger = true;
 
