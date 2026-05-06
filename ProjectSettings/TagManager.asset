@@ -11,6 +11,7 @@ TagManager:
   - Trou
   - LimiteHaut
   - LimiteBas
+  - Bille
   layers:
   - Default
   - TransparentFX

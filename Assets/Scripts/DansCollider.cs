@@ -4,16 +4,24 @@ using UnityEngine.SceneManagement;
 public class DansCollider : MonoBehaviour
 {
     Rigidbody2D rb;
+    SpriteRenderer sr;
+    Animator anim;
+    Vector2 positionDepart;
+    public DeplacementParFleches deplacement; // Pour gérer l'arrêt de déplacement par flèches
     AudioSource audioSource;
     public AudioClip vocalMauvaiseDirectionDroite;
     public AudioClip vocalMauvaiseDirectionGauche;
 
     public LeJeu leJeu; // Pour utiliser le bool vocalInstructionsTerminees
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponentInChildren<SpriteRenderer>();
+        anim = GetComponentInChildren<Animator>();
         audioSource = GetComponent<AudioSource>();
+        positionDepart = transform.position;
     }
 
 
@@ -40,7 +48,16 @@ public class DansCollider : MonoBehaviour
         {
             if (collision.CompareTag("Trou"))
             {
-                Debug.Log("Dans Trou");
+                anim.SetBool("estTombee", true); // La fourmi tombe dans un trou
+                deplacement.peutBouger = false;
+
+                Vector2 dir = ((Vector2)collision.transform.position - (Vector2)transform.position).normalized; // Direction d'un vecteur qui pointe de la fourmi vers le trou
+                rb.AddForce(dir * 10f, ForceMode2D.Impulse); // Une force vers le trou
+                rb.linearDamping = 5f; // Force moins brusque
+                
+                Invoke("ReviensSurface", 1f);
+
+                //Debug.Log("Dans trou");
             }
 
         }
@@ -63,7 +80,8 @@ public class DansCollider : MonoBehaviour
         {
             if (collision.CompareTag("Trou"))
             {
-                Debug.Log("Hors Trou");
+                rb.linearDamping = 25f; // Pour éviter toute flottaison en physique par après
+                //Debug.Log("Hors Trou");
             }
 
         }
@@ -84,4 +102,14 @@ public class DansCollider : MonoBehaviour
 
         }
     }
+
+
+
+    void ReviensSurface()
+    {
+        rb.linearDamping = 0f;
+        deplacement.peutBouger = true;
+        anim.SetBool("estTombee", false);
+    }
+
 }

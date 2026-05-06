@@ -13,8 +13,7 @@ public class DeplacementParFleches : MonoBehaviour
     public float vitesseDeplacement;
     public float vitesseRotation;
     public bool peutBouger = true;
-    bool enDeplacement = false;
-    Vector2 positionDepart;
+    public bool enDeplacement = false;
 
 
     [Header("Gestion inputs")]
@@ -35,7 +34,6 @@ public class DeplacementParFleches : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        positionDepart = transform.position;
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponentInChildren<SpriteRenderer>();
         anim = GetComponentInChildren<Animator>();

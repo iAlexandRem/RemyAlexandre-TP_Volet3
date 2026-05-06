@@ -532,7 +532,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &49772626
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,7 +850,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &73364730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1349,7 +1349,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &139721594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1660,7 +1660,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &191911455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1765,7 +1765,7 @@ GameObject:
   - component: {fileID: 201334068}
   m_Layer: 0
   m_Name: bille-metal
-  m_TagString: Untagged
+  m_TagString: Bille
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2386,7 +2386,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &342021532
 GameObject:
   m_ObjectHideFlags: 0
@@ -2874,7 +2874,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &454370401
 GameObject:
   m_ObjectHideFlags: 0
@@ -2943,7 +2943,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &508831430
 GameObject:
   m_ObjectHideFlags: 0
@@ -3652,7 +3652,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &556887507
 GameObject:
   m_ObjectHideFlags: 0
@@ -4031,7 +4031,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &658546698
 GameObject:
   m_ObjectHideFlags: 0
@@ -5142,7 +5142,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &823903910
 GameObject:
   m_ObjectHideFlags: 0
@@ -6727,7 +6727,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &1027735597
 GameObject:
   m_ObjectHideFlags: 0
@@ -6887,7 +6887,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &1045968538
 GameObject:
   m_ObjectHideFlags: 0
@@ -7217,7 +7217,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &1078122459
 GameObject:
   m_ObjectHideFlags: 0
@@ -7730,7 +7730,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &1153850570
 GameObject:
   m_ObjectHideFlags: 0
@@ -9202,7 +9202,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &1436082230
 GameObject:
   m_ObjectHideFlags: 0
@@ -9490,7 +9490,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &1455670890
 GameObject:
   m_ObjectHideFlags: 0
@@ -9832,7 +9832,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &1530329603
 GameObject:
   m_ObjectHideFlags: 0
@@ -9992,7 +9992,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &1590324036
 GameObject:
   m_ObjectHideFlags: 0
@@ -10042,6 +10042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 535e443ec7b214a268b1152c59da7962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DansCollider
+  deplacement: {fileID: 1590324041}
   vocalMauvaiseDirectionDroite: {fileID: 0}
   vocalMauvaiseDirectionGauche: {fileID: 0}
   leJeu: {fileID: 865667311}
@@ -10133,6 +10134,7 @@ MonoBehaviour:
   vitesseDeplacement: 11
   vitesseRotation: 222
   peutBouger: 1
+  enDeplacement: 0
   actionDeplacement:
     m_Name: Action Deplacement
     m_Type: 0
@@ -10575,7 +10577,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &1754232712
 GameObject:
   m_ObjectHideFlags: 0
@@ -11380,7 +11382,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &1856689923
 GameObject:
   m_ObjectHideFlags: 0
@@ -11714,7 +11716,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &1903668381
 GameObject:
   m_ObjectHideFlags: 0
@@ -11953,7 +11955,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &1929045326
 GameObject:
   m_ObjectHideFlags: 0
@@ -12998,7 +13000,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &2013260229
 GameObject:
   m_ObjectHideFlags: 0
@@ -13601,7 +13603,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &2087670153
 GameObject:
   m_ObjectHideFlags: 0
@@ -13761,7 +13763,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.42
+  m_Radius: 2
 --- !u!1 &2102994583
 GameObject:
   m_ObjectHideFlags: 0

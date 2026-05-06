@@ -47,7 +47,7 @@ public class LeJeu : MonoBehaviour
 
                 audioSource.loop = false;
                 audioSource.clip = vocalInstructionsDebut;
-                audioSource.Play(); // On passe aux instructions de la souris
+                audioSource.Play(); // On passe aux instructions de la souris ou du clavier
 
                 wasPlaying = true;
             }
