@@ -1,3 +1,4 @@
+using System.Drawing;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,7 @@ public class DansCollider : MonoBehaviour
     Animator anim;
     Vector2 positionDepart;
     public DeplacementParFleches deplacement; // Pour gérer l'arrêt de déplacement par flèches
+    public Transform pointRetour; // Un point de retour où le joueur revient
     AudioSource audioSource;
     public AudioClip vocalMauvaiseDirectionDroite;
     public AudioClip vocalMauvaiseDirectionGauche;
@@ -27,7 +29,7 @@ public class DansCollider : MonoBehaviour
 
     void Update()
     {
-
+        
     }
 
     void OnTriggerEnter2D(Collider2D collision) // En RENTRANT dans le collider trigger 
@@ -48,20 +50,17 @@ public class DansCollider : MonoBehaviour
         {
             if (collision.CompareTag("Trou"))
             {
-                anim.SetBool("estTombee", true); // La fourmi tombe dans un trou
+                anim.SetTrigger("estTombee"); // La fourmi tombe dans un trou
                 deplacement.peutBouger = false;
 
                 Vector2 dir = ((Vector2)collision.transform.position - (Vector2)transform.position).normalized; // Direction d'un vecteur qui pointe de la fourmi vers le trou
                 rb.AddForce(dir * 10f, ForceMode2D.Impulse); // Une force vers le trou
                 rb.linearDamping = 5f; // Force moins brusque
-                
+                //Debug.Log("Dans Trou");
+
                 Invoke("ReviensSurface", 1f);
-
-                //Debug.Log("Dans trou");
             }
-
         }
-
     }
 
     void OnTriggerExit2D(Collider2D collision) // En SORTANT du collider trigger
@@ -81,9 +80,9 @@ public class DansCollider : MonoBehaviour
             if (collision.CompareTag("Trou"))
             {
                 rb.linearDamping = 25f; // Pour éviter toute flottaison en physique par après
+                anim.speed = 1f;
                 //Debug.Log("Hors Trou");
             }
-
         }
     }
 
@@ -107,9 +106,18 @@ public class DansCollider : MonoBehaviour
 
     void ReviensSurface()
     {
-        rb.linearDamping = 0f;
+        anim.SetTrigger("vaRemonter"); // La fourmi remonte du trou
         deplacement.peutBouger = true;
-        anim.SetBool("estTombee", false);
+
+        transform.position = pointRetour.position; // On revient au trou zéro en tombant dans les trous
+        rb.AddForce(Vector2.down * 10f, ForceMode2D.Impulse); // Petite force vers le bas
+
+        Invoke("StressAnim", 1f);
+    }
+
+    void StressAnim()
+    {
+        anim.speed = 5f; // Stress de la fourmi sur le idle
     }
 
 }

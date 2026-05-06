@@ -1842,7 +1842,7 @@ Transform:
   m_GameObject: {fileID: 201334067}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.17, y: 59.55, z: 0}
+  m_LocalPosition: {x: 0.8, y: 62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8962,11 +8962,11 @@ Transform:
   m_GameObject: {fileID: 1382641490}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.32, y: 0.34, z: 0}
+  m_LocalPosition: {x: 1.3199948, y: 0.33999926, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1590324037}
+  m_Father: {fileID: 1994004745}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1382641492
 SpriteRenderer:
@@ -10027,7 +10027,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1994004745}
-  - {fileID: 1382641491}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1590324038
@@ -10043,6 +10042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DansCollider
   deplacement: {fileID: 1590324041}
+  pointRetour: {fileID: 2088070263}
   vocalMauvaiseDirectionDroite: {fileID: 0}
   vocalMauvaiseDirectionGauche: {fileID: 0}
   leJeu: {fileID: 865667311}
@@ -12848,7 +12848,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1382641491}
   m_Father: {fileID: 1590324037}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1994004747
