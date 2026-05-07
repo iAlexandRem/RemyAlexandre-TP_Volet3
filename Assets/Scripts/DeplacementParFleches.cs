@@ -58,7 +58,8 @@ public class DeplacementParFleches : MonoBehaviour
             enDeplacement = directionDeplacement != 0 || directionRotation != 0; // La translation ou la rotation active l'animation Fourmi@Marche
             anim.SetFloat("vitesse", enDeplacement ? 1f : 0f); // dans l'Animator, vitesse de 1f si enDeplacement est true, sinon 0f
 
-            if (enDeplacement) {
+            if (enDeplacement)
+            {
                 anim.speed = 1f; // Vitesse normale
             }
         }
