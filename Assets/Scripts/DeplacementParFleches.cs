@@ -7,8 +7,6 @@ public class DeplacementParFleches : MonoBehaviour
     SpriteRenderer sr;
     Animator anim;
 
-    public DansCollider scriptCollider; // Pour passer d'un script à l'autre
-
     [Header("Déplacement")]
     float directionDeplacement = 0;
     float directionRotation = 0;
@@ -62,7 +60,6 @@ public class DeplacementParFleches : MonoBehaviour
 
             if (enDeplacement) {
                 anim.speed = 1f; // Vitesse normale
-                scriptCollider.peutTomber = true;
             }
         }
 

@@ -7,11 +7,11 @@ public class DansCollider : MonoBehaviour
     Rigidbody2D rb;
     SpriteRenderer sr;
     Animator anim;
+
     Vector2 positionDepart;
-    public DeplacementParFleches deplacement; // Pour gérer l'arrêt de déplacement par flèches
+    public DeplacementParFleches deplacement; // Pour gérer l'arrêt de déplacement par flèches, avec le bool peutBouger
     public Transform pointRetour; // Un point de retour où le joueur revient
-    public bool peutTomber = true;
- 
+
     AudioSource audioSource;
     public AudioClip vocalMauvaiseDirectionDroite;
     public AudioClip vocalMauvaiseDirectionGauche;
@@ -31,7 +31,7 @@ public class DansCollider : MonoBehaviour
 
     void Update()
     {
-      Debug.Log(peutTomber);
+
     }
 
     void OnTriggerEnter2D(Collider2D collision) // En RENTRANT dans le collider trigger 
@@ -52,19 +52,14 @@ public class DansCollider : MonoBehaviour
         {
             if (collision.CompareTag("Trou"))
             {
-                if (peutTomber) {
                 anim.SetTrigger("estTombee"); // La fourmi tombe dans un trou  
-                }
-                peutTomber = false;  
-                
+
                 deplacement.peutBouger = false;
 
                 Vector2 dir = ((Vector2)collision.transform.position - (Vector2)transform.position).normalized; // Direction d'un vecteur qui pointe de la fourmi vers le trou
-                rb.AddForce(dir * 10f, ForceMode2D.Impulse); // Une force vers le trou
-                rb.linearDamping = 5f; // Force moins brusque
+                rb.AddForce(dir * 10f, ForceMode2D.Impulse); // Une force vers le centre du trou
+                
                 //Debug.Log("Dans Trou");
-
-              
                 Invoke("ReviensSurface", 0.5f);
             }
         }
@@ -86,8 +81,6 @@ public class DansCollider : MonoBehaviour
         {
             if (collision.CompareTag("Trou"))
             {
-                rb.linearDamping = 25f; // Pour éviter toute flottaison en physique par après
- 
                 //Debug.Log("Hors Trou");
             }
         }
@@ -105,26 +98,25 @@ public class DansCollider : MonoBehaviour
         else if (collision.gameObject.CompareTag("LimiteGauche"))
         {
             audioSource.PlayOneShot(vocalMauvaiseDirectionGauche); // Je pense qu'on devrait aller à droite
-
         }
     }
 
 
 
     void ReviensSurface()
-    {   
+    {
         anim.SetTrigger("vaRemonter"); // La fourmi remonte du trou
-        deplacement.peutBouger = true;
 
         transform.position = pointRetour.position; // On revient au trou zéro en tombant dans les trous
         rb.AddForce(Vector2.down * 10f, ForceMode2D.Impulse); // Petite force vers le bas
 
-        Invoke("StressAnim", 1f);
+        Invoke("StressAnim", 0.7f);
     }
 
     void StressAnim()
     {
         anim.speed = 5f; // Stress de la fourmi sur le idle
+        deplacement.peutBouger = true; // Le déplacement n'est plus bloqué
     }
 
 }
