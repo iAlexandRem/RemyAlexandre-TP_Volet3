@@ -32,7 +32,7 @@ public class DansCollider : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(ignoreProchainTrou);
+
     }
 
     void OnTriggerEnter2D(Collider2D collision) // En RENTRANT dans le collider trigger 

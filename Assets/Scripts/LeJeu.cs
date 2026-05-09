@@ -9,7 +9,7 @@ public class LeJeu : MonoBehaviour
     public AudioClip vocalInstructionsDebut;
     bool premierClickDetecte = false;
     bool instructionsJouees = false;
-    public HoverBoutons hoverBoutons; // Pour éviter la cacophonie avec le bool hoverUI
+    public HoverBoutons hoverBoutons; // Pour éviter la cacophonie grâce au bool hoverUI
     bool wasHovering = false; // True si on arrête de hover une fois qu'on a hover
     bool wasPlaying = false; // True si l'AudioClip finit de jouer une fois joué
     public bool vocalInstructionsTerminees = false;
@@ -35,8 +35,8 @@ public class LeJeu : MonoBehaviour
 
     void Update()
     {
-        // Au premier clic durant le premier mini-jeu
-        if (!premierClickDetecte && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+        // Au premier clic durant les mini-jeux
+        if (!premierClickDetecte && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame && SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "Selecteur de jeux")
         {
             premierClickDetecte = true;
             audioSource.Stop(); // J'arrête le premier message
