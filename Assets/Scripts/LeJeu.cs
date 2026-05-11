@@ -9,8 +9,9 @@ public class LeJeu : MonoBehaviour
     public AudioClip vocalInstructionsDebut;
     bool premierClickDetecte = false;
     bool instructionsJouees = false;
-    public HoverBoutons hoverBoutons; // Pour éviter la cacophonie grâce au bool hoverUI
+    public HoverBoutons[] hoverBoutons; // Pour éviter la cacophonie grâce au bool hoverUI
     bool wasHovering = false; // True si on arrête de hover une fois qu'on a hover
+    bool isHovering = false; // True si on hover au moins un des boutons
     bool wasPlaying = false; // True si l'AudioClip finit de jouer une fois joué
     public bool vocalInstructionsTerminees = false;
 
@@ -62,11 +63,19 @@ public class LeJeu : MonoBehaviour
 
         else if (SceneManager.GetActiveScene().name == "Selecteur de jeux")
         {
-            bool isHovering = (hoverBoutons != null && hoverBoutons.hoverUI);
+            isHovering = false; // À réinitialiser
+
+            foreach (HoverBoutons hb in hoverBoutons) // Pour chacun des trois boutons ayant le script HoverBoutons
+            {
+                if (hb != null && hb.hoverUI)
+                {
+                    isHovering = true;
+                }
+            }
 
             if (isHovering)
             {
-                audioSource.Stop();
+                audioSource.Stop(); // Le message qui joue s'arrête si on hover un bouton de mini-jeu
             }
             else
             {

@@ -8,6 +8,14 @@ public class DansCollider : MonoBehaviour
     SpriteRenderer sr;
     Animator anim;
 
+    public Animator camAnimator; // Pour glisser l'Animator de la CinemachineCamera 
+    public GameObject LimitesPositionCamera; // Pour modifier son scale lorsqu'on est hors labyrinthe
+    public Vector3 hausseScaleLimites; // Par l'Inspector
+    private Vector3 initialScaleLimites;
+    private Vector3 targetScaleLimites; // Facteur d'aggrandissement cible
+    private float smoothSpeed = 0.5f; // Vitesse de transition du scale pour le lerp dans Update
+
+
     Vector2 positionDepart;
     public DeplacementParFleches deplacement; // Pour gérer l'arrêt de déplacement par flèches, avec le bool peutBouger
     public Transform pointRetour; // Un point de retour où le joueur revient
@@ -27,13 +35,23 @@ public class DansCollider : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         audioSource = GetComponent<AudioSource>();
         positionDepart = transform.position;
+
+        if (LimitesPositionCamera != null)
+        {
+            initialScaleLimites = LimitesPositionCamera.transform.localScale;
+            targetScaleLimites = initialScaleLimites;
+        }
     }
 
 
     void Update()
     {
-
+        if (SceneManager.GetActiveScene().name == "Mini-Jeu2") // Juste pour essayer une transition "fluide" des limites de position caméra quand on sort du périmètre du labyrinthe
+        {
+            LimitesPositionCamera.transform.localScale = Vector3.Lerp(LimitesPositionCamera.transform.localScale, targetScaleLimites, Time.deltaTime * smoothSpeed);
+        }
     }
+
 
     void OnTriggerEnter2D(Collider2D collision) // En RENTRANT dans le collider trigger 
     {
@@ -56,7 +74,7 @@ public class DansCollider : MonoBehaviour
                 if (ignoreProchainTrou)
                 {
                     ignoreProchainTrou = false;
-                    return; // Si on vient juste d'être téléporté, je dois éviter le reste de la fonction, pour pas de tombée double
+                    return; // Si on vient juste d'être téléporté, je dois éviter le reste de la fonction en-dessous, pour pas de tombée double
                 }
                 ignoreProchainTrou = true;
 
@@ -70,6 +88,17 @@ public class DansCollider : MonoBehaviour
                 //Debug.Log("Dans Trou");
                 Invoke("ReviensSurface", 0.5f);
             }
+
+
+            if (collision.CompareTag("HorsLabyrinthe") && camAnimator != null) // Quand on s'aventure hors labyrinthe
+            {
+                camAnimator.SetTrigger("CamZoom"); // Plan rapproché
+
+                targetScaleLimites = Vector3.Scale(initialScaleLimites, hausseScaleLimites); // + grande zone pour les limites de caméra
+
+                rb.angularDamping = 0f;
+            }
+
         }
     }
 
@@ -90,6 +119,15 @@ public class DansCollider : MonoBehaviour
             if (collision.CompareTag("Trou"))
             {
                 //Debug.Log("Hors Trou");
+            }
+
+            if (collision.CompareTag("HorsLabyrinthe") && camAnimator != null) // Quand on revient dedans le labyrinthe
+            {
+                camAnimator.SetTrigger("CamDezoom"); // Plan moins rapproché
+
+                targetScaleLimites = initialScaleLimites; // Scale initial pour les limites de caméra
+
+                rb.angularDamping = 42f;
             }
         }
     }
@@ -115,18 +153,18 @@ public class DansCollider : MonoBehaviour
     {
         transform.position = pointRetour.position; // On revient au trou zéro en tombant dans les trous
 
-        transform.rotation = Quaternion.Euler(0f, 0f, 90f); // Différent angle de rotation à la remontée
+        transform.rotation = Quaternion.Euler(0f, 0f, 45f); // Différent angle de rotation à la remontée
 
         anim.SetTrigger("vaRemonter"); // La fourmi remonte du trou
 
-        rb.AddForce(Vector2.down * 10f, ForceMode2D.Impulse); // Petite force vers le bas
+        rb.AddForce(new Vector2(-1f, -1f).normalized * 15f, ForceMode2D.Impulse); // Petite force en diagonale sud-ouest
 
-        deplacement.peutBouger = true; // Le déplacement n'est plus bloqué
-        Invoke("StressAnim", 0.7f);
+        Invoke("PostRemontee", 0.7f);
     }
 
-    void StressAnim()
+    void PostRemontee()
     {
+        deplacement.peutBouger = true; // Déplacement permis
         anim.speed = 5f; // Stress de la fourmi sur le idle
         ignoreProchainTrou = false; // Je réactive le trigger du trou ici, le délai est important, j'ai testé
     }

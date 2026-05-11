@@ -3245,6 +3245,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 535e443ec7b214a268b1152c59da7962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GestionCases
+  camAnimator: {fileID: 0}
+  LimitesPositionCamera: {fileID: 0}
   deplacement: {fileID: 0}
   pointRetour: {fileID: 0}
   vocalMauvaiseDirectionDroite: {fileID: 8300000, guid: af87bba6427734237b3516bb6a26fe8c, type: 3}
@@ -15616,7 +15618,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   vocalMessageDebut: {fileID: 8300000, guid: aad0b580ed10b471399a8efd199b9825, type: 3}
   vocalInstructionsDebut: {fileID: 8300000, guid: 2430066209bfe4fc294d493d491229a2, type: 3}
-  hoverBoutons: {fileID: 0}
+  hoverBoutons:
+  - {fileID: 0}
   vocalInstructionsTerminees: 0
 --- !u!4 &865667312
 Transform:
@@ -16627,7 +16630,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -16716,7 +16719,7 @@ Transform:
   m_GameObject: {fileID: 953994249}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0000000035202365, y: -0.000000037515793, z: -2.6943612e-16, w: 1}
-  m_LocalPosition: {x: 115.54975, y: 0.9951601, z: -10.000001}
+  m_LocalPosition: {x: 115.56684, y: 0.9951601, z: -10.000001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

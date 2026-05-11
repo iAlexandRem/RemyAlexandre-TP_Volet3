@@ -709,7 +709,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -2319,7 +2319,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1713251853}
-  - component: {fileID: 1713251852}
   - component: {fileID: 1713251851}
   m_Layer: 0
   m_Name: LeJeu
@@ -2339,11 +2338,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: b50e1ce0992a34349bc9ba05166b733d, type: 3}
+  m_Resource: {fileID: 8300000, guid: 6df3101a89248415f9f198bb70c4f97f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.42
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2425,22 +2424,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1713251852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1713251850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f90e2b8e1b7e4a6ab0d82b6bdafc579, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LeJeu
-  vocalMessageDebut: {fileID: 8300000, guid: 6df3101a89248415f9f198bb70c4f97f, type: 3}
-  vocalInstructionsDebut: {fileID: 0}
-  hoverBoutons: {fileID: 0}
-  vocalInstructionsTerminees: 0
 --- !u!4 &1713251853
 Transform:
   m_ObjectHideFlags: 0

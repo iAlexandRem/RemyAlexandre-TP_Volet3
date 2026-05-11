@@ -12,6 +12,8 @@ TagManager:
   - LimiteHaut
   - LimiteBas
   - Bille
+  - Bois
+  - HorsLabyrinthe
   layers:
   - Default
   - TransparentFX
