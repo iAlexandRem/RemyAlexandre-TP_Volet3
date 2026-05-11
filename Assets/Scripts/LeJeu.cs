@@ -81,7 +81,7 @@ public class LeJeu : MonoBehaviour
             {
                 if (wasHovering)
                 {
-                    audioSource.time = 0f;
+                    audioSource.time = 21f; // À f secondes dans l'audio
                     audioSource.Play(); // Le message ("Sélectionne un mini-jeu parmi les trois suivants") rejoue seulement si on sort du hover
                 }
             }

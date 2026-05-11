@@ -134,6 +134,8 @@ public class DansCollider : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (audioSource.isPlaying) return; // Éviter le spam sonore
+
         if (collision.gameObject.CompareTag("LimiteDroite"))
         {
             if (leJeu != null && leJeu.vocalInstructionsTerminees) // Attendre que les instructions soient finies

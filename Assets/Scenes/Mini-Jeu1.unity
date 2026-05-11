@@ -3247,6 +3247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GestionCases
   camAnimator: {fileID: 0}
   LimitesPositionCamera: {fileID: 0}
+  hausseScaleLimites: {x: 0, y: 0, z: 0}
   deplacement: {fileID: 0}
   pointRetour: {fileID: 0}
   vocalMauvaiseDirectionDroite: {fileID: 8300000, guid: af87bba6427734237b3516bb6a26fe8c, type: 3}
@@ -10262,7 +10263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &600021812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16719,7 +16720,7 @@ Transform:
   m_GameObject: {fileID: 953994249}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0000000035202365, y: -0.000000037515793, z: -2.6943612e-16, w: 1}
-  m_LocalPosition: {x: 115.56684, y: 0.9951601, z: -10.000001}
+  m_LocalPosition: {x: 115.560394, y: 0.9951601, z: -10.000001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
