@@ -15,6 +15,7 @@ TagManager:
   - Bois
   - HorsLabyrinthe
   - Sucre
+  - ZoneProtegee
   layers:
   - Default
   - TransparentFX

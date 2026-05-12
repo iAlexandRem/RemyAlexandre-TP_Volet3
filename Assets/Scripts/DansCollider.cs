@@ -86,6 +86,7 @@ public class DansCollider : MonoBehaviour
                 }
 
                 Vector2 dir = ((Vector2)collision.transform.position - (Vector2)transform.position).normalized; // Direction d'un vecteur qui pointe du sujet vers le trou
+
                 if (CompareTag("Sucre"))
                 {
                     rb.AddForce(dir * 10f, ForceMode2D.Impulse); // Une force vers le centre du trou
@@ -182,7 +183,7 @@ public class DansCollider : MonoBehaviour
             transform.position = pointsRetour[index].position; // La chose est transportée à ce trou
             if (CompareTag("Sucre"))
             {
-                rb.AddForce(new Vector2(-1f, -1f).normalized * 67f, ForceMode2D.Impulse); // Grosse force hehe
+                rb.AddForce(new Vector2(-1f, -1f).normalized * 42f, ForceMode2D.Impulse); // Grosse force hehe
             }
         }
 

@@ -30,7 +30,8 @@ public class MouvementBillesEnnemies : MonoBehaviour
         // Si enfin pas de rebond ET si le joueur est proche 
         if (timerRebond <= 0 && Vector2.Distance(transform.position, joueur.position) <= distanceActivation)
         {
-            dir = ((Vector2)joueur.position - (Vector2)transform.position).normalized; // La dir est vers le joueur
+            Vector2 dirJoueur = ((Vector2)joueur.position - (Vector2)transform.position).normalized; // Une dir allant de la bille vers le joueur
+            dir = Vector2.Lerp(rb.linearVelocity.normalized, dirJoueur, acceleration * Time.fixedDeltaTime).normalized; // Virage progressif
         }
         else
         {
@@ -51,16 +52,16 @@ public class MouvementBillesEnnemies : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")) // À chaque fois que la bille rentre en contact avec le joueur
         {
-            GameObject[] trous = GameObject.FindGameObjectsWithTag("Trou"); // On met tous les gameobjects Trous dans un array [trous]
+            GameObject[] trous = GameObject.FindGameObjectsWithTag("Trou"); // Ça met tous les gameobjects Trous dans un array [trous]
 
             GameObject plusProche = trous[0]; // Je veux repérer le trou le plus proche AU MOMENT DE LA COLLISION, on commence par un premier
             float minDist = Vector2.Distance(collision.transform.position, plusProche.transform.position); // Distance minimale entre le joueur touché et ce trou (qu'on considère proche)
             foreach (GameObject t in trous) // Pour CHAQUE trou (t) dans l'array
             {
                 float d = Vector2.Distance(collision.transform.position, t.transform.position); // Calcul distance entre joueur et ce trou
-                if (d < minDist) // Si cette distance est plus petite jusqu'à présent
+                if (d < minDist) // Si cette distance est la plus petite jusqu'à présent
                 {
-                    plusProche = t; // On met à jour que ce trou t est le plus proche
+                    plusProche = t; // Mise à jour que ce trou t est le plus proche
                     minDist = d; // Nouvelle distance minimale pour comparer avec les autres trous de l'array
                 }
             }
@@ -78,6 +79,16 @@ public class MouvementBillesEnnemies : MonoBehaviour
             Vector2 dirAleatoire = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad)); // Direction aléatoire
 
             rb.linearVelocity = dirAleatoire * vitesse; // Vitesse constante selon direction aléatoire
+        }
+    }
+
+
+    void OnTriggerStay2D(Collider2D fuite) // Tant que la bille est dedans
+    {
+        if (fuite.CompareTag("ZoneProtegee")) // Pour que la bille fuit certaines zones dites protégées (DÉBUT, FIN)
+        {
+            Vector2 dir = ((Vector2)transform.position - fuite.ClosestPoint(transform.position)).normalized; // Une dir allant du point le plus près du collider vers la bille
+            rb.linearVelocity += dir * 50f; // Vitesse de poussée constante selon cette direction de fuite
         }
     }
 }
