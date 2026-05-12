@@ -9,6 +9,8 @@ public class MouvementBillesEnnemies : MonoBehaviour
     public float tempsRebond; // Temps avant de changer de direction après collision
     private float vitesseActuelle; // Pour les transitions de vitesse
 
+    public bool BilleToucheFourmi = false; // Je réutilise dans le script SucreBrun
+
     Rigidbody2D rb;
     private Transform joueur;
     private float timerRebond = 0f; // Pour un countdown à chaque rebond
@@ -58,6 +60,8 @@ public class MouvementBillesEnnemies : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")) // À chaque fois que la bille rentre en contact avec le joueur
         {
+            BilleToucheFourmi = true;
+
             GameObject[] trous = GameObject.FindGameObjectsWithTag("Trou"); // Ça met tous les gameobjects Trous dans un array [trous]
 
             GameObject plusProche = trous[1]; // Je veux repérer le trou le plus proche au moment de la collision, on commence par un premier
@@ -90,6 +94,13 @@ public class MouvementBillesEnnemies : MonoBehaviour
         }
     }
 
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            BilleToucheFourmi = false;
+        }
+    }
 
     void OnTriggerStay2D(Collider2D fuite) // Tant que la bille est dedans
     {

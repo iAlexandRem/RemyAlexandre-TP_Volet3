@@ -3,55 +3,62 @@ using UnityEngine.InputSystem;
 
 public class SucreBrun : MonoBehaviour
 {
-    Rigidbody2D rb;
+    MouvementBillesEnnemies[] billes; // Référence au script MouvementBillesEnnemies des billes
+
     Transform joueur;
+    Rigidbody2D rb;
 
-    bool estPorte = false;
-    Vector2 offset = new Vector2(-1f, 0f);
+    bool estPorte = false; // On ne porte pas le sucre au début
+    public float distancePrise; // 4f
 
-    public float distancePrise = 1.5f; // distance pour pouvoir ramasser
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        joueur = GameObject.FindGameObjectWithTag("Player").transform;
+
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        joueur = playerObj.transform; // Transform du joueur
+        billes = FindObjectsByType<MouvementBillesEnnemies>(FindObjectsSortMode.None);
+
         Invoke("PetitePoussee", 3f); // Délai
     }
 
-
     void PetitePoussee()
     {
-        rb.AddForce(Vector2.down * 17f, ForceMode2D.Impulse); // Poussée automatique vers le bas
+        rb.AddForce(Vector2.down * 17f, ForceMode2D.Impulse); // Poussée automatique du sucre vers le bas au début du jeu
     }
 
 
     void Update()
     {
-        if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
+        if (Keyboard.current.spaceKey.wasPressedThisFrame) // On équipe le sucre quand on appuie Espace
         {
-            Debug.Log("SPACE détecté");
-            float dist = Vector2.Distance(transform.position, joueur.position);
+            float dist = Vector2.Distance(transform.position, joueur.position); // Distance entre le sucre et joueur
 
-            // 👉 ON PEUT RAMASSER SEULEMENT SI PROCHE
-            if (dist <= distancePrise)
+            if (!estPorte && dist <= distancePrise) // Quand on est près du sucre
             {
-                estPorte = !estPorte;
-
-                if (estPorte)
-                {
-                    rb.linearVelocity = Vector2.zero;
-                }
+                estPorte = true;
+                rb.simulated = false; // Physique est désactivée, donc suit celle de la fourmi
+            }
+            else if (estPorte) // Quand on lâche le sucre
+            {
+                estPorte = false;
+                rb.simulated = true;
             }
         }
-    }
 
-    void FixedUpdate()
-    {
-        if (estPorte && joueur != null)
+        if (estPorte)
         {
-            Vector2 target = (Vector2)joueur.position + offset;
-            rb.MovePosition(target);
+            transform.position = (Vector2)joueur.position + (Vector2)joueur.right * -2f; // 2 unités en décalage avec la tête de la fourmi
+
+
+            foreach (MouvementBillesEnnemies bille in billes) // Pour chaque bille...
+            {
+                if (bille.BilleToucheFourmi)
+                {
+                    estPorte = false; // La fourmi échappe le sucre, lors d'une collision avec bille
+                }
+            }
         }
     }
 }
