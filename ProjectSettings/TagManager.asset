@@ -14,6 +14,7 @@ TagManager:
   - Bille
   - Bois
   - HorsLabyrinthe
+  - Sucre
   layers:
   - Default
   - TransparentFX

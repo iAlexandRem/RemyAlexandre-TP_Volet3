@@ -1474,7 +1474,7 @@ GameObject:
   m_Component:
   - component: {fileID: 116117722}
   - component: {fileID: 116117724}
-  - component: {fileID: 116117723}
+  - component: {fileID: 116117725}
   m_Layer: 0
   m_Name: bille-metal_spritesheet
   m_TagString: Untagged
@@ -1498,28 +1498,6 @@ Transform:
   - {fileID: 39091859}
   m_Father: {fileID: 1440885577}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &116117723
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116117721}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c01ba2504e61b471bbf827225613a180, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &116117724
 SpriteRenderer:
   serializedVersion: 2
@@ -1579,6 +1557,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &116117725
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116117721}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c01ba2504e61b471bbf827225613a180, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &139721594
 GameObject:
   m_ObjectHideFlags: 0
@@ -2424,7 +2424,7 @@ GameObject:
   m_Component:
   - component: {fileID: 245061434}
   - component: {fileID: 245061436}
-  - component: {fileID: 245061435}
+  - component: {fileID: 245061437}
   m_Layer: 0
   m_Name: bille-metal_spritesheet
   m_TagString: Untagged
@@ -2448,28 +2448,6 @@ Transform:
   - {fileID: 420721941}
   m_Father: {fileID: 1330841161}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &245061435
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245061433}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c01ba2504e61b471bbf827225613a180, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &245061436
 SpriteRenderer:
   serializedVersion: 2
@@ -2529,6 +2507,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &245061437
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245061433}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c01ba2504e61b471bbf827225613a180, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &261833379
 GameObject:
   m_ObjectHideFlags: 0
@@ -2618,7 +2618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 291069809}
   - component: {fileID: 291069811}
-  - component: {fileID: 291069810}
+  - component: {fileID: 291069812}
   m_Layer: 0
   m_Name: bille-metal_spritesheet
   m_TagString: Untagged
@@ -2642,28 +2642,6 @@ Transform:
   - {fileID: 1344857826}
   m_Father: {fileID: 1110611099}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &291069810
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 291069808}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c01ba2504e61b471bbf827225613a180, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &291069811
 SpriteRenderer:
   serializedVersion: 2
@@ -2723,6 +2701,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &291069812
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291069808}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c01ba2504e61b471bbf827225613a180, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &314564698
 GameObject:
   m_ObjectHideFlags: 0
@@ -5619,6 +5619,7 @@ GameObject:
   m_Component:
   - component: {fileID: 729564119}
   - component: {fileID: 729564120}
+  - component: {fileID: 729564121}
   m_Layer: 0
   m_Name: sucre brun en cube
   m_TagString: Untagged
@@ -5700,6 +5701,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &729564121
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729564118}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2129a088b46e346d597654847877d5a3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &760918125
 GameObject:
   m_ObjectHideFlags: 0
@@ -7620,7 +7643,7 @@ GameObject:
   m_Component:
   - component: {fileID: 980190994}
   - component: {fileID: 980190996}
-  - component: {fileID: 980190995}
+  - component: {fileID: 980190997}
   m_Layer: 0
   m_Name: bille-metal_spritesheet
   m_TagString: Untagged
@@ -7644,28 +7667,6 @@ Transform:
   - {fileID: 552348552}
   m_Father: {fileID: 1704911558}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &980190995
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 980190993}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c01ba2504e61b471bbf827225613a180, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &980190996
 SpriteRenderer:
   serializedVersion: 2
@@ -7725,6 +7726,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &980190997
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980190993}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c01ba2504e61b471bbf827225613a180, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1020881352
 GameObject:
   m_ObjectHideFlags: 0
@@ -8740,6 +8763,8 @@ GameObject:
   - component: {fileID: 1110611098}
   - component: {fileID: 1110611097}
   - component: {fileID: 1110611096}
+  - component: {fileID: 1110611100}
+  - component: {fileID: 1110611101}
   m_Layer: 0
   m_Name: bille-metal (4)
   m_TagString: Bille
@@ -8843,6 +8868,148 @@ Transform:
   - {fileID: 291069809}
   m_Father: {fileID: 1366563543}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1110611100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110611095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535e443ec7b214a268b1152c59da7962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DansCollider
+  camAnimator: {fileID: 0}
+  LimitesPositionCamera: {fileID: 0}
+  hausseScaleLimites: {x: 0, y: 0, z: 0}
+  deplacement: {fileID: 0}
+  pointsRetour:
+  - {fileID: 2088070263}
+  - {fileID: 1854406448}
+  - {fileID: 69073668}
+  - {fileID: 1070636759}
+  - {fileID: 454370402}
+  - {fileID: 647915914}
+  - {fileID: 1036367383}
+  - {fileID: 188670266}
+  - {fileID: 813043254}
+  - {fileID: 1123077624}
+  - {fileID: 1862655323}
+  - {fileID: 2056308895}
+  - {fileID: 1443372110}
+  - {fileID: 1917127230}
+  - {fileID: 554433292}
+  - {fileID: 1550666501}
+  - {fileID: 330909166}
+  - {fileID: 1424941668}
+  - {fileID: 1530322722}
+  - {fileID: 99697875}
+  - {fileID: 2002891680}
+  - {fileID: 39000424}
+  - {fileID: 452096575}
+  - {fileID: 1020881353}
+  - {fileID: 1731279253}
+  vocalMauvaiseDirectionDroite: {fileID: 0}
+  vocalMauvaiseDirectionGauche: {fileID: 0}
+  leJeu: {fileID: 0}
+--- !u!82 &1110611101
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110611095}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.42
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 142
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1123077623
 GameObject:
   m_ObjectHideFlags: 0
@@ -10009,6 +10176,8 @@ GameObject:
   - component: {fileID: 1330841160}
   - component: {fileID: 1330841159}
   - component: {fileID: 1330841158}
+  - component: {fileID: 1330841162}
+  - component: {fileID: 1330841163}
   m_Layer: 0
   m_Name: bille-metal (3)
   m_TagString: Bille
@@ -10112,6 +10281,148 @@ Transform:
   - {fileID: 245061434}
   m_Father: {fileID: 1366563543}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1330841162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330841157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535e443ec7b214a268b1152c59da7962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DansCollider
+  camAnimator: {fileID: 0}
+  LimitesPositionCamera: {fileID: 0}
+  hausseScaleLimites: {x: 0, y: 0, z: 0}
+  deplacement: {fileID: 0}
+  pointsRetour:
+  - {fileID: 2088070263}
+  - {fileID: 1854406448}
+  - {fileID: 69073668}
+  - {fileID: 1070636759}
+  - {fileID: 454370402}
+  - {fileID: 647915914}
+  - {fileID: 1036367383}
+  - {fileID: 188670266}
+  - {fileID: 813043254}
+  - {fileID: 1123077624}
+  - {fileID: 1862655323}
+  - {fileID: 2056308895}
+  - {fileID: 1443372110}
+  - {fileID: 1917127230}
+  - {fileID: 554433292}
+  - {fileID: 1550666501}
+  - {fileID: 330909166}
+  - {fileID: 1424941668}
+  - {fileID: 1530322722}
+  - {fileID: 99697875}
+  - {fileID: 2002891680}
+  - {fileID: 39000424}
+  - {fileID: 452096575}
+  - {fileID: 1020881353}
+  - {fileID: 1731279253}
+  vocalMauvaiseDirectionDroite: {fileID: 0}
+  vocalMauvaiseDirectionGauche: {fileID: 0}
+  leJeu: {fileID: 0}
+--- !u!82 &1330841163
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330841157}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.42
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 142
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1337779444
 GameObject:
   m_ObjectHideFlags: 0
@@ -10536,6 +10847,8 @@ GameObject:
   - component: {fileID: 1377660325}
   - component: {fileID: 1377660324}
   - component: {fileID: 1377660323}
+  - component: {fileID: 1377660327}
+  - component: {fileID: 1377660328}
   m_Layer: 0
   m_Name: bille-metal (1)
   m_TagString: Bille
@@ -10639,6 +10952,148 @@ Transform:
   - {fileID: 929071128}
   m_Father: {fileID: 1366563543}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1377660327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377660322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535e443ec7b214a268b1152c59da7962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DansCollider
+  camAnimator: {fileID: 0}
+  LimitesPositionCamera: {fileID: 0}
+  hausseScaleLimites: {x: 0, y: 0, z: 0}
+  deplacement: {fileID: 0}
+  pointsRetour:
+  - {fileID: 2088070263}
+  - {fileID: 1854406448}
+  - {fileID: 69073668}
+  - {fileID: 1070636759}
+  - {fileID: 454370402}
+  - {fileID: 647915914}
+  - {fileID: 1036367383}
+  - {fileID: 188670266}
+  - {fileID: 813043254}
+  - {fileID: 1123077624}
+  - {fileID: 1862655323}
+  - {fileID: 2056308895}
+  - {fileID: 1443372110}
+  - {fileID: 1917127230}
+  - {fileID: 554433292}
+  - {fileID: 1550666501}
+  - {fileID: 330909166}
+  - {fileID: 1424941668}
+  - {fileID: 1530322722}
+  - {fileID: 99697875}
+  - {fileID: 2002891680}
+  - {fileID: 39000424}
+  - {fileID: 452096575}
+  - {fileID: 1020881353}
+  - {fileID: 1731279253}
+  vocalMauvaiseDirectionDroite: {fileID: 0}
+  vocalMauvaiseDirectionGauche: {fileID: 0}
+  leJeu: {fileID: 0}
+--- !u!82 &1377660328
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377660322}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.42
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 142
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1382641490
 GameObject:
   m_ObjectHideFlags: 0
@@ -10742,9 +11197,11 @@ GameObject:
   - component: {fileID: 1394456545}
   - component: {fileID: 1394456544}
   - component: {fileID: 1394456547}
+  - component: {fileID: 1394456549}
+  - component: {fileID: 1394456548}
   m_Layer: 0
   m_Name: sucre brun
-  m_TagString: Untagged
+  m_TagString: Sucre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10765,7 +11222,7 @@ Rigidbody2D:
   m_LinearDamping: 2
   m_AngularDamping: 10
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4b6d4d1ee949e4be5a252ea27553bc03, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -10774,7 +11231,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &1394456545
 BoxCollider2D:
@@ -10850,6 +11307,148 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc1d5589189cd4203888a3608e7530da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!82 &1394456548
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394456543}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.42
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 142
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1394456549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394456543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535e443ec7b214a268b1152c59da7962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DansCollider
+  camAnimator: {fileID: 0}
+  LimitesPositionCamera: {fileID: 0}
+  hausseScaleLimites: {x: 0, y: 0, z: 0}
+  deplacement: {fileID: 0}
+  pointsRetour:
+  - {fileID: 2088070263}
+  - {fileID: 1854406448}
+  - {fileID: 69073668}
+  - {fileID: 1070636759}
+  - {fileID: 454370402}
+  - {fileID: 647915914}
+  - {fileID: 1036367383}
+  - {fileID: 188670266}
+  - {fileID: 813043254}
+  - {fileID: 1123077624}
+  - {fileID: 1862655323}
+  - {fileID: 2056308895}
+  - {fileID: 1443372110}
+  - {fileID: 1917127230}
+  - {fileID: 554433292}
+  - {fileID: 1550666501}
+  - {fileID: 330909166}
+  - {fileID: 1424941668}
+  - {fileID: 1530322722}
+  - {fileID: 99697875}
+  - {fileID: 2002891680}
+  - {fileID: 39000424}
+  - {fileID: 452096575}
+  - {fileID: 1020881353}
+  - {fileID: 1731279253}
+  vocalMauvaiseDirectionDroite: {fileID: 0}
+  vocalMauvaiseDirectionGauche: {fileID: 0}
+  leJeu: {fileID: 0}
 --- !u!1 &1424941667
 GameObject:
   m_ObjectHideFlags: 0
@@ -11113,6 +11712,8 @@ GameObject:
   - component: {fileID: 1440885576}
   - component: {fileID: 1440885575}
   - component: {fileID: 1440885574}
+  - component: {fileID: 1440885578}
+  - component: {fileID: 1440885579}
   m_Layer: 0
   m_Name: bille-metal (2)
   m_TagString: Bille
@@ -11216,6 +11817,148 @@ Transform:
   - {fileID: 116117722}
   m_Father: {fileID: 1366563543}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1440885578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440885573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535e443ec7b214a268b1152c59da7962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DansCollider
+  camAnimator: {fileID: 0}
+  LimitesPositionCamera: {fileID: 0}
+  hausseScaleLimites: {x: 0, y: 0, z: 0}
+  deplacement: {fileID: 0}
+  pointsRetour:
+  - {fileID: 2088070263}
+  - {fileID: 1854406448}
+  - {fileID: 69073668}
+  - {fileID: 1070636759}
+  - {fileID: 454370402}
+  - {fileID: 647915914}
+  - {fileID: 1036367383}
+  - {fileID: 188670266}
+  - {fileID: 813043254}
+  - {fileID: 1123077624}
+  - {fileID: 1862655323}
+  - {fileID: 2056308895}
+  - {fileID: 1443372110}
+  - {fileID: 1917127230}
+  - {fileID: 554433292}
+  - {fileID: 1550666501}
+  - {fileID: 330909166}
+  - {fileID: 1424941668}
+  - {fileID: 1530322722}
+  - {fileID: 99697875}
+  - {fileID: 2002891680}
+  - {fileID: 39000424}
+  - {fileID: 452096575}
+  - {fileID: 1020881353}
+  - {fileID: 1731279253}
+  vocalMauvaiseDirectionDroite: {fileID: 0}
+  vocalMauvaiseDirectionGauche: {fileID: 0}
+  leJeu: {fileID: 0}
+--- !u!82 &1440885579
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440885573}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.42
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 142
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1442161106
 GameObject:
   m_ObjectHideFlags: 0
@@ -11970,7 +12713,8 @@ MonoBehaviour:
   LimitesPositionCamera: {fileID: 22216288}
   hausseScaleLimites: {x: 1.078, y: 1.098, z: 1}
   deplacement: {fileID: 1590324041}
-  pointRetour: {fileID: 2088070263}
+  pointsRetour:
+  - {fileID: 2088070263}
   vocalMauvaiseDirectionDroite: {fileID: 0}
   vocalMauvaiseDirectionGauche: {fileID: 0}
   leJeu: {fileID: 865667311}
@@ -12238,6 +12982,8 @@ GameObject:
   - component: {fileID: 1596150407}
   - component: {fileID: 1596150406}
   - component: {fileID: 1596150405}
+  - component: {fileID: 1596150409}
+  - component: {fileID: 1596150410}
   m_Layer: 0
   m_Name: bille-metal (6)
   m_TagString: Bille
@@ -12341,6 +13087,148 @@ Transform:
   - {fileID: 2012347130}
   m_Father: {fileID: 1366563543}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1596150409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596150404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535e443ec7b214a268b1152c59da7962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DansCollider
+  camAnimator: {fileID: 0}
+  LimitesPositionCamera: {fileID: 0}
+  hausseScaleLimites: {x: 0, y: 0, z: 0}
+  deplacement: {fileID: 0}
+  pointsRetour:
+  - {fileID: 2088070263}
+  - {fileID: 1854406448}
+  - {fileID: 69073668}
+  - {fileID: 1070636759}
+  - {fileID: 454370402}
+  - {fileID: 647915914}
+  - {fileID: 1036367383}
+  - {fileID: 188670266}
+  - {fileID: 813043254}
+  - {fileID: 1123077624}
+  - {fileID: 1862655323}
+  - {fileID: 2056308895}
+  - {fileID: 1443372110}
+  - {fileID: 1917127230}
+  - {fileID: 554433292}
+  - {fileID: 1550666501}
+  - {fileID: 330909166}
+  - {fileID: 1424941668}
+  - {fileID: 1530322722}
+  - {fileID: 99697875}
+  - {fileID: 2002891680}
+  - {fileID: 39000424}
+  - {fileID: 452096575}
+  - {fileID: 1020881353}
+  - {fileID: 1731279253}
+  vocalMauvaiseDirectionDroite: {fileID: 0}
+  vocalMauvaiseDirectionGauche: {fileID: 0}
+  leJeu: {fileID: 0}
+--- !u!82 &1596150410
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596150404}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.42
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 142
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1639235101
 GameObject:
   m_ObjectHideFlags: 0
@@ -12582,6 +13470,8 @@ GameObject:
   - component: {fileID: 1704911557}
   - component: {fileID: 1704911556}
   - component: {fileID: 1704911555}
+  - component: {fileID: 1704911559}
+  - component: {fileID: 1704911560}
   m_Layer: 0
   m_Name: bille-metal (5)
   m_TagString: Bille
@@ -12685,6 +13575,148 @@ Transform:
   - {fileID: 980190994}
   m_Father: {fileID: 1366563543}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1704911559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704911554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535e443ec7b214a268b1152c59da7962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DansCollider
+  camAnimator: {fileID: 0}
+  LimitesPositionCamera: {fileID: 0}
+  hausseScaleLimites: {x: 0, y: 0, z: 0}
+  deplacement: {fileID: 0}
+  pointsRetour:
+  - {fileID: 2088070263}
+  - {fileID: 1854406448}
+  - {fileID: 69073668}
+  - {fileID: 1070636759}
+  - {fileID: 454370402}
+  - {fileID: 647915914}
+  - {fileID: 1036367383}
+  - {fileID: 188670266}
+  - {fileID: 813043254}
+  - {fileID: 1123077624}
+  - {fileID: 1862655323}
+  - {fileID: 2056308895}
+  - {fileID: 1443372110}
+  - {fileID: 1917127230}
+  - {fileID: 554433292}
+  - {fileID: 1550666501}
+  - {fileID: 330909166}
+  - {fileID: 1424941668}
+  - {fileID: 1530322722}
+  - {fileID: 99697875}
+  - {fileID: 2002891680}
+  - {fileID: 39000424}
+  - {fileID: 452096575}
+  - {fileID: 1020881353}
+  - {fileID: 1731279253}
+  vocalMauvaiseDirectionDroite: {fileID: 0}
+  vocalMauvaiseDirectionGauche: {fileID: 0}
+  leJeu: {fileID: 0}
+--- !u!82 &1704911560
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704911554}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.42
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 142
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1720544333
 GameObject:
   m_ObjectHideFlags: 0
@@ -15197,7 +16229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2012347130}
   - component: {fileID: 2012347132}
-  - component: {fileID: 2012347131}
+  - component: {fileID: 2012347133}
   m_Layer: 0
   m_Name: bille-metal_spritesheet
   m_TagString: Untagged
@@ -15221,28 +16253,6 @@ Transform:
   - {fileID: 1162603050}
   m_Father: {fileID: 1596150408}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &2012347131
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2012347129}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c01ba2504e61b471bbf827225613a180, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &2012347132
 SpriteRenderer:
   serializedVersion: 2
@@ -15302,6 +16312,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &2012347133
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012347129}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c01ba2504e61b471bbf827225613a180, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2013260229
 GameObject:
   m_ObjectHideFlags: 0
