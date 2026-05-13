@@ -2,15 +2,9 @@ using UnityEngine;
 
 public class TrouConnect4 : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public int rangee; // Pour identifier la rangée du trou
+    public int colonne; // Pour identifier la colonne du trou
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public bool trouOccupe = false; // Le trou n'est pas occupé au début
+
 }
