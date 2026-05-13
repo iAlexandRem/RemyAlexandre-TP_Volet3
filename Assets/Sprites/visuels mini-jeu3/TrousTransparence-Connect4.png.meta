@@ -1,0 +1,1222 @@
+fileFormatVersion: 2
+guid: 755c48502a45341c7a62ed619cd99d7d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4729803749713066371
+    second: TrousTransparence-Connect4_0
+  - first:
+      213: 1051771328876761730
+    second: TrousTransparence-Connect4_1
+  - first:
+      213: -1882320060446287207
+    second: TrousTransparence-Connect4_2
+  - first:
+      213: -3755454711995000389
+    second: TrousTransparence-Connect4_3
+  - first:
+      213: -4269953272478755608
+    second: TrousTransparence-Connect4_4
+  - first:
+      213: 8698037824811131261
+    second: TrousTransparence-Connect4_5
+  - first:
+      213: 8354870633793178778
+    second: TrousTransparence-Connect4_6
+  - first:
+      213: -4125980153443315617
+    second: TrousTransparence-Connect4_7
+  - first:
+      213: -3048562619275205354
+    second: TrousTransparence-Connect4_8
+  - first:
+      213: 2200877662667367132
+    second: TrousTransparence-Connect4_9
+  - first:
+      213: -8985301178746337544
+    second: TrousTransparence-Connect4_10
+  - first:
+      213: 7606836508208326649
+    second: TrousTransparence-Connect4_11
+  - first:
+      213: -41470629382111386
+    second: TrousTransparence-Connect4_12
+  - first:
+      213: -8777487604644649561
+    second: TrousTransparence-Connect4_13
+  - first:
+      213: -7569626278209492963
+    second: TrousTransparence-Connect4_14
+  - first:
+      213: 2680471797342238052
+    second: TrousTransparence-Connect4_15
+  - first:
+      213: 6648297339754268551
+    second: TrousTransparence-Connect4_16
+  - first:
+      213: -7220990452692902757
+    second: TrousTransparence-Connect4_17
+  - first:
+      213: 6131453052716908259
+    second: TrousTransparence-Connect4_18
+  - first:
+      213: -1337396103966593592
+    second: TrousTransparence-Connect4_19
+  - first:
+      213: 4518345855493652480
+    second: TrousTransparence-Connect4_20
+  - first:
+      213: -5986679182830725361
+    second: TrousTransparence-Connect4_21
+  - first:
+      213: -3800107408030660497
+    second: TrousTransparence-Connect4_22
+  - first:
+      213: -7538334357505266079
+    second: TrousTransparence-Connect4_23
+  - first:
+      213: 4965458444660427139
+    second: TrousTransparence-Connect4_24
+  - first:
+      213: -4801215684287771266
+    second: TrousTransparence-Connect4_25
+  - first:
+      213: 6871150860829117702
+    second: TrousTransparence-Connect4_26
+  - first:
+      213: -7343209486868385494
+    second: TrousTransparence-Connect4_27
+  - first:
+      213: -6076340586882096946
+    second: TrousTransparence-Connect4_28
+  - first:
+      213: -2485770852185319262
+    second: TrousTransparence-Connect4_29
+  - first:
+      213: 7631950387428918048
+    second: TrousTransparence-Connect4_30
+  - first:
+      213: -953469620255237144
+    second: TrousTransparence-Connect4_31
+  - first:
+      213: 1704423326141860096
+    second: TrousTransparence-Connect4_32
+  - first:
+      213: 4401627221644878529
+    second: TrousTransparence-Connect4_33
+  - first:
+      213: -1923280885275890883
+    second: TrousTransparence-Connect4_34
+  - first:
+      213: 532694758143129189
+    second: TrousTransparence-Connect4_35
+  - first:
+      213: 445258412626391167
+    second: TrousTransparence-Connect4_36
+  - first:
+      213: -7650964908616620106
+    second: TrousTransparence-Connect4_37
+  - first:
+      213: -3207013514786435492
+    second: TrousTransparence-Connect4_38
+  - first:
+      213: -2720415312797632673
+    second: TrousTransparence-Connect4_39
+  - first:
+      213: 5545493639260207350
+    second: TrousTransparence-Connect4_40
+  - first:
+      213: -4028428335032839561
+    second: TrousTransparence-Connect4_41
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_0
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 4168
+        width: 677
+        height: 676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d76ca099c8c5c5eb0800000000000000
+      internalID: -4729803749713066371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_1
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 4168
+        width: 678
+        height: 676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 282d3aa7374a89e00800000000000000
+      internalID: 1051771328876761730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_2
+      rect:
+        serializedVersion: 2
+        x: 1958
+        y: 4168
+        width: 677
+        height: 676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99ad183c0e7a0e5e0800000000000000
+      internalID: -1882320060446287207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_3
+      rect:
+        serializedVersion: 2
+        x: 2771
+        y: 4168
+        width: 678
+        height: 676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb9987136d1f1ebc0800000000000000
+      internalID: -3755454711995000389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_4
+      rect:
+        serializedVersion: 2
+        x: 3573
+        y: 4168
+        width: 679
+        height: 676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e413623f141eb4c0800000000000000
+      internalID: -4269953272478755608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_5
+      rect:
+        serializedVersion: 2
+        x: 4386
+        y: 4168
+        width: 678
+        height: 676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7167c64153a5b870800000000000000
+      internalID: 8698037824811131261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_6
+      rect:
+        serializedVersion: 2
+        x: 5205
+        y: 4168
+        width: 676
+        height: 676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9cc59f439672f370800000000000000
+      internalID: 8354870633793178778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_7
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 3345
+        width: 677
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5013bb29e29db6c0800000000000000
+      internalID: -4125980153443315617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_8
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 3345
+        width: 678
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6152192237451b5d0800000000000000
+      internalID: -3048562619275205354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_9
+      rect:
+        serializedVersion: 2
+        x: 1958
+        y: 3345
+        width: 677
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd2616dc2961b8e10800000000000000
+      internalID: 2200877662667367132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_10
+      rect:
+        serializedVersion: 2
+        x: 2771
+        y: 3345
+        width: 678
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f60de02f2ccd4380800000000000000
+      internalID: -8985301178746337544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_11
+      rect:
+        serializedVersion: 2
+        x: 3573
+        y: 3345
+        width: 679
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f7ea306089e09960800000000000000
+      internalID: 7606836508208326649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_12
+      rect:
+        serializedVersion: 2
+        x: 4386
+        y: 3345
+        width: 678
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66f311baeaaac6ff0800000000000000
+      internalID: -41470629382111386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_13
+      rect:
+        serializedVersion: 2
+        x: 5205
+        y: 3345
+        width: 676
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a5e2c85789103680800000000000000
+      internalID: -8777487604644649561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_14
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 2551
+        width: 677
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d186cdc610943f690800000000000000
+      internalID: -7569626278209492963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_15
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 2551
+        width: 678
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 465790fd5e2f23520800000000000000
+      internalID: 2680471797342238052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_16
+      rect:
+        serializedVersion: 2
+        x: 1958
+        y: 2551
+        width: 677
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7874a31d43f734c50800000000000000
+      internalID: 6648297339754268551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_17
+      rect:
+        serializedVersion: 2
+        x: 2771
+        y: 2551
+        width: 678
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9c90c41173e9cb90800000000000000
+      internalID: -7220990452692902757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_18
+      rect:
+        serializedVersion: 2
+        x: 3573
+        y: 2551
+        width: 679
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3eefc2cc01c471550800000000000000
+      internalID: 6131453052716908259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_19
+      rect:
+        serializedVersion: 2
+        x: 4386
+        y: 2551
+        width: 678
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cd641b445d907de0800000000000000
+      internalID: -1337396103966593592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_20
+      rect:
+        serializedVersion: 2
+        x: 5205
+        y: 2551
+        width: 676
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 000ce09cd9364be30800000000000000
+      internalID: 4518345855493652480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_21
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 1728
+        width: 677
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f071623800b0beca0800000000000000
+      internalID: -5986679182830725361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_22
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 1728
+        width: 678
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f68800c327e434bc0800000000000000
+      internalID: -3800107408030660497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_23
+      rect:
+        serializedVersion: 2
+        x: 1958
+        y: 1728
+        width: 677
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16ea6c677d4726790800000000000000
+      internalID: -7538334357505266079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_24
+      rect:
+        serializedVersion: 2
+        x: 2771
+        y: 1728
+        width: 678
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 389c2f4b52ad8e440800000000000000
+      internalID: 4965458444660427139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_25
+      rect:
+        serializedVersion: 2
+        x: 3573
+        y: 1728
+        width: 679
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7d4ef7e5c7ae5db0800000000000000
+      internalID: -4801215684287771266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_26
+      rect:
+        serializedVersion: 2
+        x: 4386
+        y: 1728
+        width: 678
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60dc6d19d4b3b5f50800000000000000
+      internalID: 6871150860829117702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_27
+      rect:
+        serializedVersion: 2
+        x: 5205
+        y: 1728
+        width: 676
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a217eefa0eda71a90800000000000000
+      internalID: -7343209486868385494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_28
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 946
+        width: 677
+        height: 676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec0aa981e608caba0800000000000000
+      internalID: -6076340586882096946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_29
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 946
+        width: 678
+        height: 676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a859728494c08dd0800000000000000
+      internalID: -2485770852185319262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_30
+      rect:
+        serializedVersion: 2
+        x: 1958
+        y: 946
+        width: 677
+        height: 676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0230b1a01722ae960800000000000000
+      internalID: 7631950387428918048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_31
+      rect:
+        serializedVersion: 2
+        x: 2771
+        y: 946
+        width: 678
+        height: 676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eb5f8c9e6894c2f0800000000000000
+      internalID: -953469620255237144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_32
+      rect:
+        serializedVersion: 2
+        x: 3573
+        y: 946
+        width: 679
+        height: 676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00943951cf357a710800000000000000
+      internalID: 1704423326141860096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_33
+      rect:
+        serializedVersion: 2
+        x: 4386
+        y: 946
+        width: 678
+        height: 676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c225d323a8b51d30800000000000000
+      internalID: 4401627221644878529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_34
+      rect:
+        serializedVersion: 2
+        x: 5205
+        y: 946
+        width: 676
+        height: 676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3be4dd89322f45e0800000000000000
+      internalID: -1923280885275890883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_35
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 123
+        width: 677
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56675d86f03846700800000000000000
+      internalID: 532694758143129189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_36
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 123
+        width: 678
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f70b9ddca20ed2600800000000000000
+      internalID: 445258412626391167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_37
+      rect:
+        serializedVersion: 2
+        x: 1958
+        y: 123
+        width: 677
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b76de0c3ff42d590800000000000000
+      internalID: -7650964908616620106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_38
+      rect:
+        serializedVersion: 2
+        x: 2771
+        y: 123
+        width: 678
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5e074523366e73d0800000000000000
+      internalID: -3207013514786435492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_39
+      rect:
+        serializedVersion: 2
+        x: 3573
+        y: 123
+        width: 679
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f57f927bfa42f3ad0800000000000000
+      internalID: -2720415312797632673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_40
+      rect:
+        serializedVersion: 2
+        x: 4386
+        y: 123
+        width: 678
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f8fa48651d85fc40800000000000000
+      internalID: 5545493639260207350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrousTransparence-Connect4_41
+      rect:
+        serializedVersion: 2
+        x: 5205
+        y: 123
+        width: 676
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 772df37d5c52818c0800000000000000
+      internalID: -4028428335032839561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TrousTransparence-Connect4_0: -4729803749713066371
+      TrousTransparence-Connect4_1: 1051771328876761730
+      TrousTransparence-Connect4_10: -8985301178746337544
+      TrousTransparence-Connect4_11: 7606836508208326649
+      TrousTransparence-Connect4_12: -41470629382111386
+      TrousTransparence-Connect4_13: -8777487604644649561
+      TrousTransparence-Connect4_14: -7569626278209492963
+      TrousTransparence-Connect4_15: 2680471797342238052
+      TrousTransparence-Connect4_16: 6648297339754268551
+      TrousTransparence-Connect4_17: -7220990452692902757
+      TrousTransparence-Connect4_18: 6131453052716908259
+      TrousTransparence-Connect4_19: -1337396103966593592
+      TrousTransparence-Connect4_2: -1882320060446287207
+      TrousTransparence-Connect4_20: 4518345855493652480
+      TrousTransparence-Connect4_21: -5986679182830725361
+      TrousTransparence-Connect4_22: -3800107408030660497
+      TrousTransparence-Connect4_23: -7538334357505266079
+      TrousTransparence-Connect4_24: 4965458444660427139
+      TrousTransparence-Connect4_25: -4801215684287771266
+      TrousTransparence-Connect4_26: 6871150860829117702
+      TrousTransparence-Connect4_27: -7343209486868385494
+      TrousTransparence-Connect4_28: -6076340586882096946
+      TrousTransparence-Connect4_29: -2485770852185319262
+      TrousTransparence-Connect4_3: -3755454711995000389
+      TrousTransparence-Connect4_30: 7631950387428918048
+      TrousTransparence-Connect4_31: -953469620255237144
+      TrousTransparence-Connect4_32: 1704423326141860096
+      TrousTransparence-Connect4_33: 4401627221644878529
+      TrousTransparence-Connect4_34: -1923280885275890883
+      TrousTransparence-Connect4_35: 532694758143129189
+      TrousTransparence-Connect4_36: 445258412626391167
+      TrousTransparence-Connect4_37: -7650964908616620106
+      TrousTransparence-Connect4_38: -3207013514786435492
+      TrousTransparence-Connect4_39: -2720415312797632673
+      TrousTransparence-Connect4_4: -4269953272478755608
+      TrousTransparence-Connect4_40: 5545493639260207350
+      TrousTransparence-Connect4_41: -4028428335032839561
+      TrousTransparence-Connect4_5: 8698037824811131261
+      TrousTransparence-Connect4_6: 8354870633793178778
+      TrousTransparence-Connect4_7: -4125980153443315617
+      TrousTransparence-Connect4_8: -3048562619275205354
+      TrousTransparence-Connect4_9: 2200877662667367132
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -16,6 +16,9 @@ TagManager:
   - HorsLabyrinthe
   - Sucre
   - ZoneProtegee
+  - CocciRouge
+  - CocciJaune
+  - Cercle
   layers:
   - Default
   - TransparentFX
