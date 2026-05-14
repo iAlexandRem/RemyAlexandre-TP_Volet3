@@ -32,7 +32,7 @@ public class ColliderConnect4 : MonoBehaviour
 
             Debug.Log("Cocci rouge dans rangée " + trou.rangee + " colonne " + trou.colonne);
 
-            partie.JouerCoup(trou.rangee, trou.colonne); // On inscrit la coordonnée du trou comme étant celle du joueur
+            partie.JouerCoup(trou.colonne); // Retenir la colonne du trou où la coccinelle est tombée
         }
 
         if (collision.CompareTag("CocciJaune"))
@@ -41,7 +41,7 @@ public class ColliderConnect4 : MonoBehaviour
 
             Debug.Log("Cocci jaune dans rangée " + trou.rangee + " colonne " + trou.colonne);
 
-            partie.JouerCoup(trou.rangee, trou.colonne); // On inscrit la coordonnée du trou comme étant celle du joueur
+            partie.JouerCoup(trou.colonne); // Retenir la colonne du trou où la coccinelle est tombée
         }
     }
 }
