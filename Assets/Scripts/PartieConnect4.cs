@@ -32,18 +32,18 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
         int joueur = tourRouge ? 1 : 2; // Si c'est le tourRouge, joueur = 1, sinon 2
 
         // Si la colonne est pleine jusqu'en haut
-        if (plateau[0, colonne] != 0) // Toutes les rangées, et selon colonne, vérifier si ce n'est pas vide
+        if (plateau[0, colonne] != 0) // Une colonne est pleine si le haut est occupé
         {
             Debug.Log("Colonne pleine");
             return; // Stop de la fonction en entier
         }
 
 
-        for (int rangee = 0; rangee < 6; rangee++) // Vérifier avec une boucle pour toutes les 6 rangées de 0 à 5
+        for (int rangee = 5; rangee >= 0; rangee--) // Vérifier avec une boucle (du bas vers le haut) pour toutes les 6 rangées de 5 à 0
         {
             if (plateau[rangee, colonne] == 0) // Si le trou à telle rangée et colonne est vide
             {
-                // On inscrit alors que rangée, colonne = joueur (et l'index d'un tableau commence par 0)
+                // On inscrit alors que rangée, colonne = joueur
                 plateau[rangee, colonne] = joueur; // Ex. plateau[0, 3] = 1 ; 1ère rangée du haut & 4e colonne = Rouge
                 Debug.Log((joueur == 1 ? "Rouge" : "Jaune") + " joue en " + rangee + "," + colonne);
 
