@@ -16,7 +16,7 @@ public class ColliderConnect4 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -35,8 +35,6 @@ public class ColliderConnect4 : MonoBehaviour
 
             trou.trouOccupe = true;
 
-            Debug.Log("Cocci rouge dans rangée " + trou.rangee + " colonne " + trou.colonne);
-
             partie.JouerCoup(trou.colonne); // Retenir la colonne du trou où la coccinelle est tombée
         }
 
@@ -48,8 +46,6 @@ public class ColliderConnect4 : MonoBehaviour
             }
 
             trou.trouOccupe = true;
-
-            Debug.Log("Cocci jaune dans rangée " + trou.rangee + " colonne " + trou.colonne);
 
             partie.JouerCoup(trou.colonne); // Retenir la colonne du trou où la coccinelle est tombée
         }

@@ -9,20 +9,26 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
     // (0,0) = l'origine est en haut à gauche (C# standard)
     // L'index des colonnes augmentent vers la droite, l'index des rangées augmentent vers le bas
 
-    public bool tourRouge = true; // Les rouges commencent 
+    public bool tourRouge; // Le tour de quelle couleur
+    public int couleurChoisie; // 1 pour rouge, 2 pour jaune
 
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        ChoisirCouleur();
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    void ChoisirCouleur()
+    {
+        tourRouge = (couleurChoisie == 1) ? true : false;
     }
 
 
@@ -40,6 +46,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
 
 
         for (int rangee = 5; rangee >= 0; rangee--) // Vérifier avec une boucle (du bas vers le haut) pour toutes les 6 rangées de 5 à 0
+        // Bas vers le haut, car il faut détecter à chaque fois la rangée du trou libre le plus bas de la colonne
         {
             if (plateau[rangee, colonne] == 0) // Si le trou à telle rangée et colonne est vide
             {
@@ -84,6 +91,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                     plateau[r, c + 2] == joueur &&
                     plateau[r, c + 3] == joueur) // Ex. [r, 3+3]; c = 6, donc jusqu'à la 7e dernière colonne à droite
                 {
+                    Debug.Log("Les " + (joueur == 1 ? "Rouges" : "Jaunes") + " forment une ligne HORIZONTALE");
                     return true; // 4 trous consécutifs
                 }
             }
@@ -99,6 +107,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                     plateau[r + 2, c] == joueur &&
                     plateau[r + 3, c] == joueur) // Ex. [2+3, c]; r = 5, donc jusqu'à la 6e dernière rangée en bas
                 {
+                    Debug.Log("Les " + (joueur == 1 ? "Rouges" : "Jaunes") + " forment une ligne VERTICALE");
                     return true; // 4 trous consécutifs
                 }
             }
@@ -114,6 +123,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                     plateau[r + 2, c + 2] == joueur && // Ex. [0+2, 0+2]; r = 2, c = 2 
                     plateau[r + 3, c + 3] == joueur) // Ex. [0+3, 0+3]; r = 3, c = 3 
                 {
+                    Debug.Log("Les " + (joueur == 1 ? "Rouges" : "Jaunes") + " forment une ligne DIAGONALE DESCENDANTE");
                     return true; // 4 trous consécutifs
                 }
             }
@@ -129,6 +139,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                     plateau[r - 2, c + 2] == joueur && // Ex. [5-2, 0+2]; r = 3, c = 2 
                     plateau[r - 3, c + 3] == joueur) // Ex. [5-3, 0+3]; r = 2, c = 3 
                 {
+                    Debug.Log("Les " + (joueur == 1 ? "Rouges" : "Jaunes") + " forment une ligne DIAGONALE MONTANTE");
                     return true; // 4 trous consécutifs
                 }
             }
