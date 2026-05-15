@@ -10,13 +10,13 @@ public class ColliderConnect4 : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        trou = GetComponent<TrouConnect4>(); // Cela cherche le script TrouConnect4 sur le même component
+        trou = GetComponent<TrouConnect4>(); // Recherche du script TrouConnect4 sur le même component
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -28,6 +28,11 @@ public class ColliderConnect4 : MonoBehaviour
 
         if (collision.CompareTag("CocciRouge"))
         {
+            if (!partie.tourRouge)
+            {
+                return; // Aucune détection des rouges si c'est le tour des Jaunes
+            }
+
             trou.trouOccupe = true;
 
             Debug.Log("Cocci rouge dans rangée " + trou.rangee + " colonne " + trou.colonne);
@@ -37,6 +42,11 @@ public class ColliderConnect4 : MonoBehaviour
 
         if (collision.CompareTag("CocciJaune"))
         {
+            if (partie.tourRouge)
+            {
+                return; // Aucune détection des jaunes si c'est le tour des Rouges
+            }
+
             trou.trouOccupe = true;
 
             Debug.Log("Cocci jaune dans rangée " + trou.rangee + " colonne " + trou.colonne);
