@@ -39,7 +39,7 @@ public class SourisBougeCam : MonoBehaviour
 
         if (LimitesPositionCamera != null)
         {
-            initialScaleLimites = LimitesPositionCamera.transform.localScale;
+            initialScaleLimites = new Vector3(100f, 48f, 1f);
             targetScaleLimites = initialScaleLimites;
         }
     }

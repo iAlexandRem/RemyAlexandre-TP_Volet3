@@ -1,8 +1,13 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class SelectionCoccinelle : MonoBehaviour
 {
     Animator anim;
+
+    public EventTrigger eventTrigger;
+
+    public float delaiSec;
 
     public bool estRouge; // estRouge, true ou false sur la coccinelle par l'Inspector
 
@@ -17,6 +22,14 @@ public class SelectionCoccinelle : MonoBehaviour
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
+        eventTrigger.enabled = false;
+
+        Invoke(nameof(ActiverTrigger), delaiSec);
+    }
+
+    void ActiverTrigger()
+    {
+        eventTrigger.enabled = true; // Délai pour activer le Event Trigger
     }
 
     // Update is called once per frame

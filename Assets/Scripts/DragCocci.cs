@@ -5,8 +5,13 @@ public class DragCocci : MonoBehaviour
 {
     Rigidbody2D rb;
     SpriteRenderer sr;
+    public EventTrigger eventTrigger;
     private Camera cam;
     private Vector3 offset;
+
+    public GameObject prefabCocci; // Le prefab de la coccinelle
+    public Transform pointSpawn; // Position où faire apparaître la nouvelle
+
     private bool peutDrag = true;
     public bool dropDepuisHautGrille = false; // La collision trigger avec DepuisHaut le fait passer à true
 
@@ -21,12 +26,15 @@ public class DragCocci : MonoBehaviour
 
         int currentOrder = sr.sortingOrder;
         sr.sortingOrder = 5; // Devant grille
+
+        peutDrag = true;
+        eventTrigger.enabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+
     }
 
     // DRAG & DROP
@@ -67,11 +75,15 @@ public class DragCocci : MonoBehaviour
 
     public void AuFinGlisser(BaseEventData eventData)
     {
+        if (!peutDrag) return;
+
         GetComponent<Collider2D>().enabled = true; // De base au drop
 
         peutDrag = false; // On ne peut plus rattraper Cocci lors du drop
 
         rb.gravityScale = 1f; // Cocci tombe dans le néant
+
+        Instantiate(prefabCocci, pointSpawn.position, Quaternion.identity); // Spawn d'une nouvelle cocci
 
         Invoke("VerifierDrop", 0.05f); // Petit délai de vérification trigger
     }
@@ -86,12 +98,15 @@ public class DragCocci : MonoBehaviour
         }
     }
 
-     void VerifierDrop() // Désactiver le Collider2D si le drop n'est pas depuis le haut de la grille
+    void VerifierDrop() // Désactiver le Collider2D si le drop n'est pas depuis le haut de la grille
     {
         if (!dropDepuisHautGrille)
         {
             GetComponent<Collider2D>().enabled = false; // Cocci ne reste pas pris au fond de la grille, et tombe à travers
         }
+
+        peutDrag = false;
+        eventTrigger.enabled = false; // Pour ne pas désactiver le Collider2D par accident, s'il doit rester activé
     }
 }
 
