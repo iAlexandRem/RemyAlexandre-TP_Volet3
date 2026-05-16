@@ -10,30 +10,37 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
     // L'index des colonnes augmentent vers la droite, l'index des rangées augmentent vers le bas
 
     public bool tourRouge; // Le tour de quelle couleur
-    public int couleurChoisie; // 1 pour rouge, 2 pour jaune
+    public int couleurChoisie = 0; // 0 rien, 1 pour rouge, 2 pour jaune
+
+    public static bool partieCommence; // Static pour partager le bool aux autres scripts
 
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ChoisirCouleur();
+        partieCommence = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (SelectionCoccinelle.couleurEstChoisie && couleurChoisie != 0 && !partieCommence) // Dès qu'on click sur l'une des deux coccinelles du canvas
+        {
+            CommencerAvecCouleur(); // Fonction se joue une seule fois
+            partieCommence = true;
+        }
     }
 
-    void ChoisirCouleur()
+    void CommencerAvecCouleur()
     {
-        tourRouge = (couleurChoisie == 1) ? true : false;
+        tourRouge = (couleurChoisie == 1) ? true : false; // Le joueur jouera-t-il avec les rouges ou jaunes au premier tour?
+        Debug.Log("Tu seras en charge de l'équipe des " + (tourRouge ? "Rouges" : "Jaunes") + " !");
     }
 
 
     // 0 = VIDE, 1 = ROUGE, 2 = JAUNE
-    public void JouerCoup(int colonne) // À l'aide de la colonne du trou joué dans la partie
+    public void JouerCoup(int colonne) // À l'aide de la colonne du trou joué dans la partie, détecté par collider du trou dans script ColliderConnect4
     {
         int joueur = tourRouge ? 1 : 2; // Si c'est le tourRouge, joueur = 1, sinon 2
 
@@ -78,7 +85,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
     }
 
 
-    // La logique est de scanner à chaque fois sur tout le plateau 6x7 : 4 trous consécutifs, si [r, c] == joueur
+    // La logique est de scanner à chaque tour sur tout le plateau 6x7 : 4 trous consécutifs, si [r, c] == joueur
     bool VerifierVictoire(int joueur)
     {
         // Horizontal
