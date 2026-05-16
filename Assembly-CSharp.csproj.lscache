@@ -57,6 +57,7 @@ Assets/Scripts/
  CurseurScript.cs
  DansCollider.cs
  DeplacementParFleches.cs
+ DragCocci.cs
  GestionScenes.cs
  HoverBoutons.cs
  LeJeu.cs

@@ -6,7 +6,6 @@ public class ColliderConnect4 : MonoBehaviour
 
     public PartieConnect4 partie; // Référence au script PartieConnect4
 
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,10 +20,11 @@ public class ColliderConnect4 : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (trou.trouOccupe) // Si le trou est occupé, on ne fait rien
-        {
-            return;
-        }
+        DragCocci drag = collision.GetComponent<DragCocci>(); // Référence au script de la coccinelle
+
+        if (trou.trouOccupe) return; // Si le trou est déjà occupé, on ne fait rien
+
+        if (!drag.dropDepuisHautGrille) return; // Si la coccinelle n'est pas lancée depuis le haut, les trous ne détectent rien quand on les survole avec la coccinelle en drag
 
         if (collision.CompareTag("CocciRouge"))
         {
@@ -34,6 +34,8 @@ public class ColliderConnect4 : MonoBehaviour
             }
 
             trou.trouOccupe = true;
+
+            drag.dropDepuisHautGrille = false; // Le drop dans la grille est terminé
 
             partie.JouerCoup(trou.colonne); // Retenir la colonne du trou où la coccinelle est tombée
         }
@@ -46,6 +48,8 @@ public class ColliderConnect4 : MonoBehaviour
             }
 
             trou.trouOccupe = true;
+
+            drag.dropDepuisHautGrille = false; // Le drop dans la grille est terminé
 
             partie.JouerCoup(trou.colonne); // Retenir la colonne du trou où la coccinelle est tombée
         }
