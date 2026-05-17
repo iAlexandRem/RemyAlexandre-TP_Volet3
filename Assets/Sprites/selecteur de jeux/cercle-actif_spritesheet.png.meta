@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: 24b0b0bd3a76f4d4a8a9ff4605ff8269
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3862333652379941732
+    second: cercle-actif_spritesheet_0
+  - first:
+      213: 233836394339319330
+    second: cercle-actif_spritesheet_1
+  - first:
+      213: 4977946628416659484
+    second: cercle-actif_spritesheet_2
+  - first:
+      213: 2647986056245042585
+    second: cercle-actif_spritesheet_3
+  - first:
+      213: 8750290957144633798
+    second: cercle-actif_spritesheet_4
+  - first:
+      213: -8491823713582971260
+    second: cercle-actif_spritesheet_5
+  - first:
+      213: -1830039216753630844
+    second: cercle-actif_spritesheet_6
+  - first:
+      213: -7992048742074419965
+    second: cercle-actif_spritesheet_7
+  - first:
+      213: 7180700286718596697
+    second: cercle-actif_spritesheet_8
+  - first:
+      213: 8757007381437650782
+    second: cercle-actif_spritesheet_9
+  - first:
+      213: -2476671006758183947
+    second: cercle-actif_spritesheet_10
+  - first:
+      213: 5832845256017316145
+    second: cercle-actif_spritesheet_11
+  - first:
+      213: 3205339228166475547
+    second: cercle-actif_spritesheet_12
+  - first:
+      213: 657516076529230976
+    second: cercle-actif_spritesheet_13
+  - first:
+      213: -2696027473123995502
+    second: cercle-actif_spritesheet_14
+  - first:
+      213: -8507348423149033852
+    second: cercle-actif_spritesheet_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cercle-actif_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 3433
+        width: 1067
+        height: 1067
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c944bd5b10c366ac0800000000000000
+      internalID: -3862333652379941732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cercle-actif_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 3433
+        width: 1067
+        height: 1067
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e372436f0ce3300800000000000000
+      internalID: 233836394339319330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cercle-actif_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 2472
+        y: 3433
+        width: 1067
+        height: 1067
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c10e0a19518351540800000000000000
+      internalID: 4977946628416659484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cercle-actif_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 3674
+        y: 3433
+        width: 1067
+        height: 1067
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99d5cacd9498fb420800000000000000
+      internalID: 2647986056245042585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cercle-actif_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 2299
+        width: 1067
+        height: 1067
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c13be5b3474f6970800000000000000
+      internalID: 8750290957144633798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cercle-actif_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 2299
+        width: 1067
+        height: 1067
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48606a8f25bf62a80800000000000000
+      internalID: -8491823713582971260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cercle-actif_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 2472
+        y: 2299
+        width: 1067
+        height: 1067
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 481ad5047056a96e0800000000000000
+      internalID: -1830039216753630844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cercle-actif_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 3674
+        y: 2299
+        width: 1067
+        height: 1067
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 305fb05430a861190800000000000000
+      internalID: -7992048742074419965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cercle-actif_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1165
+        width: 1067
+        height: 1067
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9565864add8f6a360800000000000000
+      internalID: 7180700286718596697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cercle-actif_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 1165
+        width: 1067
+        height: 1067
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e57901a11d3278970800000000000000
+      internalID: 8757007381437650782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cercle-actif_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 2472
+        y: 1165
+        width: 1067
+        height: 1067
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fb5ba067d811add0800000000000000
+      internalID: -2476671006758183947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cercle-actif_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 3674
+        y: 1165
+        width: 1067
+        height: 1067
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1390cba4bdd62f050800000000000000
+      internalID: 5832845256017316145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cercle-actif_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 31
+        width: 1067
+        height: 1067
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1fcc7f9b07ab7c20800000000000000
+      internalID: 3205339228166475547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cercle-actif_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 31
+        width: 1067
+        height: 1067
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08422af4367ff1900800000000000000
+      internalID: 657516076529230976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cercle-actif_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 2472
+        y: 31
+        width: 1067
+        height: 1067
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29010cf1c49c59ad0800000000000000
+      internalID: -2696027473123995502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cercle-actif_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 3674
+        y: 31
+        width: 1067
+        height: 1067
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 486e8b9dea3dfe980800000000000000
+      internalID: -8507348423149033852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      cercle-actif_spritesheet_0: -3862333652379941732
+      cercle-actif_spritesheet_1: 233836394339319330
+      cercle-actif_spritesheet_10: -2476671006758183947
+      cercle-actif_spritesheet_11: 5832845256017316145
+      cercle-actif_spritesheet_12: 3205339228166475547
+      cercle-actif_spritesheet_13: 657516076529230976
+      cercle-actif_spritesheet_14: -2696027473123995502
+      cercle-actif_spritesheet_15: -8507348423149033852
+      cercle-actif_spritesheet_2: 4977946628416659484
+      cercle-actif_spritesheet_3: 2647986056245042585
+      cercle-actif_spritesheet_4: 8750290957144633798
+      cercle-actif_spritesheet_5: -8491823713582971260
+      cercle-actif_spritesheet_6: -1830039216753630844
+      cercle-actif_spritesheet_7: -7992048742074419965
+      cercle-actif_spritesheet_8: 7180700286718596697
+      cercle-actif_spritesheet_9: 8757007381437650782
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

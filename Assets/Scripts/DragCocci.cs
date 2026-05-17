@@ -79,6 +79,8 @@ public class DragCocci : MonoBehaviour
 
         GetComponent<Collider2D>().enabled = true; // De base au drop
 
+        GetComponent<Animator>().enabled = false; // Si je ne le fais pas, je perds bizarrement leur rotation en physique
+
         peutDrag = false; // On ne peut plus rattraper Cocci lors du drop
 
         rb.gravityScale = 1f; // Cocci tombe dans le néant
