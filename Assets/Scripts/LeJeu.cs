@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class LeJeu : MonoBehaviour
 {
     AudioSource audioSource;
+    public AudioSource autreAudioSource;
     public AudioClip vocalMessageDebut;
     public AudioClip vocalInstructionsDebut;
     bool premierClickDetecte = false;
@@ -76,6 +77,8 @@ public class LeJeu : MonoBehaviour
             if (isHovering)
             {
                 audioSource.Stop(); // Le message qui joue s'arrête si on hover un bouton de mini-jeu
+
+                autreAudioSource.volume = 0f; // Pas de cacophonie accidentelle
             }
             else
             {
@@ -83,9 +86,17 @@ public class LeJeu : MonoBehaviour
                 {
                     audioSource.time = 21f; // À f secondes dans l'audio
                     audioSource.Play(); // Le message ("Sélectionne un mini-jeu parmi les trois suivants") rejoue seulement si on sort du hover
+
+                    autreAudioSource.volume = 0f; // Pas de cacophonie accidentelle
+                    Invoke("RemettreVolume", 5f);
                 }
             }
             wasHovering = isHovering; // Le bool du passé devient à chaque fois le bool du présent
         }
+    }
+
+    void RemettreVolume()
+    {
+        autreAudioSource.volume = 0.67f;
     }
 }

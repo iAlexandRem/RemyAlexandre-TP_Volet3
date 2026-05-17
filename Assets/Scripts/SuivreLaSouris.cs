@@ -54,6 +54,8 @@ public class SuivreLaSouris : MonoBehaviour
             }
 
             enDeplacementX = true; //Déplacement
+            anim.SetBool("enDeplacement", true); // Pour set l'Anim
+
 
             if (sonFlip == true)
             {
@@ -63,25 +65,23 @@ public class SuivreLaSouris : MonoBehaviour
                 dernierFlip = dir;
             }
         }
-        
+
         else
         {
             enDeplacementX = false; //Aucun déplacement
+            anim.SetBool("enDeplacement", false); // Retour à l'idle
         }
 
 
-
-        foreach (SpriteRenderer sr in sprites) // Pour tous les sprites enfants
+        if (directionX < 0)
         {
-            if (directionX < 0)
-            {
-                sr.flipX = true;
-            }
-            else if (directionX > 0)
-            {
-                sr.flipX = false;
-            }
+            transform.localScale = new Vector3(1, 1, 1); // Flip vers la gauche
         }
+        else if (directionX > 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1); // Flip vers la droite
+        }
+
 
         if (hoverBoutons != null && hoverBoutons.hoverUI)
         {

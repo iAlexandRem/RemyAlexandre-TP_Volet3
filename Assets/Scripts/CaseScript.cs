@@ -6,6 +6,7 @@ public class CaseScript : MonoBehaviour
     public SpriteRenderer chiffre00; // Deuxième chiffre, s'il y en a un
     public SpriteRenderer globe;
     public int nombre;
+    private bool caseActivee;
 
     float chiffreScaling = 1.3f; // Pour AGGRANDIR le chiffre
     private Vector3 scaleInitial0;
@@ -13,12 +14,14 @@ public class CaseScript : MonoBehaviour
     private Color couleurInitiale; // Couleur du globe
 
     AudioSource audioSource;
+    Animator anim;
     public AudioClip vocalNombreCompter;
 
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        anim = GetComponent<Animator>();
 
         if (chiffre0 != null)
         {
@@ -37,13 +40,18 @@ public class CaseScript : MonoBehaviour
 
     void Update()
     {
-
+        if (nombre == 42 && caseActivee) // Si on atteint la dernière case
+        {
+            anim.SetBool("Illumine", true); // Le globe 42 s'illumine
+        }
     }
 
 
 
     public void ActiverCase() // Activée par OnTriggerEnter2D dans le script DansCollider du joueur
     {
+        caseActivee = true;
+
         if (chiffre0 != null)
             chiffre0.transform.localScale = scaleInitial0 * chiffreScaling; //Chiffre + gros
 
@@ -61,6 +69,8 @@ public class CaseScript : MonoBehaviour
 
     public void DesactiverCase() // Activée par OnTriggerExit2D dans le script DansCollider du joueur
     {
+        caseActivee = false;
+
         if (chiffre0 != null)
         {
             chiffre0.transform.localScale = scaleInitial0; //Chiffre taille normale
