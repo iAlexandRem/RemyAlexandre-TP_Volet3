@@ -9,7 +9,6 @@ public class HoverBoutons : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public GameObject visuelHover;
     public GameObject visuelActive;
     Animator anim;
-
     AudioSource audioSource;
     public AudioClip vocalHover;
     public AudioClip vocalActive;
@@ -36,10 +35,21 @@ public class HoverBoutons : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     {
         hoverUI = true;
 
-        if (visuelHover != null)
+
+        bool canHover = true;
+        if (SceneManager.GetActiveScene().name == "Mini-Jeu3")
         {
-            visuelHover.SetActive(true);
+            SelectionCoccinelle selection = GetComponent<SelectionCoccinelle>();
+
+            // Délai pour hover cocci car pourquoi pas
+            if (selection != null)
+            {
+                canHover = selection.peutHoverCocci; // Selon bool dans l'autre script
+            }
         }
+        visuelHover.SetActive(canHover);
+
+
 
         if (anim != null)
         {

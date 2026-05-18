@@ -5,21 +5,29 @@ public class DragCocci : MonoBehaviour
 {
     Rigidbody2D rb;
     SpriteRenderer sr;
+    private Animator anim;
+    public PartieConnect4 partie; // Référence au script PartieConnect4
+    public SelectionCoccinelle selection; // Référence au script SelectionCoccinelle
     public EventTrigger eventTrigger;
     private Camera cam;
     private Vector3 offset;
 
     public GameObject prefabCocci; // Le prefab de la coccinelle
-    public Transform pointSpawn; // Position où faire apparaître la nouvelle
+    public GameObject prefabRouge;
+    public GameObject prefabJaune;
+    public Transform spawnPointActuel; // Où je veux que ça spawn
+    public Transform spawnPointAdversaire; // Au-dessus de la grille
+    public static bool RespawnTime = false; // Pour contrôler le respawn par unité à volonté
 
     private bool peutDrag = true;
     public bool dropDepuisHautGrille = false; // La collision trigger avec DepuisHaut le fait passer à true
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponentInChildren<SpriteRenderer>();
+        anim = GetComponent<Animator>();
         cam = Camera.main;
 
         rb.gravityScale = 0f; // Zéro gravité
@@ -36,6 +44,25 @@ public class DragCocci : MonoBehaviour
     {
 
     }
+
+    public void Spawn() // Instantiation de cocci, voir script RespawnAuBonTour
+    {
+        GameObject nouvelleCocci = Instantiate(prefabCocci, spawnPointActuel.position, Quaternion.identity);
+
+        nouvelleCocci.GetComponent<Animator>().enabled = true;
+        nouvelleCocci.GetComponent<Animator>().SetTrigger("Spawn"); // Animation spawn rotation de la cocci
+
+        nouvelleCocci.transform.localScale = Vector3.one; // Il y a un bug, il faut forcer le scale normal pour spawn l'équipe inverse
+
+        if (spawnPointActuel == spawnPointAdversaire) // Spawn au-dessus si c'est le tour adverse
+        {
+            nouvelleCocci.GetComponent<DragCocci>().ForceDrop(); // Cocci tombe toute seule dans la grille
+        }
+    }
+
+
+
+
 
     // DRAG & DROP
 
@@ -79,23 +106,55 @@ public class DragCocci : MonoBehaviour
 
         GetComponent<Collider2D>().enabled = true; // De base au drop
 
-        GetComponent<Animator>().enabled = false; // Si je ne le fais pas, je perds bizarrement leur rotation en physique
+        anim.enabled = false; // Si je ne le fais pas, je perds bizarrement leur rotation en physique
 
         peutDrag = false; // On ne peut plus rattraper Cocci lors du drop
 
-        rb.gravityScale = 1f; // Cocci tombe dans le néant
+        rb.gravityScale = 1f; // Cocci tombe 
 
-        Instantiate(prefabCocci, pointSpawn.position, Quaternion.identity); // Spawn d'une nouvelle cocci
+        // Spawn(); Spawn d'une nouvelleCocci au drop
+
+        RespawnTime = true; // Devient true pour toutes les prochaines instances (et non le PremierSpawn)
 
         Invoke("VerifierDrop", 0.05f); // Petit délai de vérification trigger
     }
+
+
+    public void ForceDrop() // Comme AuFinGlisser, mais seulement pour le camp adverse qui tombe automatiquement dans la grille
+    {
+        GetComponent<Collider2D>().enabled = true;
+    
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+
+        peutDrag = false;
+        eventTrigger.enabled = false;
+
+        rb.gravityScale = 1f; // Gravité
+
+        this.enabled = false; // Pour que le script n'interfère pas avec la physique 
+
+        RespawnTime = true;
+    }
+
+
+
+
 
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("DepuisHaut")) // Si on échappe Cocci depuis le haut de la grille
         {
-            sr.sortingOrder = 2; // Derrière grille
+            if (sr == null)
+            {
+                sr = GetComponentInChildren<SpriteRenderer>();
+            }
+
+            if (sr != null)
+            {
+                sr.sortingOrder = 2; // Derrière grille
+            }
+
             dropDepuisHautGrille = true; // Le bool enclenche la détection des colliders triggers des Trous dans ColliderConnect4
         }
     }

@@ -10,6 +10,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
     // L'index des colonnes augmentent vers la droite, l'index des rangées augmentent vers le bas
 
     public bool tourRouge; // Le tour de quelle couleur
+    public bool tourJoueur = true; // Je laisse le joueur commencer
     public int couleurChoisie = 0; // 0 rien, 1 pour rouge, 2 pour jaune
 
     public static bool partieCommence; // Static pour partager le bool aux autres scripts
@@ -68,7 +69,8 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                     return; // Stop de la fonction en entier
                 }
 
-                tourRouge = !tourRouge; // C'est le tour de l'adversaire, ça inverse le bool à chaque fois
+                tourRouge = !tourRouge; // Des rouges aux jaunes ou vice versa
+                tourJoueur = !tourJoueur; // C'est le tour de l'adversaire, ça inverse le bool à chaque fois
 
                 if (tourRouge)
                 {
@@ -77,6 +79,11 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                 else
                 {
                     Debug.Log("Les Jaunes, c'est votre tour!");
+                }
+
+                if (tourJoueur)
+                {
+                    Debug.Log("C'est maintenant TON tour!");
                 }
 
                 break; // Arrêt de la boucle

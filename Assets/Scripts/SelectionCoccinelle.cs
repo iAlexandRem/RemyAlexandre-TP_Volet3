@@ -4,7 +4,8 @@ using UnityEngine.EventSystems;
 public class SelectionCoccinelle : MonoBehaviour
 {
     Animator anim;
-
+    public Animator animRouge;
+    public Animator animJaune;
     public EventTrigger eventTrigger;
 
     public float delaiSec;
@@ -12,24 +13,36 @@ public class SelectionCoccinelle : MonoBehaviour
     public bool estRouge; // estRouge, true ou false sur la coccinelle par l'Inspector
 
     public static bool couleurEstChoisie = false; // Passe de false à true (static pour partager le bool aux autres scripts)
+    public static DragCocci dragSelectionne; // Pour s'assurer de spawn la couleur choisie avec SelectionCoccinelle.dragSelectionne.Spawn();
+    public DragCocci dragRouge; // Prefab rouge
+    public DragCocci dragJaune; // Prefab jaune
 
     public PartieConnect4 partie; // Référence au script PartieConnect4
-
     public GameObject panelCoccinelles; // Groupe des deux coccinelles dans le canvas
+    public bool peutHoverCocci = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
-        eventTrigger.enabled = false;
+        if (animRouge == null)
+        {
+            animRouge = GetComponent<Animator>();
+        }
+        if (animJaune == null)
+        {
+            animJaune = GetComponent<Animator>();
+        }
 
+        eventTrigger.enabled = false;
         Invoke(nameof(ActiverTrigger), delaiSec);
     }
 
-    void ActiverTrigger()
+    void ActiverTrigger() // Pour pas de clic trop hâtif
     {
         eventTrigger.enabled = true; // Délai pour activer le Event Trigger
+        peutHoverCocci = true;
     }
 
     // Update is called once per frame
@@ -47,16 +60,37 @@ public class SelectionCoccinelle : MonoBehaviour
 
         if (partie.couleurChoisie == 0) // Une seule fois le choix de couleur
         {
-            if (estRouge)
-            {
-                partie.couleurChoisie = 1;
-                Debug.Log("Rouge choisi");
-            }
-            else
-            {
-                partie.couleurChoisie = 2;
-                Debug.Log("Jaune choisi");
-            }
+            Invoke("CouleurChoisie", 0.5f);
+        }
+    }
+
+    public void CouleurChoisie() // Rouge ou jaune, à transmettre au script PartieConnect4
+    {
+        if (estRouge)
+        {
+            partie.couleurChoisie = 1;
+            Debug.Log("Rouge choisi");
+            dragSelectionne = dragRouge;
+        }
+        else
+        {
+            partie.couleurChoisie = 2;
+            Debug.Log("Jaune choisi");
+            dragSelectionne = dragJaune;
+        }
+
+        PremierSpawn();
+    }
+
+    public void PremierSpawn() // Le joueur a accès aux coccinelles prefabs de la couleur de son choix
+    {
+        if (partie.couleurChoisie == 1 && animRouge != null)
+        {
+            animRouge.SetTrigger("Spawn");
+        }
+        else if (partie.couleurChoisie == 2 && animJaune != null)
+        {
+            animJaune.SetTrigger("Spawn");
         }
     }
 }

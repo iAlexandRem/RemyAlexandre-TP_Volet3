@@ -15,12 +15,18 @@ public class LeJeu : MonoBehaviour
     bool isHovering = false; // True si on hover au moins un des boutons
     bool wasPlaying = false; // True si l'AudioClip finit de jouer une fois joué
     public bool vocalInstructionsTerminees = false;
+    public Animator anim;
 
 
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+
+        if (anim == null)
+        {
+            anim = GetComponent<Animator>();
+        }
 
         if (SceneManager.GetActiveScene().name == "Selecteur de jeux")
         {
@@ -50,6 +56,11 @@ public class LeJeu : MonoBehaviour
                 audioSource.loop = false;
                 audioSource.clip = vocalInstructionsDebut;
                 audioSource.Play(); // On passe aux instructions de la souris ou du clavier
+
+                if (SceneManager.GetActiveScene().name == "Mini-Jeu1")
+                {
+                    anim.SetTrigger("Souris-Demonstration");
+                }
 
                 wasPlaying = true;
             }
