@@ -21,6 +21,8 @@ TagManager:
   - Cercle
   - DepuisHaut
   - DeclencheurPlateforme
+  - TombeePerdue
+  - DessousGrille
   layers:
   - Default
   - TransparentFX

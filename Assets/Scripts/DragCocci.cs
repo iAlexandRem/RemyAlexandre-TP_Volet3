@@ -8,6 +8,7 @@ public class DragCocci : MonoBehaviour
     private Animator anim;
     public PartieConnect4 partie; // Référence au script PartieConnect4
     public SelectionCoccinelle selection; // Référence au script SelectionCoccinelle
+    public RespawnAuBonTour respawn; // Référence au script RespawnAuBonTour
     public EventTrigger eventTrigger;
     private Camera cam;
     private Vector3 offset;
@@ -21,6 +22,7 @@ public class DragCocci : MonoBehaviour
 
     private bool peutDrag = true;
     public bool dropDepuisHautGrille = false; // La collision trigger avec DepuisHaut le fait passer à true
+    public bool coupEnregistre = false;
 
 
     void Start()
@@ -37,6 +39,7 @@ public class DragCocci : MonoBehaviour
 
         peutDrag = true;
         eventTrigger.enabled = true;
+        coupEnregistre = false;
     }
 
     // Update is called once per frame
@@ -54,9 +57,10 @@ public class DragCocci : MonoBehaviour
 
         nouvelleCocci.transform.localScale = Vector3.one; // Il y a un bug, il faut forcer le scale normal pour spawn l'équipe inverse
 
-        if (spawnPointActuel == spawnPointAdversaire) // Spawn au-dessus si c'est le tour adverse
+        if (spawnPointActuel == spawnPointAdversaire) // Spawn au-dessus de la grille si c'est le tour adverse
         {
-            nouvelleCocci.GetComponent<DragCocci>().ForceDrop(); // Cocci tombe toute seule dans la grille
+            nouvelleCocci.GetComponent<Animator>().enabled = false; // Car ça bloque la rotation dans la grille
+            nouvelleCocci.GetComponent<DragCocci>().ForceDrop(); // Cocci est forcée de tomber
         }
     }
 
@@ -123,8 +127,9 @@ public class DragCocci : MonoBehaviour
     public void ForceDrop() // Comme AuFinGlisser, mais seulement pour le camp adverse qui tombe automatiquement dans la grille
     {
         GetComponent<Collider2D>().enabled = true;
-    
+
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.mass = 0.1f;
 
         peutDrag = false;
         eventTrigger.enabled = false;
@@ -132,8 +137,6 @@ public class DragCocci : MonoBehaviour
         rb.gravityScale = 1f; // Gravité
 
         this.enabled = false; // Pour que le script n'interfère pas avec la physique 
-
-        RespawnTime = true;
     }
 
 
@@ -156,18 +159,41 @@ public class DragCocci : MonoBehaviour
             }
 
             dropDepuisHautGrille = true; // Le bool enclenche la détection des colliders triggers des Trous dans ColliderConnect4
+
+            if (rb != null)
+                rb.AddForce(Vector2.right * 2f, ForceMode2D.Impulse); // Chute dans la grille garantie
+        }
+
+        if (collision.CompareTag("TombeePerdue")) // Si on échappe Cocci dans le vide
+        {
+            respawn.RespawnJoueur(); // Le joueur peut en ravoir une autre
+            
+            if (coupEnregistre) // Si un coup de la partie a été enregistré
+            {
+                partie.AnnulerDernierCoup(); // Il faut annuler le coup si Cocci n'est plus dans la grille
+            }
+
+            gameObject.SetActive(false);
         }
     }
+
+
 
     void VerifierDrop() // Désactiver le Collider2D si le drop n'est pas depuis le haut de la grille
     {
         if (!dropDepuisHautGrille)
         {
             GetComponent<Collider2D>().enabled = false; // Cocci ne reste pas pris au fond de la grille, et tombe à travers
+            Invoke("ReactiverCollider", 3f);
         }
 
         peutDrag = false;
         eventTrigger.enabled = false; // Pour ne pas désactiver le Collider2D par accident, s'il doit rester activé
+    }
+
+    void ReactiverCollider()
+    {
+        GetComponent<Collider2D>().enabled = true; // Pour pouvoir détecter le besoin d'un respawn
     }
 }
 

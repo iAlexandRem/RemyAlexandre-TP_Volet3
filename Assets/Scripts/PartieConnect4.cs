@@ -10,10 +10,16 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
     // L'index des colonnes augmentent vers la droite, l'index des rangées augmentent vers le bas
 
     public bool tourRouge; // Le tour de quelle couleur
-    public bool tourJoueur = true; // Je laisse le joueur commencer
+    public static bool tourJoueur = true; // Je laisse le joueur commencer
     public int couleurChoisie = 0; // 0 rien, 1 pour rouge, 2 pour jaune
 
     public static bool partieCommence; // Static pour partager le bool aux autres scripts
+    public bool aGagne = false;
+    public int couleurGagnante; // À détermine
+    public RespawnAuBonTour respawn; // Référence au script RespawnAuBonTour
+
+    public int derniereRangee = -1; // Aucun coup enregistré pour le moment
+    public int derniereColonne = -1; // Aucun coup enregistré pour le moment
 
 
 
@@ -21,6 +27,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
     void Start()
     {
         partieCommence = false;
+        aGagne = false;
     }
 
     // Update is called once per frame
@@ -61,15 +68,18 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                 // On inscrit alors que rangée, colonne = joueur
                 plateau[rangee, colonne] = joueur; // Ex. plateau[0, 3] = 1 ; 1ère rangée du haut & 4e colonne = Rouge
                 Debug.Log((joueur == 1 ? "Rouge" : "Jaune") + " joue en " + rangee + "," + colonne);
+                derniereRangee = rangee;
+                derniereColonne = colonne;
 
 
-                if (VerifierVictoire(joueur)) // Si la fonction bool est true, victoire
+                if (VerifierVictoire(joueur)) // Si la fonction bool est true, VICTOIRE
                 {
+                    aGagne = true;
                     Debug.Log("Les " + (joueur == 1 ? "Rouges" : "Jaunes") + " ont GAGNÉ !");
                     return; // Stop de la fonction en entier
                 }
 
-                tourRouge = !tourRouge; // Des rouges aux jaunes ou vice versa
+                tourRouge = !tourRouge; // Tour des rouges à celui des jaunes ou vice versa
                 tourJoueur = !tourJoueur; // C'est le tour de l'adversaire, ça inverse le bool à chaque fois
 
                 if (tourRouge)
@@ -91,9 +101,21 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
         }
     }
 
+    public void AnnulerDernierCoup() // Annuler le coup, si Cocci n'est accidentellement pas resté dans la grille; script DragCocci peut déclencher lors d'une collision avec TombeePerdue
+    {
+        if (derniereRangee != -1 && derniereColonne != -1)
+        {
+            plateau[derniereRangee, derniereColonne] = 0;
+            Debug.Log("COUP RETIRÉ"); // J'espère que ça fonctionnera, en théorie
 
-    // La logique est de scanner à chaque tour sur tout le plateau 6x7 : 4 trous consécutifs, si [r, c] == joueur
-    bool VerifierVictoire(int joueur)
+            derniereRangee = -1;
+            derniereColonne = -1;
+        }
+    }
+
+
+    // La logique est de scanner à chaque tour sur tout le plateau 6x7 : 4 trous consécutifs, si [r, c] == joueur, donc si le trou l'appartient
+    public bool VerifierVictoire(int joueur)
     {
         // Horizontal
         for (int r = 0; r < 6; r++) // Pour chacune des 6 rangées (r de 0 à 5)
@@ -106,6 +128,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                     plateau[r, c + 3] == joueur) // Ex. [r, 3+3]; c = 6, donc jusqu'à la 7e dernière colonne à droite
                 {
                     Debug.Log("Les " + (joueur == 1 ? "Rouges" : "Jaunes") + " forment une ligne HORIZONTALE");
+                    couleurGagnante = joueur;
                     return true; // 4 trous consécutifs
                 }
             }
@@ -122,6 +145,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                     plateau[r + 3, c] == joueur) // Ex. [2+3, c]; r = 5, donc jusqu'à la 6e dernière rangée en bas
                 {
                     Debug.Log("Les " + (joueur == 1 ? "Rouges" : "Jaunes") + " forment une ligne VERTICALE");
+                    couleurGagnante = joueur;
                     return true; // 4 trous consécutifs
                 }
             }
@@ -138,6 +162,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                     plateau[r + 3, c + 3] == joueur) // Ex. [0+3, 0+3]; r = 3, c = 3 
                 {
                     Debug.Log("Les " + (joueur == 1 ? "Rouges" : "Jaunes") + " forment une ligne DIAGONALE DESCENDANTE");
+                    couleurGagnante = joueur;
                     return true; // 4 trous consécutifs
                 }
             }
@@ -154,6 +179,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                     plateau[r - 3, c + 3] == joueur) // Ex. [5-3, 0+3]; r = 2, c = 3 
                 {
                     Debug.Log("Les " + (joueur == 1 ? "Rouges" : "Jaunes") + " forment une ligne DIAGONALE MONTANTE");
+                    couleurGagnante = joueur;
                     return true; // 4 trous consécutifs
                 }
             }

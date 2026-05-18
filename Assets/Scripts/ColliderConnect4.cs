@@ -5,6 +5,7 @@ public class ColliderConnect4 : MonoBehaviour
     private TrouConnect4 trou;
 
     public PartieConnect4 partie; // Référence au script PartieConnect4
+    public RespawnAuBonTour respawn; // Référence au script RespawnAuBonTour
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -37,7 +38,11 @@ public class ColliderConnect4 : MonoBehaviour
 
             drag.dropDepuisHautGrille = false; // Le drop dans la grille est terminé
 
-            partie.JouerCoup(trou.colonne); // Retenir la colonne du trou où la coccinelle est tombée
+
+            partie.JouerCoup(trou.colonne); // Retenir la colonne du trou où la coccinelle est tombée 
+            drag.coupEnregistre = true;
+
+            respawn.JoueurCocciDroppedDansGrille(); // Le tour de l'adversaire de drop
         }
 
         if (collision.CompareTag("CocciJaune"))
@@ -52,6 +57,9 @@ public class ColliderConnect4 : MonoBehaviour
             drag.dropDepuisHautGrille = false; // Le drop dans la grille est terminé
 
             partie.JouerCoup(trou.colonne); // Retenir la colonne du trou où la coccinelle est tombée
+            drag.coupEnregistre = true;
+
+            respawn.JoueurCocciDroppedDansGrille(); // Le tour de l'adversaire de drop
         }
     }
 }

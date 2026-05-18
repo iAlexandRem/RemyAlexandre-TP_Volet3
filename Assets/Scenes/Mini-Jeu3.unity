@@ -396,8 +396,8 @@ GameObject:
   - component: {fileID: 59299303}
   - component: {fileID: 59299304}
   - component: {fileID: 59299305}
-  - component: {fileID: 59299306}
   - component: {fileID: 59299307}
+  - component: {fileID: 59299306}
   m_Layer: 0
   m_Name: Anim_CoccinelleRouge
   m_TagString: Untagged
@@ -487,8 +487,10 @@ MonoBehaviour:
   animRouge: {fileID: 1781571690}
   animJaune: {fileID: 0}
   eventTrigger: {fileID: 59299305}
-  delaiSec: 2
+  delaiSec: 1.5
   estRouge: 1
+  dragRouge: {fileID: 1781571691}
+  dragJaune: {fileID: 2075932791}
   partie: {fileID: 1004767418}
   panelCoccinelles: {fileID: 1510389009}
   peutHoverCocci: 0
@@ -607,6 +609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &112661919
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,6 +708,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
+--- !u!1 &118380709 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8746119361961599827, guid: 37e60335f3489483787c4bc936bcb433, type: 3}
+  m_PrefabInstance: {fileID: 2518498200084369419}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &139721594
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,6 +896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &208155694
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,7 +909,7 @@ GameObject:
   - component: {fileID: 208155695}
   m_Layer: 0
   m_Name: dessous qui supporte tout le monde
-  m_TagString: Untagged
+  m_TagString: DessousGrille
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1063,6 +1073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &301755931
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,6 +1263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &377905202
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,6 +1630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &402234192
 GameObject:
   m_ObjectHideFlags: 0
@@ -1716,6 +1729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &447141793
 GameObject:
   m_ObjectHideFlags: 0
@@ -1814,6 +1828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &461028716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,7 +1854,7 @@ Transform:
   m_GameObject: {fileID: 461028716}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2040,6 +2055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &563227775
 GameObject:
   m_ObjectHideFlags: 0
@@ -2138,6 +2154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &573788141
 GameObject:
   m_ObjectHideFlags: 0
@@ -2236,6 +2253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &593618330
 GameObject:
   m_ObjectHideFlags: 0
@@ -2575,6 +2593,97 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &659810395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 659810396}
+  - component: {fileID: 659810398}
+  - component: {fileID: 659810399}
+  m_Layer: 0
+  m_Name: SpawnPoint-Adversaire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &659810396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659810395}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -18, y: 67, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1736977346}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &659810398
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659810395}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1
+--- !u!95 &659810399
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659810395}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f321bd6185eab410b840914bd759ecd9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &663738355
 GameObject:
   m_ObjectHideFlags: 0
@@ -2606,6 +2715,7 @@ Transform:
   m_Children:
   - {fileID: 1589388292}
   - {fileID: 2055771512}
+  - {fileID: 1952559696}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &681278331
@@ -2977,6 +3087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &739520511
 GameObject:
   m_ObjectHideFlags: 0
@@ -3244,6 +3355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &775979260
 GameObject:
   m_ObjectHideFlags: 0
@@ -3342,6 +3454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &789143173
 GameObject:
   m_ObjectHideFlags: 0
@@ -3928,6 +4041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &926501437
 GameObject:
   m_ObjectHideFlags: 0
@@ -4117,6 +4231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &952042539
 GameObject:
   m_ObjectHideFlags: 0
@@ -4618,6 +4733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &1004767417
 GameObject:
   m_ObjectHideFlags: 0
@@ -4649,6 +4765,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PartieConnect4
   tourRouge: 0
   couleurChoisie: 0
+  aGagne: 0
+  couleurGagnante: 0
+  respawn: {fileID: 1736977347}
+  derniereRangee: -1
+  derniereColonne: -1
 --- !u!4 &1004767419
 Transform:
   m_ObjectHideFlags: 0
@@ -4853,6 +4974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &1102084909
 GameObject:
   m_ObjectHideFlags: 0
@@ -5065,6 +5187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &1176209572
 GameObject:
   m_ObjectHideFlags: 0
@@ -5163,6 +5286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &1181164901
 GameObject:
   m_ObjectHideFlags: 0
@@ -5353,6 +5477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &1213726575
 GameObject:
   m_ObjectHideFlags: 0
@@ -5601,6 +5726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &1231434879
 GameObject:
   m_ObjectHideFlags: 0
@@ -5699,6 +5825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &1257324685
 GameObject:
   m_ObjectHideFlags: 0
@@ -5708,8 +5835,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1257324686}
+  - component: {fileID: 1257324688}
   m_Layer: 0
-  m_Name: PointSpawn2
+  m_Name: SpawnPoint-Jaune
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5730,6 +5858,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1736977346}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1257324688
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257324685}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1
 --- !u!1 &1287270436
 GameObject:
   m_ObjectHideFlags: 0
@@ -5828,6 +5992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &1295968707
 GameObject:
   m_ObjectHideFlags: 0
@@ -5926,6 +6091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &1310350527
 GameObject:
   m_ObjectHideFlags: 0
@@ -6336,6 +6502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &1455470268
 GameObject:
   m_ObjectHideFlags: 0
@@ -6514,8 +6681,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1497869981}
+  - component: {fileID: 1497869983}
   m_Layer: 0
-  m_Name: PointSpawn1
+  m_Name: SpawnPoint-Rouge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6536,6 +6704,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1736977346}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1497869983
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497869980}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1
 --- !u!1 &1510389009
 GameObject:
   m_ObjectHideFlags: 0
@@ -6745,6 +6949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &1547154687
 GameObject:
   m_ObjectHideFlags: 0
@@ -6843,6 +7048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &1573609121
 GameObject:
   m_ObjectHideFlags: 0
@@ -7038,6 +7244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &1631955822
 GameObject:
   m_ObjectHideFlags: 0
@@ -7136,6 +7343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &1640398119
 GameObject:
   m_ObjectHideFlags: 0
@@ -7234,6 +7442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &1644060564
 GameObject:
   m_ObjectHideFlags: 0
@@ -7313,8 +7522,10 @@ MonoBehaviour:
   animRouge: {fileID: 0}
   animJaune: {fileID: 2075932790}
   eventTrigger: {fileID: 1644060566}
-  delaiSec: 2
+  delaiSec: 1.5
   estRouge: 0
+  dragRouge: {fileID: 1781571691}
+  dragJaune: {fileID: 2075932791}
   partie: {fileID: 1004767418}
   panelCoccinelles: {fileID: 1510389009}
   peutHoverCocci: 0
@@ -7433,6 +7644,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
+--- !u!1 &1646994235 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3009051964551129516, guid: d31947353cb984751beeb068fa0e5fef, type: 3}
+  m_PrefabInstance: {fileID: 1274408256933695547}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1656313248
 GameObject:
   m_ObjectHideFlags: 0
@@ -7684,6 +7901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &1736977345
 GameObject:
   m_ObjectHideFlags: 0
@@ -7693,6 +7911,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1736977346}
+  - component: {fileID: 1736977347}
   m_Layer: 0
   m_Name: SpawnPoints
   m_TagString: Untagged
@@ -7715,8 +7934,26 @@ Transform:
   m_Children:
   - {fileID: 1497869981}
   - {fileID: 1257324686}
+  - {fileID: 659810396}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1736977347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736977345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8997b03be9c774131abcaca376c31fc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  drag: {fileID: 2075932791}
+  partie: {fileID: 1004767418}
+  spawnPointRouge: {fileID: 1497869981}
+  spawnPointJaune: {fileID: 1257324686}
+  spawnPointAdversaire: {fileID: 659810396}
 --- !u!1001 &1750010578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8071,6 +8308,17 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 8925224404303703474, guid: d31947353cb984751beeb068fa0e5fef, type: 3}
   m_PrefabInstance: {fileID: 1274408256933695547}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1781571691 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 48461210550549142, guid: d31947353cb984751beeb068fa0e5fef, type: 3}
+  m_PrefabInstance: {fileID: 1274408256933695547}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646994235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb49e6f3249844b4cbee7ed5053fd33f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &1795174310
 GameObject:
   m_ObjectHideFlags: 0
@@ -8421,6 +8669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &1862036837
 GameObject:
   m_ObjectHideFlags: 0
@@ -8519,6 +8768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &1879849360
 GameObject:
   m_ObjectHideFlags: 0
@@ -8783,6 +9033,85 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
+--- !u!1 &1952559695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1952559696}
+  - component: {fileID: 1952559697}
+  m_Layer: 0
+  m_Name: TombeePerdue
+  m_TagString: TombeePerdue
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1952559696
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952559695}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.78999996, y: -91.9, z: 0}
+  m_LocalScale: {x: 125.092354, y: 2.9813247, z: 5.9232}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 663738356}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1952559697
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952559695}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1971030405
 GameObject:
   m_ObjectHideFlags: 0
@@ -8881,6 +9210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &1988647218
 GameObject:
   m_ObjectHideFlags: 0
@@ -8979,6 +9309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &2003277478
 GameObject:
   m_ObjectHideFlags: 0
@@ -9351,6 +9682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &2049420957
 GameObject:
   m_ObjectHideFlags: 0
@@ -9618,6 +9950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!4 &2075932789 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4226741135571719421, guid: 37e60335f3489483787c4bc936bcb433, type: 3}
@@ -9628,6 +9961,17 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 8070204972733737499, guid: 37e60335f3489483787c4bc936bcb433, type: 3}
   m_PrefabInstance: {fileID: 2518498200084369419}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2075932791 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 328215395897447540, guid: 37e60335f3489483787c4bc936bcb433, type: 3}
+  m_PrefabInstance: {fileID: 2518498200084369419}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118380709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb49e6f3249844b4cbee7ed5053fd33f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &2082410802
 GameObject:
   m_ObjectHideFlags: 0
@@ -9638,7 +9982,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2082410803}
   m_Layer: 0
-  m_Name: Coccinelles
+  m_Name: Coccinelles Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9759,6 +10103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1 &2102629348
 GameObject:
   m_ObjectHideFlags: 0
@@ -9857,6 +10202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderConnect4
   partie: {fileID: 1004767418}
+  respawn: {fileID: 1736977347}
 --- !u!1001 &1274408256933695547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9870,6 +10216,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1004767418}
     - target: {fileID: 48461210550549142, guid: d31947353cb984751beeb068fa0e5fef, type: 3}
+      propertyPath: respawn
+      value: 
+      objectReference: {fileID: 1736977347}
+    - target: {fileID: 48461210550549142, guid: d31947353cb984751beeb068fa0e5fef, type: 3}
       propertyPath: animRouge
       value: 
       objectReference: {fileID: 1781571690}
@@ -9881,6 +10231,26 @@ PrefabInstance:
       propertyPath: pointSpawn
       value: 
       objectReference: {fileID: 1497869981}
+    - target: {fileID: 48461210550549142, guid: d31947353cb984751beeb068fa0e5fef, type: 3}
+      propertyPath: prefabJaune
+      value: 
+      objectReference: {fileID: 118380709}
+    - target: {fileID: 48461210550549142, guid: d31947353cb984751beeb068fa0e5fef, type: 3}
+      propertyPath: prefabRouge
+      value: 
+      objectReference: {fileID: 1646994235}
+    - target: {fileID: 48461210550549142, guid: d31947353cb984751beeb068fa0e5fef, type: 3}
+      propertyPath: spawnPointActuel
+      value: 
+      objectReference: {fileID: 1497869981}
+    - target: {fileID: 48461210550549142, guid: d31947353cb984751beeb068fa0e5fef, type: 3}
+      propertyPath: spawnPointAdversaire
+      value: 
+      objectReference: {fileID: 659810396}
+    - target: {fileID: 2273622225176798608, guid: d31947353cb984751beeb068fa0e5fef, type: 3}
+      propertyPath: m_Mass
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3009051964551129516, guid: d31947353cb984751beeb068fa0e5fef, type: 3}
       propertyPath: m_Name
       value: CocciRouge
@@ -9943,6 +10313,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1004767418}
     - target: {fileID: 328215395897447540, guid: 37e60335f3489483787c4bc936bcb433, type: 3}
+      propertyPath: respawn
+      value: 
+      objectReference: {fileID: 1736977347}
+    - target: {fileID: 328215395897447540, guid: 37e60335f3489483787c4bc936bcb433, type: 3}
       propertyPath: animJaune
       value: 
       objectReference: {fileID: 2075932790}
@@ -9954,6 +10328,26 @@ PrefabInstance:
       propertyPath: pointSpawn
       value: 
       objectReference: {fileID: 1257324686}
+    - target: {fileID: 328215395897447540, guid: 37e60335f3489483787c4bc936bcb433, type: 3}
+      propertyPath: prefabJaune
+      value: 
+      objectReference: {fileID: 118380709}
+    - target: {fileID: 328215395897447540, guid: 37e60335f3489483787c4bc936bcb433, type: 3}
+      propertyPath: prefabRouge
+      value: 
+      objectReference: {fileID: 1646994235}
+    - target: {fileID: 328215395897447540, guid: 37e60335f3489483787c4bc936bcb433, type: 3}
+      propertyPath: spawnPointActuel
+      value: 
+      objectReference: {fileID: 1257324686}
+    - target: {fileID: 328215395897447540, guid: 37e60335f3489483787c4bc936bcb433, type: 3}
+      propertyPath: spawnPointAdversaire
+      value: 
+      objectReference: {fileID: 659810396}
+    - target: {fileID: 4177966375420529398, guid: 37e60335f3489483787c4bc936bcb433, type: 3}
+      propertyPath: m_Mass
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4226741135571719421, guid: 37e60335f3489483787c4bc936bcb433, type: 3}
       propertyPath: m_LocalPosition.x
       value: 34.27
