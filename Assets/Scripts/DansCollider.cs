@@ -25,6 +25,7 @@ public class DansCollider : MonoBehaviour
     public AudioClip vocalMauvaiseDirectionDroite;
     public AudioClip vocalMauvaiseDirectionGauche;
 
+    public bool delaiAspire = false;
     public LeJeu leJeu; // Pour utiliser le bool vocalInstructionsTerminees
 
 
@@ -41,6 +42,7 @@ public class DansCollider : MonoBehaviour
             initialScaleLimites = LimitesPositionCamera.transform.localScale;
             targetScaleLimites = initialScaleLimites;
         }
+        delaiAspire = false;
     }
 
 
@@ -87,9 +89,11 @@ public class DansCollider : MonoBehaviour
 
                 Vector2 dir = ((Vector2)collision.transform.position - (Vector2)transform.position).normalized; // Direction d'un vecteur qui pointe du sujet vers le trou
 
-                if (CompareTag("Sucre"))
+                if (CompareTag("Sucre") && !delaiAspire)
                 {
-                    rb.AddForce(dir * 10f, ForceMode2D.Impulse); // Une force vers le centre du trou
+                    rb.AddForce(dir * 20f, ForceMode2D.Impulse); // Une force vers le centre du trou
+                    delaiAspire = true;
+                    Invoke("DelaiAspire", 2f);
                 }
                 else
                 {
@@ -183,7 +187,7 @@ public class DansCollider : MonoBehaviour
             transform.position = pointsRetour[index].position; // La chose est transportée à ce trou
             if (CompareTag("Sucre"))
             {
-                rb.AddForce(new Vector2(-1f, -1f).normalized * 42f, ForceMode2D.Impulse); // Grosse force hehe
+                rb.AddForce(new Vector2(-1f, -1f).normalized * 420f, ForceMode2D.Impulse); // Grosse force hehe
             }
         }
 
@@ -200,6 +204,12 @@ public class DansCollider : MonoBehaviour
             anim.speed = 5f; // Stress de la fourmi sur le idle
         }
         ignoreProchainTrou = false; // Je réactive le trigger du trou ici, le délai est important, j'ai testé
+    }
+
+
+    void DelaiAspire()
+    {
+        delaiAspire = false;
     }
 
 }

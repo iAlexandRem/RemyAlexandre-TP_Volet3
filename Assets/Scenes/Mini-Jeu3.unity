@@ -4064,8 +4064,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   autreAudioSource: {fileID: 0}
-  vocalMessageDebut: {fileID: 0}
-  vocalInstructionsDebut: {fileID: 0}
+  vocalMessageDebut: {fileID: 8300000, guid: 9e2e77005a39d44d08c267a4341f69e8, type: 3}
+  vocalInstructionsDebut: {fileID: 8300000, guid: 3b6e99a3ce07a4a229334912748856d8, type: 3}
   hoverBoutons:
   - {fileID: 0}
   vocalInstructionsTerminees: 0

@@ -8,7 +8,7 @@ public class SucreBrun : MonoBehaviour
     Transform joueur;
     Rigidbody2D rb;
 
-    bool estPorte = false; // On ne porte pas le sucre au début
+    public bool estPorte = false; // On ne porte pas le sucre au début
     public float distancePrise; // 4f
 
 
@@ -20,7 +20,7 @@ public class SucreBrun : MonoBehaviour
         joueur = playerObj.transform; // Transform du joueur
         billes = FindObjectsByType<MouvementBillesEnnemies>(FindObjectsSortMode.None);
 
-        Invoke("PetitePoussee", 3f); // Délai
+        Invoke("PetitePoussee", 6f); // Délai
     }
 
     void PetitePoussee()
@@ -42,10 +42,10 @@ public class SucreBrun : MonoBehaviour
             }
             else if (estPorte) // Quand on lâche le sucre
             {
-                estPorte = false;
-                rb.simulated = true;
+                LacheLeSucre();
             }
         }
+
 
         if (estPorte)
         {
@@ -59,6 +59,15 @@ public class SucreBrun : MonoBehaviour
                     estPorte = false; // La fourmi échappe le sucre, lors d'une collision avec bille
                 }
             }
+        }
+    }
+
+
+    public void LacheLeSucre() // Je devrais appeler cette fonction aussi depuis le collider du trou, car le sucre devient rb.simulated = false
+    {
+        {
+            estPorte = false;
+            rb.simulated = true;
         }
     }
 }

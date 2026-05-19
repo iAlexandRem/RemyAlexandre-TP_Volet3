@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using UnityEditor;
 
 public class LeJeu : MonoBehaviour
 {
@@ -15,12 +16,15 @@ public class LeJeu : MonoBehaviour
     bool isHovering = false; // True si on hover au moins un des boutons
     bool wasPlaying = false; // True si l'AudioClip finit de jouer une fois joué
     public bool vocalInstructionsTerminees = false;
+    public static bool autreVocalQuiJoue = false;
     public Animator anim;
 
 
 
     void Start()
     {
+        SelectionCoccinelle.couleurEstChoisie = false;
+
         audioSource = GetComponent<AudioSource>();
 
         if (anim == null)
@@ -43,15 +47,16 @@ public class LeJeu : MonoBehaviour
 
     void Update()
     {
-        // Au premier clic durant les mini-jeux
-        if (!premierClickDetecte && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame && SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "Selecteur de jeux")
+       // Debug.Log(autreVocalQuiJoue);
+        // Au premier clic durant Mini-Jeu1 et Mini-Jeu2
+        if (!premierClickDetecte && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame && SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "Selecteur de jeux" && SceneManager.GetActiveScene().name != "Mini-Jeu3")
         {
             premierClickDetecte = true;
             if (SceneManager.GetActiveScene().name == "Mini-Jeu2" && Keyboard.current.anyKey.wasPressedThisFrame)
             {
                 audioSource.Stop(); // J'arrête le premier message, aussi par keyboard
             }
-            else if (SceneManager.GetActiveScene().name == "Mini-Jeu1" || SceneManager.GetActiveScene().name == "Mini-Jeu3")
+            else if (SceneManager.GetActiveScene().name == "Mini-Jeu1")
             {
                 audioSource.Stop(); // J'arrête le premier message par souris seulement
             }
@@ -62,7 +67,18 @@ public class LeJeu : MonoBehaviour
 
                 audioSource.loop = false;
                 audioSource.clip = vocalInstructionsDebut;
-                audioSource.Play(); // On passe aux INSTRUCTIONS de la souris ou du clavier
+                if (SceneManager.GetActiveScene().name == "Mini-Jeu3")
+                {
+                    if (SelectionCoccinelle.couleurEstChoisie)
+                    {
+                        audioSource.Play(); // On passe aux INSTRUCTIONS de Drag&Drop
+                    }
+                }
+                else
+                {
+                    audioSource.Play(); // On passe aux INSTRUCTIONS de la souris ou du clavier
+                }
+
 
                 if (SceneManager.GetActiveScene().name == "Mini-Jeu1")
                 {
@@ -72,7 +88,30 @@ public class LeJeu : MonoBehaviour
                 wasPlaying = true;
             }
         }
-        else if (wasPlaying && audioSource.clip == vocalInstructionsDebut && !audioSource.isPlaying && !vocalInstructionsTerminees)
+
+        // Pour le Mini-Jeu3, on attend la sélection de couleur
+        if (!premierClickDetecte &&
+            SceneManager.GetActiveScene().name == "Mini-Jeu3" &&
+            SelectionCoccinelle.couleurEstChoisie)
+        {
+            premierClickDetecte = true;
+
+            audioSource.Stop(); // J'arrête le premier message quand la couleur est choisie
+
+            if (!instructionsJouees)
+            {
+                instructionsJouees = true;
+
+                audioSource.loop = false;
+                audioSource.clip = vocalInstructionsDebut;
+                audioSource.Play(); // On passe aux INSTRUCTIONS de Drag&Drop
+
+                wasPlaying = true;
+            }
+        }
+
+
+        if (wasPlaying && audioSource.clip == vocalInstructionsDebut && !audioSource.isPlaying && !vocalInstructionsTerminees)
         {
             vocalInstructionsTerminees = true;
             wasPlaying = false;
@@ -80,7 +119,7 @@ public class LeJeu : MonoBehaviour
         }
 
 
-        else if (SceneManager.GetActiveScene().name == "Selecteur de jeux")
+        if (SceneManager.GetActiveScene().name == "Selecteur de jeux")
         {
             isHovering = false; // À réinitialiser
 
@@ -116,5 +155,10 @@ public class LeJeu : MonoBehaviour
     void RemettreVolume()
     {
         autreAudioSource.volume = 0.67f;
+    }
+
+    public void SonEstLibre()
+    {
+        autreVocalQuiJoue = false;
     }
 }

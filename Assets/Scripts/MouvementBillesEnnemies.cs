@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class MouvementBillesEnnemies : MonoBehaviour
 {
+    public LeJeu jeu; // Référence au script LeJeu
     public float vitesse;
     public float acceleration;
     public float forcePoussee;
@@ -25,6 +26,7 @@ public class MouvementBillesEnnemies : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         joueur = GameObject.FindGameObjectWithTag("Player").transform; // Trouve la fourmi
         vitesseActuelle = vitesse;
+        BilleToucheFourmi = false;
     }
 
     void FixedUpdate()
@@ -67,10 +69,12 @@ public class MouvementBillesEnnemies : MonoBehaviour
         {
             if (!BilleToucheFourmi)
             {
-                if (leJeu != null && leJeu.vocalInstructionsTerminees) // Attendre que les instructions soient finies
+                if (leJeu != null && leJeu.vocalInstructionsTerminees && !LeJeu.autreVocalQuiJoue) // Attendre que les instructions soient finies
                 {
                     BilleToucheFourmi = true;
                     audioSource.PlayOneShot(vocalEviteBillesEnMetal); // Avertissement des billes au premier contact
+                    LeJeu.autreVocalQuiJoue = true;
+                    Invoke("VersSonLibre", 5f);
                 }
             }
             collisionBilleFourmi = true;
@@ -122,5 +126,11 @@ public class MouvementBillesEnnemies : MonoBehaviour
             Vector2 dir = ((Vector2)transform.position - fuite.ClosestPoint(transform.position)).normalized; // Une dir allant du point le plus près du collider vers la bille
             rb.linearVelocity = dir * rb.linearVelocity.magnitude * 1.5f; // Vitesse de poussée constante selon cette direction de fuite
         }
+    }
+
+
+    void VersSonLibre()
+    {
+        jeu.SonEstLibre();
     }
 }

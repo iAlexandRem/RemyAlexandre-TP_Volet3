@@ -6583,7 +6583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   autreAudioSource: {fileID: 0}
-  vocalMessageDebut: {fileID: 0}
+  vocalMessageDebut: {fileID: 8300000, guid: 3e1fe971ff8444a9f8190afe76e117bd, type: 3}
   vocalInstructionsDebut: {fileID: 8300000, guid: 3e810fb1c0d254bbb968bb8943040138, type: 3}
   hoverBoutons:
   - {fileID: 0}
