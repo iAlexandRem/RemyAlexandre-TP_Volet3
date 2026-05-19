@@ -1,0 +1,676 @@
+fileFormatVersion: 2
+guid: 6fe9a98810a8943f1a55f18e8312b852
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6016209559830298822
+    second: la fourmi contre le labyrinthe -sale_0
+  - first:
+      213: -8209897605896804649
+    second: la fourmi contre le labyrinthe -sale_1
+  - first:
+      213: 1271254692834425383
+    second: la fourmi contre le labyrinthe -sale_2
+  - first:
+      213: -3718473200206447896
+    second: la fourmi contre le labyrinthe -sale_3
+  - first:
+      213: -6312715572883984673
+    second: la fourmi contre le labyrinthe -sale_4
+  - first:
+      213: -4137754283839319424
+    second: la fourmi contre le labyrinthe -sale_5
+  - first:
+      213: 401789543882194364
+    second: la fourmi contre le labyrinthe -sale_6
+  - first:
+      213: 4323093084588667978
+    second: la fourmi contre le labyrinthe -sale_7
+  - first:
+      213: 3098582340124120857
+    second: la fourmi contre le labyrinthe -sale_8
+  - first:
+      213: 8593681890408171472
+    second: la fourmi contre le labyrinthe -sale_9
+  - first:
+      213: 4273701255199115484
+    second: la fourmi contre le labyrinthe -sale_10
+  - first:
+      213: 9193304480492282364
+    second: la fourmi contre le labyrinthe -sale_11
+  - first:
+      213: -8684336796493478469
+    second: la fourmi contre le labyrinthe -sale_12
+  - first:
+      213: 3937716514184418959
+    second: la fourmi contre le labyrinthe -sale_13
+  - first:
+      213: -6704775781409028755
+    second: la fourmi contre le labyrinthe -sale_14
+  - first:
+      213: 8500523922327417178
+    second: la fourmi contre le labyrinthe -sale_15
+  - first:
+      213: 8858683515917345952
+    second: la fourmi contre le labyrinthe -sale_16
+  - first:
+      213: 2933496575864711401
+    second: la fourmi contre le labyrinthe -sale_17
+  - first:
+      213: -1235527559080240059
+    second: la fourmi contre le labyrinthe -sale_18
+  - first:
+      213: -4804118457868155136
+    second: la fourmi contre le labyrinthe -sale_19
+  - first:
+      213: 939413589282858289
+    second: la fourmi contre le labyrinthe -sale_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: la fourmi contre le labyrinthe -sale_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 168
+        width: 104
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c08efb28bedd7350800000000000000
+      internalID: 6016209559830298822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: la fourmi contre le labyrinthe -sale_1
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 218
+        width: 105
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d6e03610a5901e80800000000000000
+      internalID: -8209897605896804649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: la fourmi contre le labyrinthe -sale_2
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 304
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72ab171686764a110800000000000000
+      internalID: 1271254692834425383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: la fourmi contre le labyrinthe -sale_3
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 218
+        width: 37
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ea72e26354556cc0800000000000000
+      internalID: -3718473200206447896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: la fourmi contre le labyrinthe -sale_4
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 218
+        width: 61
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fde6c26f1aab468a0800000000000000
+      internalID: -6312715572883984673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: la fourmi contre le labyrinthe -sale_5
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 218
+        width: 114
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08218efc66eb396c0800000000000000
+      internalID: -4137754283839319424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: la fourmi contre le labyrinthe -sale_6
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 220
+        width: 133
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbd709d1671739500800000000000000
+      internalID: 401789543882194364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: la fourmi contre le labyrinthe -sale_7
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 218
+        width: 55
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a44fad57146befb30800000000000000
+      internalID: 4323093084588667978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: la fourmi contre le labyrinthe -sale_8
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 218
+        width: 61
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 917956aa830600b20800000000000000
+      internalID: 3098582340124120857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: la fourmi contre le labyrinthe -sale_9
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 220
+        width: 64
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d78c76e524e24770800000000000000
+      internalID: 8593681890408171472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: la fourmi contre le labyrinthe -sale_10
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 220
+        width: 49
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd8c84806ac3f4b30800000000000000
+      internalID: 4273701255199115484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: la fourmi contre le labyrinthe -sale_11
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 218
+        width: 56
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf1efbf77bd259f70800000000000000
+      internalID: 9193304480492282364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: la fourmi contre le labyrinthe -sale_12
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 0
+        width: 103
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb50727f1b90b7780800000000000000
+      internalID: -8684336796493478469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: la fourmi contre le labyrinthe -sale_13
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 0
+        width: 102
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f86d6268e4495a630800000000000000
+      internalID: 3937716514184418959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: la fourmi contre le labyrinthe -sale_14
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 50
+        width: 117
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d65097243f9d3f2a0800000000000000
+      internalID: -6704775781409028755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: la fourmi contre le labyrinthe -sale_15
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 136
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a51390b387de7f570800000000000000
+      internalID: 8500523922327417178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: la fourmi contre le labyrinthe -sale_16
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 51
+        width: 39
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a4acdfe8bd50fa70800000000000000
+      internalID: 8858683515917345952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: la fourmi contre le labyrinthe -sale_17
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 51
+        width: 63
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e8ad3ae79fd5b820800000000000000
+      internalID: 2933496575864711401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: la fourmi contre le labyrinthe -sale_18
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 24
+        width: 111
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54c11da2b368adee0800000000000000
+      internalID: -1235527559080240059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: la fourmi contre le labyrinthe -sale_19
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 51
+        width: 95
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0070fd347b7545db0800000000000000
+      internalID: -4804118457868155136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: la fourmi contre le labyrinthe -sale_20
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 49
+        width: 54
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1352166aea7790d00800000000000000
+      internalID: 939413589282858289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      la fourmi contre le labyrinthe -sale_0: 6016209559830298822
+      la fourmi contre le labyrinthe -sale_1: -8209897605896804649
+      la fourmi contre le labyrinthe -sale_10: 4273701255199115484
+      la fourmi contre le labyrinthe -sale_11: 9193304480492282364
+      la fourmi contre le labyrinthe -sale_12: -8684336796493478469
+      la fourmi contre le labyrinthe -sale_13: 3937716514184418959
+      la fourmi contre le labyrinthe -sale_14: -6704775781409028755
+      la fourmi contre le labyrinthe -sale_15: 8500523922327417178
+      la fourmi contre le labyrinthe -sale_16: 8858683515917345952
+      la fourmi contre le labyrinthe -sale_17: 2933496575864711401
+      la fourmi contre le labyrinthe -sale_18: -1235527559080240059
+      la fourmi contre le labyrinthe -sale_19: -4804118457868155136
+      la fourmi contre le labyrinthe -sale_2: 1271254692834425383
+      la fourmi contre le labyrinthe -sale_20: 939413589282858289
+      la fourmi contre le labyrinthe -sale_3: -3718473200206447896
+      la fourmi contre le labyrinthe -sale_4: -6312715572883984673
+      la fourmi contre le labyrinthe -sale_5: -4137754283839319424
+      la fourmi contre le labyrinthe -sale_6: 401789543882194364
+      la fourmi contre le labyrinthe -sale_7: 4323093084588667978
+      la fourmi contre le labyrinthe -sale_8: 3098582340124120857
+      la fourmi contre le labyrinthe -sale_9: 8593681890408171472
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

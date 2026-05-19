@@ -47,7 +47,14 @@ public class LeJeu : MonoBehaviour
         if (!premierClickDetecte && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame && SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "Selecteur de jeux")
         {
             premierClickDetecte = true;
-            audioSource.Stop(); // J'arrête le premier message
+            if (SceneManager.GetActiveScene().name == "Mini-Jeu2" && Keyboard.current.anyKey.wasPressedThisFrame)
+            {
+                audioSource.Stop(); // J'arrête le premier message, aussi par keyboard
+            }
+            else if (SceneManager.GetActiveScene().name == "Mini-Jeu1" || SceneManager.GetActiveScene().name == "Mini-Jeu3")
+            {
+                audioSource.Stop(); // J'arrête le premier message par souris seulement
+            }
 
             if (!instructionsJouees)
             {
@@ -55,7 +62,7 @@ public class LeJeu : MonoBehaviour
 
                 audioSource.loop = false;
                 audioSource.clip = vocalInstructionsDebut;
-                audioSource.Play(); // On passe aux instructions de la souris ou du clavier
+                audioSource.Play(); // On passe aux INSTRUCTIONS de la souris ou du clavier
 
                 if (SceneManager.GetActiveScene().name == "Mini-Jeu1")
                 {

@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: f081c849e4ae94f2ab78b1fc777b591e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7101181722925092337
+    second: cocci connect 4 -sale_0
+  - first:
+      213: -1932923871884547086
+    second: cocci connect 4 -sale_1
+  - first:
+      213: 6327663734601262256
+    second: cocci connect 4 -sale_2
+  - first:
+      213: 1573230583498411786
+    second: cocci connect 4 -sale_3
+  - first:
+      213: -5751210713469453490
+    second: cocci connect 4 -sale_4
+  - first:
+      213: 7359563919702836203
+    second: cocci connect 4 -sale_5
+  - first:
+      213: -6790633700079964174
+    second: cocci connect 4 -sale_6
+  - first:
+      213: 7954331476431608706
+    second: cocci connect 4 -sale_7
+  - first:
+      213: -4025416859046936084
+    second: cocci connect 4 -sale_8
+  - first:
+      213: 6272750351601896027
+    second: cocci connect 4 -sale_9
+  - first:
+      213: 1062127247540472214
+    second: cocci connect 4 -sale_10
+  - first:
+      213: -3050519131652469273
+    second: cocci connect 4 -sale_11
+  - first:
+      213: 4543287671226829961
+    second: cocci connect 4 -sale_12
+  - first:
+      213: -1086041294441364730
+    second: cocci connect 4 -sale_13
+  - first:
+      213: -6002148489077802645
+    second: cocci connect 4 -sale_14
+  - first:
+      213: 3995092220263154994
+    second: cocci connect 4 -sale_15
+  - first:
+      213: -6616843324728402022
+    second: cocci connect 4 -sale_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cocci connect 4 -sale_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 65
+        width: 31
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f02bd8fb8d8837d90800000000000000
+      internalID: -7101181722925092337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cocci connect 4 -sale_1
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 119
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fbe276caffdc25e0800000000000000
+      internalID: -1932923871884547086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cocci connect 4 -sale_2
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 0
+        width: 118
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b4a70724a060d750800000000000000
+      internalID: 6327663734601262256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cocci connect 4 -sale_3
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 6
+        width: 42
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0f043f51ec35d510800000000000000
+      internalID: 1573230583498411786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cocci connect 4 -sale_4
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 0
+        width: 93
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4b7b3bc3589f20b0800000000000000
+      internalID: -5751210713469453490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cocci connect 4 -sale_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 65
+        width: 29
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be34baf646c622660800000000000000
+      internalID: 7359563919702836203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cocci connect 4 -sale_6
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 159
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ffefeac0a2d2c1a0800000000000000
+      internalID: -6790633700079964174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cocci connect 4 -sale_7
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 11
+        width: 93
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28b1a6e7556736e60800000000000000
+      internalID: 7954331476431608706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cocci connect 4 -sale_8
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 2
+        width: 44
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce183abb1b8d228c0800000000000000
+      internalID: -4025416859046936084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cocci connect 4 -sale_9
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 0
+        width: 131
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5a00f7d5394d0750800000000000000
+      internalID: 6272750351601896027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cocci connect 4 -sale_10
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 1
+        width: 90
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 699c9efaa1f6dbe00800000000000000
+      internalID: 1062127247540472214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cocci connect 4 -sale_11
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 2
+        width: 44
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ed425913016aa5d0800000000000000
+      internalID: -3050519131652469273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cocci connect 4 -sale_12
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 1
+        width: 44
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98c03ebc0100d0f30800000000000000
+      internalID: 4543287671226829961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cocci connect 4 -sale_13
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 8
+        width: 145
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 603ca61623b9de0f0800000000000000
+      internalID: -1086041294441364730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cocci connect 4 -sale_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b69be5bffb514bca0800000000000000
+      internalID: -6002148489077802645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cocci connect 4 -sale_15
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23546b9153b617730800000000000000
+      internalID: 3995092220263154994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cocci connect 4 -sale_16
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 12
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9f162fbd004c24a0800000000000000
+      internalID: -6616843324728402022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      cocci connect 4 -sale_0: -7101181722925092337
+      cocci connect 4 -sale_1: -1932923871884547086
+      cocci connect 4 -sale_10: 1062127247540472214
+      cocci connect 4 -sale_11: -3050519131652469273
+      cocci connect 4 -sale_12: 4543287671226829961
+      cocci connect 4 -sale_13: -1086041294441364730
+      cocci connect 4 -sale_14: -6002148489077802645
+      cocci connect 4 -sale_15: 3995092220263154994
+      cocci connect 4 -sale_16: -6616843324728402022
+      cocci connect 4 -sale_2: 6327663734601262256
+      cocci connect 4 -sale_3: 1573230583498411786
+      cocci connect 4 -sale_4: -5751210713469453490
+      cocci connect 4 -sale_5: 7359563919702836203
+      cocci connect 4 -sale_6: -6790633700079964174
+      cocci connect 4 -sale_7: 7954331476431608706
+      cocci connect 4 -sale_8: -4025416859046936084
+      cocci connect 4 -sale_9: 6272750351601896027
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

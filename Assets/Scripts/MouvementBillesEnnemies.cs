@@ -9,15 +9,20 @@ public class MouvementBillesEnnemies : MonoBehaviour
     public float tempsRebond; // Temps avant de changer de direction après collision
     private float vitesseActuelle; // Pour les transitions de vitesse
 
-    public bool BilleToucheFourmi = false; // Je réutilise dans le script SucreBrun
+    public static bool BilleToucheFourmi = false; // Je réutilise dans le script SucreBrun
+    public bool collisionBilleFourmi = false;
 
     Rigidbody2D rb;
     private Transform joueur;
     private float timerRebond = 0f; // Pour un countdown à chaque rebond
+    public LeJeu leJeu; // Pour utiliser le bool vocalInstructionsTerminees
+    AudioSource audioSource;
+    public AudioClip vocalEviteBillesEnMetal;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
         joueur = GameObject.FindGameObjectWithTag("Player").transform; // Trouve la fourmi
         vitesseActuelle = vitesse;
     }
@@ -60,7 +65,15 @@ public class MouvementBillesEnnemies : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")) // À chaque fois que la bille rentre en contact avec le joueur
         {
-            BilleToucheFourmi = true;
+            if (!BilleToucheFourmi)
+            {
+                if (leJeu != null && leJeu.vocalInstructionsTerminees) // Attendre que les instructions soient finies
+                {
+                    BilleToucheFourmi = true;
+                    audioSource.PlayOneShot(vocalEviteBillesEnMetal); // Avertissement des billes au premier contact
+                }
+            }
+            collisionBilleFourmi = true;
 
             GameObject[] trous = GameObject.FindGameObjectsWithTag("Trou"); // Ça met tous les gameobjects Trous dans un array [trous]
 
@@ -98,7 +111,7 @@ public class MouvementBillesEnnemies : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            BilleToucheFourmi = false;
+            collisionBilleFourmi = false;
         }
     }
 

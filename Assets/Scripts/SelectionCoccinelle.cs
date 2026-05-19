@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class SelectionCoccinelle : MonoBehaviour
 {
@@ -18,8 +19,15 @@ public class SelectionCoccinelle : MonoBehaviour
     public DragCocci dragJaune; // Prefab jaune
 
     public PartieConnect4 partie; // Référence au script PartieConnect4
-    public GameObject panelCoccinelles; // Groupe des deux coccinelles dans le canvas
+    public GameObject[] panelCoccinelles; // Groupe des deux coccinelles dans le canvas
     public bool peutHoverCocci = false;
+
+    public GameObject pourbougerPoisDuRouge; // Quand on clique sur l'une des coccis au début
+    public GameObject pourbougerPoisDuJaune;
+    public GameObject lumierePourSpawnRouge;
+    public GameObject lumierePourSpawnJaune;
+    AudioSource audioSource;
+    public AudioClip sfxlumierePourSpawn;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -34,6 +42,11 @@ public class SelectionCoccinelle : MonoBehaviour
         {
             animJaune = GetComponent<Animator>();
         }
+        pourbougerPoisDuRouge.gameObject.SetActive(true);
+        pourbougerPoisDuJaune.gameObject.SetActive(false);
+        lumierePourSpawnRouge.gameObject.SetActive(false);
+        lumierePourSpawnJaune.gameObject.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
 
         eventTrigger.enabled = false;
         Invoke(nameof(ActiverTrigger), delaiSec);
@@ -56,11 +69,9 @@ public class SelectionCoccinelle : MonoBehaviour
     {
         couleurEstChoisie = true;
 
-        panelCoccinelles.SetActive(false);
-
         if (partie.couleurChoisie == 0) // Une seule fois le choix de couleur
         {
-            Invoke("CouleurChoisie", 0.5f);
+            Invoke("CouleurChoisie", 0.1f);
         }
     }
 
@@ -71,15 +82,38 @@ public class SelectionCoccinelle : MonoBehaviour
             partie.couleurChoisie = 1;
             Debug.Log("Rouge choisi");
             dragSelectionne = dragRouge;
+
+            pourbougerPoisDuRouge.gameObject.SetActive(false);
+            lumierePourSpawnRouge.SetActive(true);
+            audioSource.PlayOneShot(sfxlumierePourSpawn);
         }
         else
         {
             partie.couleurChoisie = 2;
             Debug.Log("Jaune choisi");
             dragSelectionne = dragJaune;
+
+            pourbougerPoisDuJaune.gameObject.SetActive(true);
+            lumierePourSpawnJaune.SetActive(true);
+            audioSource.PlayOneShot(sfxlumierePourSpawn);
         }
 
         PremierSpawn();
+        Invoke("DesactiverPanel", 0.2f);
+    }
+
+    public void DesactiverPanel() // Cacher le panel sur le canvas
+    {
+        foreach (GameObject panel in panelCoccinelles)
+        {
+            Image img = panel.GetComponent<Image>();
+
+            if (img != null)
+            {
+                img.enabled = false;
+            }
+        }
+        eventTrigger.enabled = false;
     }
 
     public void PremierSpawn() // Le joueur a accès aux coccinelles prefabs de la couleur de son choix

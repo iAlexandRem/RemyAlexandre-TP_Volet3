@@ -54,7 +54,7 @@ public class SucreBrun : MonoBehaviour
 
             foreach (MouvementBillesEnnemies bille in billes) // Pour chaque bille...
             {
-                if (bille.BilleToucheFourmi)
+                if (bille.collisionBilleFourmi)
                 {
                     estPorte = false; // La fourmi échappe le sucre, lors d'une collision avec bille
                 }

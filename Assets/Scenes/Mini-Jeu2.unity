@@ -1755,6 +1755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 251ffdca41fcf4910abe481afa7846cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  aGagne: 0
 --- !u!1 &171944429
 GameObject:
   m_ObjectHideFlags: 0
@@ -6581,11 +6582,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f90e2b8e1b7e4a6ab0d82b6bdafc579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  autreAudioSource: {fileID: 0}
   vocalMessageDebut: {fileID: 0}
-  vocalInstructionsDebut: {fileID: 0}
+  vocalInstructionsDebut: {fileID: 8300000, guid: 3e810fb1c0d254bbb968bb8943040138, type: 3}
   hoverBoutons:
   - {fileID: 0}
   vocalInstructionsTerminees: 0
+  anim: {fileID: 0}
 --- !u!4 &865667312
 Transform:
   m_ObjectHideFlags: 0
@@ -8992,7 +8995,9 @@ MonoBehaviour:
   forcePoussee: 10
   distanceActivation: 20
   tempsRebond: 1
-  BilleToucheFourmi: 0
+  collisionBilleFourmi: 0
+  leJeu: {fileID: 865667311}
+  vocalEviteBillesEnMetal: {fileID: 8300000, guid: 49c3f76f0104642e3b233fa06abbcd5a, type: 3}
 --- !u!50 &1110611097
 Rigidbody2D:
   serializedVersion: 5
@@ -10406,7 +10411,9 @@ MonoBehaviour:
   forcePoussee: 10
   distanceActivation: 20
   tempsRebond: 1
-  BilleToucheFourmi: 0
+  collisionBilleFourmi: 0
+  leJeu: {fileID: 865667311}
+  vocalEviteBillesEnMetal: {fileID: 8300000, guid: 49c3f76f0104642e3b233fa06abbcd5a, type: 3}
 --- !u!50 &1330841159
 Rigidbody2D:
   serializedVersion: 5
@@ -11078,7 +11085,9 @@ MonoBehaviour:
   forcePoussee: 10
   distanceActivation: 20
   tempsRebond: 1
-  BilleToucheFourmi: 0
+  collisionBilleFourmi: 0
+  leJeu: {fileID: 865667311}
+  vocalEviteBillesEnMetal: {fileID: 8300000, guid: 49c3f76f0104642e3b233fa06abbcd5a, type: 3}
 --- !u!50 &1377660324
 Rigidbody2D:
   serializedVersion: 5
@@ -11494,7 +11503,7 @@ Transform:
   m_GameObject: {fileID: 1394456543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45.34, y: 69.3, z: 0}
+  m_LocalPosition: {x: 20.97, y: 55.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11945,7 +11954,9 @@ MonoBehaviour:
   forcePoussee: 10
   distanceActivation: 20
   tempsRebond: 1
-  BilleToucheFourmi: 0
+  collisionBilleFourmi: 0
+  leJeu: {fileID: 865667311}
+  vocalEviteBillesEnMetal: {fileID: 8300000, guid: 49c3f76f0104642e3b233fa06abbcd5a, type: 3}
 --- !u!50 &1440885575
 Rigidbody2D:
   serializedVersion: 5
@@ -13216,7 +13227,9 @@ MonoBehaviour:
   forcePoussee: 10
   distanceActivation: 20
   tempsRebond: 1
-  BilleToucheFourmi: 0
+  collisionBilleFourmi: 0
+  leJeu: {fileID: 865667311}
+  vocalEviteBillesEnMetal: {fileID: 8300000, guid: 49c3f76f0104642e3b233fa06abbcd5a, type: 3}
 --- !u!50 &1596150406
 Rigidbody2D:
   serializedVersion: 5
@@ -13705,7 +13718,9 @@ MonoBehaviour:
   forcePoussee: 10
   distanceActivation: 20
   tempsRebond: 1
-  BilleToucheFourmi: 0
+  collisionBilleFourmi: 0
+  leJeu: {fileID: 865667311}
+  vocalEviteBillesEnMetal: {fileID: 8300000, guid: 49c3f76f0104642e3b233fa06abbcd5a, type: 3}
 --- !u!50 &1704911556
 Rigidbody2D:
   serializedVersion: 5

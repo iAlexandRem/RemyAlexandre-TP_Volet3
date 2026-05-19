@@ -161,7 +161,7 @@ public class DragCocci : MonoBehaviour
             dropDepuisHautGrille = true; // Le bool enclenche la détection des colliders triggers des Trous dans ColliderConnect4
 
             if (rb != null)
-                rb.AddForce(Vector2.right * 2f, ForceMode2D.Impulse); // Chute dans la grille garantie
+                rb.AddForce(Vector2.right * 3f, ForceMode2D.Impulse); // Chute dans la grille garantie
         }
 
         if (collision.CompareTag("TombeePerdue")) // Si on échappe Cocci dans le vide

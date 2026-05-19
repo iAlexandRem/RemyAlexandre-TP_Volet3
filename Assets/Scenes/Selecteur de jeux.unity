@@ -2599,6 +2599,7 @@ MonoBehaviour:
   - {fileID: 1324019038}
   - {fileID: 1713018378}
   vocalInstructionsTerminees: 0
+  anim: {fileID: 0}
 --- !u!4 &1288979032
 Transform:
   m_ObjectHideFlags: 0
@@ -2758,7 +2759,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.9
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2857,7 +2858,7 @@ MonoBehaviour:
   hoverUI: 0
   visuelHover: {fileID: 1749189792}
   visuelActive: {fileID: 362939403}
-  vocalHover: {fileID: 0}
+  vocalHover: {fileID: 8300000, guid: 8d063c94faf944e2da65854f9d197cbf, type: 3}
   vocalActive: {fileID: 0}
 --- !u!58 &1324019039
 CircleCollider2D:
@@ -3092,7 +3093,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.9
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3191,7 +3192,7 @@ MonoBehaviour:
   hoverUI: 0
   visuelHover: {fileID: 2109555639}
   visuelActive: {fileID: 834811094}
-  vocalHover: {fileID: 0}
+  vocalHover: {fileID: 8300000, guid: 8fdbf081d403440939fc66499bf3e493, type: 3}
   vocalActive: {fileID: 0}
 --- !u!58 &1713018379
 CircleCollider2D:
