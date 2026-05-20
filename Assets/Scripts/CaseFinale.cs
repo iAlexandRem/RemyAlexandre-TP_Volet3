@@ -5,10 +5,16 @@ public class CaseFinale : MonoBehaviour
 {
     public bool aGagne;
     Animator anim;
+    public Animator boutonAnim;
+    public Animator cinemachine;
     AudioSource audioSource;
+    public AudioSource compter42;
+    public AudioClip sfxChenilleAGagne;
+    public AudioClip vocalOuiBravoPapillon;
     public AudioSource tuAsGagne;
     public AudioSource musique;
     public AudioClip vocalFourmiAGagne;
+    public AudioClip sfxFourmiAGagne;
 
     void Start()
     {
@@ -19,6 +25,11 @@ public class CaseFinale : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
         aGagne = false;
+        
+        if (SceneManager.GetActiveScene().name == "Mini-Jeu1")
+        {
+            compter42.volume = 0f;
+        }
     }
 
     void Update()
@@ -35,8 +46,13 @@ public class CaseFinale : MonoBehaviour
                 aGagne = true;
                 Debug.Log("VICT0IRE");
                 anim.SetTrigger("RayonsBlancs");
-                musique.volume = 0.67f;
+                Invoke("SoundEffectVictoireChenille", 1f);
+                Invoke("ZoomCinemachine", 3f);
+                musique.volume = 4f;
+                compter42.volume = 1f;
+                Invoke("InciteRetournerMenu", 7f);
                 GetComponent<Collider2D>().enabled = false; // Une seule victoire
+                Invoke("TransformationPapillon", 21f);
             }
         }
 
@@ -47,10 +63,39 @@ public class CaseFinale : MonoBehaviour
                 aGagne = true;
                 Debug.Log("VICT0IRE");
                 audioSource.PlayOneShot(vocalFourmiAGagne);
+                Invoke("SoundEffectVictoireFourmi", 1f);
+                Invoke("ZoomCinemachine", 3f);
                 musique.volume = 0.67f;
                 tuAsGagne.volume = 1f;
+                Invoke("InciteRetournerMenu", 7f);
                 GetComponent<Collider2D>().enabled = false; // Une seule victoire
             }
         }
     }
+
+    void SoundEffectVictoireChenille()
+    {
+        audioSource.PlayOneShot(sfxChenilleAGagne);
+    }
+
+    void SoundEffectVictoireFourmi()
+    {
+        audioSource.PlayOneShot(sfxFourmiAGagne);
+    }
+
+    void ZoomCinemachine()
+    {
+        cinemachine.SetTrigger("CamZoom");
+    }
+
+    void InciteRetournerMenu()
+    {
+        boutonAnim.SetTrigger("TempsDeQuitter");
+    }
+
+    void TransformationPapillon()
+    {
+        audioSource.PlayOneShot(vocalOuiBravoPapillon);
+    }
+
 }

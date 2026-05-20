@@ -24,6 +24,8 @@ public class DansCollider : MonoBehaviour
     AudioSource audioSource;
     public AudioClip vocalMauvaiseDirectionDroite;
     public AudioClip vocalMauvaiseDirectionGauche;
+    public AudioClip sfxAirSuction;
+    public AudioClip sfxAirSuctionReverse;
 
     public bool delaiAspire = false;
     public LeJeu leJeu; // Pour utiliser le bool vocalInstructionsTerminees
@@ -80,10 +82,11 @@ public class DansCollider : MonoBehaviour
                 }
                 ignoreProchainTrou = true;
 
-                anim.SetTrigger("estTombee"); // La fourmi tombe dans un trou  
+                anim.SetTrigger("estTombee"); // La fourmi tombe dans un trou
 
                 if (CompareTag("Player"))
                 {
+                    audioSource.PlayOneShot(sfxAirSuction);
                     deplacement.peutBouger = false; // Déplacement bloqué du joueur
                 }
 
@@ -98,8 +101,20 @@ public class DansCollider : MonoBehaviour
                 else
                 {
                     rb.AddForce(dir * 40f, ForceMode2D.Impulse); // Une force vers le centre du trou
-                }
 
+                    GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+                    if (player != null)
+                    {
+                        // Vérifier si le joueur est proche
+                        float distance = Vector2.Distance(transform.position, player.transform.position);
+
+                        if (distance < 20f) // Distance maximale pour entendre le son
+                        {
+                            audioSource.PlayOneShot(sfxAirSuction); // Le son est joué seulement s'il est assez près du joueur
+                        }
+                    }
+                }
                 //Debug.Log("Dans Trou");
                 Invoke("ReviensSurface", 0.5f);
             }
@@ -153,14 +168,28 @@ public class DansCollider : MonoBehaviour
 
         if (collision.gameObject.CompareTag("LimiteDroite") && CompareTag("Player"))
         {
-            if (leJeu != null && leJeu.vocalInstructionsTerminees) // Attendre que les instructions soient finies
+            if (leJeu != null && leJeu.vocalInstructionsTerminees && leJeu.MessageDebutFini && !LeJeu.autreVocalQuiJoue) // Attendre que les instructions soient finies
             {
-                audioSource.PlayOneShot(vocalMauvaiseDirectionDroite); // Je pense qu'on devrait aller à gauche
+                if (SceneManager.GetActiveScene().name == "Mini-Jeu2")
+                {
+                    audioSource.PlayOneShot(vocalMauvaiseDirectionDroite, 2f); // Hors Labyrinthe
+                }
+                else
+                {
+                    audioSource.PlayOneShot(vocalMauvaiseDirectionDroite); // Je pense qu'on devrait aller à gauche
+                }
             }
         }
         else if (collision.gameObject.CompareTag("LimiteGauche") && CompareTag("Player"))
         {
-            audioSource.PlayOneShot(vocalMauvaiseDirectionGauche); // Je pense qu'on devrait aller à droite
+            if (leJeu != null && leJeu.vocalInstructionsTerminees && leJeu.MessageDebutFini && !LeJeu.autreVocalQuiJoue)
+            {
+                if (SceneManager.GetActiveScene().name == "Mini-Jeu2")
+                {
+                    audioSource.PlayOneShot(vocalMauvaiseDirectionGauche, 2f); // Hors Labyrinthe
+                }
+                audioSource.PlayOneShot(vocalMauvaiseDirectionGauche); // Je pense qu'on devrait aller à droite
+            }
         }
     }
 
@@ -180,6 +209,7 @@ public class DansCollider : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, 0f, 45f); // Différent angle de rotation à la remontée
 
             rb.AddForce(new Vector2(-1f, -1f).normalized * 60f, ForceMode2D.Impulse); // Petite force en diagonale sud-ouest
+            audioSource.PlayOneShot(sfxAirSuctionReverse);
         }
         else
         {
@@ -188,6 +218,24 @@ public class DansCollider : MonoBehaviour
             if (CompareTag("Sucre"))
             {
                 rb.AddForce(new Vector2(-1f, -1f).normalized * 80f, ForceMode2D.Impulse); // Grosse force hehe
+            }
+
+            if (CompareTag("Sucre") || CompareTag("Bille"))
+            {
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+                if (player != null)
+                {
+                    float distance = Vector2.Distance(
+                        transform.position,
+                        player.transform.position
+                    );
+
+                    if (distance < 20f)
+                    {
+                        audioSource.PlayOneShot(sfxAirSuctionReverse); // Le son est joué seulement s'il est assez près du joueur
+                    }
+                }
             }
         }
 

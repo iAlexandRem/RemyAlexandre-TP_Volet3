@@ -85,7 +85,7 @@ public class SelectionCoccinelle : MonoBehaviour
 
             pourbougerPoisDuRouge.gameObject.SetActive(false);
             lumierePourSpawnRouge.SetActive(true);
-            audioSource.PlayOneShot(sfxlumierePourSpawn);
+            audioSource.PlayOneShot(sfxlumierePourSpawn, 2f);
         }
         else
         {
@@ -95,7 +95,7 @@ public class SelectionCoccinelle : MonoBehaviour
 
             pourbougerPoisDuJaune.gameObject.SetActive(true);
             lumierePourSpawnJaune.SetActive(true);
-            audioSource.PlayOneShot(sfxlumierePourSpawn);
+            audioSource.PlayOneShot(sfxlumierePourSpawn, 2f);
         }
 
         PremierSpawn();

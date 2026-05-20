@@ -7,7 +7,9 @@ public class SucreBrun : MonoBehaviour
 
     Transform joueur;
     Rigidbody2D rb;
-    public Collider2D col;
+    Collider2D col;
+    AudioSource audioSource;
+    public AudioClip sfxDropSucreBrun;
 
     public bool estPorte = false; // On ne porte pas le sucre au début
     public float distancePrise; // 4f
@@ -17,6 +19,7 @@ public class SucreBrun : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
+        audioSource = GetComponent<AudioSource>();
 
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         joueur = playerObj.transform; // Transform du joueur
@@ -59,6 +62,7 @@ public class SucreBrun : MonoBehaviour
                 if (bille.collisionBilleFourmi)
                 {
                     estPorte = false; // La fourmi échappe le sucre, lors d'une collision avec bille
+                    audioSource.PlayOneShot(sfxDropSucreBrun);
                 }
             }
         }

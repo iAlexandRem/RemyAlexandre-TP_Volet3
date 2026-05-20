@@ -70,13 +70,14 @@ public class LeJeu : MonoBehaviour
         }
 
 
-        Debug.Log(autreVocalQuiJoue);
+        // Debug.Log(autreVocalQuiJoue);
         // Au premier clic durant Mini-Jeu1 et Mini-Jeu2
         if (!premierClickDetecte && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame && SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "Selecteur de jeux" && SceneManager.GetActiveScene().name != "Mini-Jeu3")
         {
             premierClickDetecte = true;
 
             audioSource.Stop(); // J'arrête le premier message par souris
+            MessageDebutFini = true;
 
             if (flecheDejaPressee) // S'il y a clic alors que les flèches ont été pressées
             {

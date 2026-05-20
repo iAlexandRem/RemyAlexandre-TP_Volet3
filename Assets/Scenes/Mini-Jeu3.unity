@@ -488,7 +488,7 @@ MonoBehaviour:
   animRouge: {fileID: 1781571690}
   animJaune: {fileID: 0}
   eventTrigger: {fileID: 59299305}
-  delaiSec: 1.5
+  delaiSec: 1
   estRouge: 1
   dragRouge: {fileID: 1781571691}
   dragJaune: {fileID: 2075932791}
@@ -521,7 +521,7 @@ MonoBehaviour:
   hoverUI: 0
   visuelHover: {fileID: 1310350527}
   visuelActive: {fileID: 0}
-  vocalHover: {fileID: 0}
+  vocalHover: {fileID: 8300000, guid: 526a95418c6744a84b48100b937841d7, type: 3}
   vocalActive: {fileID: 0}
 --- !u!82 &59299308
 AudioSource:
@@ -536,7 +536,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.42
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4066,8 +4066,10 @@ MonoBehaviour:
   autreAudioSource: {fileID: 0}
   vocalMessageDebut: {fileID: 8300000, guid: 9e2e77005a39d44d08c267a4341f69e8, type: 3}
   vocalInstructionsDebut: {fileID: 8300000, guid: 3b6e99a3ce07a4a229334912748856d8, type: 3}
+  vocalPasLaSouris: {fileID: 0}
   hoverBoutons:
   - {fileID: 0}
+  MessageDebutFini: 0
   vocalInstructionsTerminees: 0
   anim: {fileID: 0}
 --- !u!4 &865667312
@@ -7884,8 +7886,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1644060565}
   - component: {fileID: 1644060566}
-  - component: {fileID: 1644060567}
   - component: {fileID: 1644060568}
+  - component: {fileID: 1644060567}
   - component: {fileID: 1644060569}
   m_Layer: 0
   m_Name: Anim_CoccinelleJaune
@@ -7954,7 +7956,7 @@ MonoBehaviour:
   animRouge: {fileID: 0}
   animJaune: {fileID: 2075932790}
   eventTrigger: {fileID: 1644060566}
-  delaiSec: 1.5
+  delaiSec: 1
   estRouge: 0
   dragRouge: {fileID: 1781571691}
   dragJaune: {fileID: 2075932791}
@@ -7987,7 +7989,7 @@ MonoBehaviour:
   hoverUI: 0
   visuelHover: {fileID: 1879849360}
   visuelActive: {fileID: 0}
-  vocalHover: {fileID: 0}
+  vocalHover: {fileID: 8300000, guid: a200ce262fcc049828f92c9188c9d011, type: 3}
   vocalActive: {fileID: 0}
 --- !u!82 &1644060569
 AudioSource:
@@ -8002,7 +8004,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.42
   m_Pitch: 1
   Loop: 0
   Mute: 0
