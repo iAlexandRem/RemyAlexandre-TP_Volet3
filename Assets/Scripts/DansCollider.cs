@@ -97,22 +97,18 @@ public class DansCollider : MonoBehaviour
                     rb.AddForce(dir * 20f, ForceMode2D.Impulse); // Une force vers le centre du trou
                     delaiAspire = true;
                     Invoke("DelaiAspire", 4f);
+                    if (ProximiteAvecJoueur(20f))
+                    {
+                        audioSource.PlayOneShot(sfxAirSuction); // Le son est joué seulement s'il est assez près du joueur
+                    }
                 }
                 else
                 {
                     rb.AddForce(dir * 40f, ForceMode2D.Impulse); // Une force vers le centre du trou
 
-                    GameObject player = GameObject.FindGameObjectWithTag("Player");
-
-                    if (player != null)
+                    if (ProximiteAvecJoueur(20f))
                     {
-                        // Vérifier si le joueur est proche
-                        float distance = Vector2.Distance(transform.position, player.transform.position);
-
-                        if (distance < 20f) // Distance maximale pour entendre le son
-                        {
-                            audioSource.PlayOneShot(sfxAirSuction); // Le son est joué seulement s'il est assez près du joueur
-                        }
+                        audioSource.PlayOneShot(sfxAirSuction); // Le son est joué seulement si l'objet est assez près du joueur
                     }
                 }
                 //Debug.Log("Dans Trou");
@@ -128,7 +124,6 @@ public class DansCollider : MonoBehaviour
 
                 rb.angularDamping = 0f;
             }
-
         }
     }
 
@@ -219,23 +214,13 @@ public class DansCollider : MonoBehaviour
             {
                 rb.AddForce(new Vector2(-1f, -1f).normalized * 80f, ForceMode2D.Impulse); // Grosse force hehe
             }
+        }
 
-            if (CompareTag("Sucre") || CompareTag("Bille"))
+        if (CompareTag("Sucre") || CompareTag("Bille"))
+        {
+            if (ProximiteAvecJoueur(20f))
             {
-                GameObject player = GameObject.FindGameObjectWithTag("Player");
-
-                if (player != null)
-                {
-                    float distance = Vector2.Distance(
-                        transform.position,
-                        player.transform.position
-                    );
-
-                    if (distance < 20f)
-                    {
-                        audioSource.PlayOneShot(sfxAirSuctionReverse); // Le son est joué seulement s'il est assez près du joueur
-                    }
-                }
+                audioSource.PlayOneShot(sfxAirSuctionReverse); // Le son est joué seulement si l'objet est assez proche du joueur
             }
         }
 
@@ -260,4 +245,16 @@ public class DansCollider : MonoBehaviour
         delaiAspire = false;
     }
 
+
+    public bool ProximiteAvecJoueur(float distanceMax)
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        if (player == null)
+            return false;
+
+        float distance = Vector2.Distance(transform.position, player.transform.position);
+
+        return distance < distanceMax;
+    }
 }

@@ -25,7 +25,7 @@ public class SucreBrun : MonoBehaviour
         joueur = playerObj.transform; // Transform du joueur
         billes = FindObjectsByType<MouvementBillesEnnemies>(FindObjectsSortMode.None);
 
-        Invoke("PetitePoussee", 7f); // Délai
+        Invoke("PetitePoussee", 11f); // Délai
     }
 
     void PetitePoussee()

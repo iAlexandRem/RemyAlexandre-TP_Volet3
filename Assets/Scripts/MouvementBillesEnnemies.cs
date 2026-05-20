@@ -16,8 +16,11 @@ public class MouvementBillesEnnemies : MonoBehaviour
     private Transform joueur;
     private float timerRebond = 0f; // Pour un countdown à chaque rebond
     public LeJeu jeu; // Pour utiliser des bools comme vocalInstructionsTerminees ou autreVocalQuiJoue
+    public Animator fourmiAnim;
     AudioSource audioSource;
     public AudioClip vocalEviteBillesEnMetal;
+    public AudioClip sfxBilleMetalRoll;
+    public AudioClip sfxCollisionBois;
 
     void Start()
     {
@@ -26,6 +29,28 @@ public class MouvementBillesEnnemies : MonoBehaviour
         joueur = GameObject.FindGameObjectWithTag("Player").transform; // Trouve la fourmi
         vitesseActuelle = vitesse;
         BilleToucheFourmi = false;
+        audioSource.Stop();
+        audioSource.clip = null;
+        audioSource.loop = false;
+    }
+
+    void Update()
+    {
+        // Debug.Log("Bille est-elle proche du joueur : " + ProximiteAvecJoueur(20f));
+        if (ProximiteAvecJoueur(20f))
+        {
+            if (!audioSource.isPlaying)
+            {
+                audioSource.clip = sfxBilleMetalRoll;
+                audioSource.loop = true;
+                audioSource.Play();
+            }
+        }
+        else
+        {
+            audioSource.clip = null;
+            audioSource.loop = false;
+        }
     }
 
     void FixedUpdate()
@@ -77,6 +102,7 @@ public class MouvementBillesEnnemies : MonoBehaviour
                 }
             }
             collisionBilleFourmi = true;
+            fourmiAnim.SetTrigger("estFrappee");
 
             GameObject[] trous = GameObject.FindGameObjectsWithTag("Trou"); // Ça met tous les gameobjects Trous dans un array [trous]
 
@@ -107,6 +133,11 @@ public class MouvementBillesEnnemies : MonoBehaviour
             Vector2 dirAleatoire = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad)); // Direction aléatoire
 
             rb.linearVelocity = dirAleatoire * rb.linearVelocity.magnitude * 0.3f; // Rebond selon direction aléatoire
+
+            if (ProximiteAvecJoueur(20f))
+            {
+                audioSource.PlayOneShot(sfxCollisionBois);
+            }
         }
     }
 
@@ -132,4 +163,17 @@ public class MouvementBillesEnnemies : MonoBehaviour
     {
         jeu.SonEstLibre();
     }
+
+    bool ProximiteAvecJoueur(float distanceMax)
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        if (player == null)
+            return false;
+
+        float distance = Vector2.Distance(transform.position, player.transform.position);
+
+        return distance < distanceMax;
+    }
+
 }

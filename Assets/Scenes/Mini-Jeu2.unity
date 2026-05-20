@@ -3652,7 +3652,7 @@ Transform:
   m_GameObject: {fileID: 416720782}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 9, y: 33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9471,7 +9471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1102084910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9597,7 +9597,10 @@ MonoBehaviour:
   tempsRebond: 1
   collisionBilleFourmi: 0
   jeu: {fileID: 865667311}
+  fourmiAnim: {fileID: 1994004748}
   vocalEviteBillesEnMetal: {fileID: 8300000, guid: 49c3f76f0104642e3b233fa06abbcd5a, type: 3}
+  sfxBilleMetalRoll: {fileID: 8300000, guid: 7c110baefd8ec41d189a7cffa199c387, type: 3}
+  sfxCollisionBois: {fileID: 8300000, guid: d2f69527a80c245f6b8543c90a7b5b3c, type: 3}
 --- !u!50 &1110611097
 Rigidbody2D:
   serializedVersion: 5
@@ -9721,6 +9724,8 @@ MonoBehaviour:
   - {fileID: 1731279253}
   vocalMauvaiseDirectionDroite: {fileID: 0}
   vocalMauvaiseDirectionGauche: {fileID: 0}
+  sfxAirSuction: {fileID: 8300000, guid: bdf123caa8ef04830bf74f916be9cf49, type: 3}
+  sfxAirSuctionReverse: {fileID: 8300000, guid: cd3a70d6cd9a7418690de46a17faf7bb, type: 3}
   delaiAspire: 0
   leJeu: {fileID: 0}
 --- !u!82 &1110611101
@@ -9735,7 +9740,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.42
   m_Pitch: 1
   Loop: 0
@@ -11263,7 +11268,7 @@ Transform:
   m_GameObject: {fileID: 1325403492}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.97, y: 55.897, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11406,7 +11411,10 @@ MonoBehaviour:
   tempsRebond: 1
   collisionBilleFourmi: 0
   jeu: {fileID: 865667311}
+  fourmiAnim: {fileID: 1994004748}
   vocalEviteBillesEnMetal: {fileID: 8300000, guid: 49c3f76f0104642e3b233fa06abbcd5a, type: 3}
+  sfxBilleMetalRoll: {fileID: 8300000, guid: 7c110baefd8ec41d189a7cffa199c387, type: 3}
+  sfxCollisionBois: {fileID: 8300000, guid: 56f088b08950d4ffa9cb513416cd8b64, type: 3}
 --- !u!50 &1330841159
 Rigidbody2D:
   serializedVersion: 5
@@ -11530,6 +11538,8 @@ MonoBehaviour:
   - {fileID: 1731279253}
   vocalMauvaiseDirectionDroite: {fileID: 0}
   vocalMauvaiseDirectionGauche: {fileID: 0}
+  sfxAirSuction: {fileID: 8300000, guid: bdf123caa8ef04830bf74f916be9cf49, type: 3}
+  sfxAirSuctionReverse: {fileID: 8300000, guid: cd3a70d6cd9a7418690de46a17faf7bb, type: 3}
   delaiAspire: 0
   leJeu: {fileID: 0}
 --- !u!82 &1330841163
@@ -11544,7 +11554,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.42
   m_Pitch: 1
   Loop: 0
@@ -12081,7 +12091,10 @@ MonoBehaviour:
   tempsRebond: 1
   collisionBilleFourmi: 0
   jeu: {fileID: 865667311}
+  fourmiAnim: {fileID: 1994004748}
   vocalEviteBillesEnMetal: {fileID: 8300000, guid: 49c3f76f0104642e3b233fa06abbcd5a, type: 3}
+  sfxBilleMetalRoll: {fileID: 8300000, guid: 7c110baefd8ec41d189a7cffa199c387, type: 3}
+  sfxCollisionBois: {fileID: 8300000, guid: 56f088b08950d4ffa9cb513416cd8b64, type: 3}
 --- !u!50 &1377660324
 Rigidbody2D:
   serializedVersion: 5
@@ -12205,6 +12218,8 @@ MonoBehaviour:
   - {fileID: 1731279253}
   vocalMauvaiseDirectionDroite: {fileID: 0}
   vocalMauvaiseDirectionGauche: {fileID: 0}
+  sfxAirSuction: {fileID: 8300000, guid: bdf123caa8ef04830bf74f916be9cf49, type: 3}
+  sfxAirSuctionReverse: {fileID: 8300000, guid: cd3a70d6cd9a7418690de46a17faf7bb, type: 3}
   delaiAspire: 0
   leJeu: {fileID: 0}
 --- !u!82 &1377660328
@@ -12219,7 +12234,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.42
   m_Pitch: 1
   Loop: 0
@@ -12498,7 +12513,7 @@ Transform:
   m_GameObject: {fileID: 1394456543}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.97, y: 55.9, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12661,6 +12676,8 @@ MonoBehaviour:
   - {fileID: 1731279253}
   vocalMauvaiseDirectionDroite: {fileID: 0}
   vocalMauvaiseDirectionGauche: {fileID: 0}
+  sfxAirSuction: {fileID: 8300000, guid: bdf123caa8ef04830bf74f916be9cf49, type: 3}
+  sfxAirSuctionReverse: {fileID: 8300000, guid: cd3a70d6cd9a7418690de46a17faf7bb, type: 3}
   delaiAspire: 0
   leJeu: {fileID: 0}
 --- !u!1 &1424941667
@@ -12968,7 +12985,10 @@ MonoBehaviour:
   tempsRebond: 1
   collisionBilleFourmi: 0
   jeu: {fileID: 865667311}
+  fourmiAnim: {fileID: 1994004748}
   vocalEviteBillesEnMetal: {fileID: 8300000, guid: 49c3f76f0104642e3b233fa06abbcd5a, type: 3}
+  sfxBilleMetalRoll: {fileID: 8300000, guid: 7c110baefd8ec41d189a7cffa199c387, type: 3}
+  sfxCollisionBois: {fileID: 8300000, guid: 56f088b08950d4ffa9cb513416cd8b64, type: 3}
 --- !u!50 &1440885575
 Rigidbody2D:
   serializedVersion: 5
@@ -13092,6 +13112,8 @@ MonoBehaviour:
   - {fileID: 1731279253}
   vocalMauvaiseDirectionDroite: {fileID: 0}
   vocalMauvaiseDirectionGauche: {fileID: 0}
+  sfxAirSuction: {fileID: 8300000, guid: bdf123caa8ef04830bf74f916be9cf49, type: 3}
+  sfxAirSuctionReverse: {fileID: 8300000, guid: cd3a70d6cd9a7418690de46a17faf7bb, type: 3}
   delaiAspire: 0
   leJeu: {fileID: 0}
 --- !u!82 &1440885579
@@ -13106,7 +13128,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.42
   m_Pitch: 1
   Loop: 0
@@ -13991,6 +14013,8 @@ MonoBehaviour:
   - {fileID: 2088070263}
   vocalMauvaiseDirectionDroite: {fileID: 8300000, guid: b34eec7079e1a47068cbc335258be02a, type: 3}
   vocalMauvaiseDirectionGauche: {fileID: 8300000, guid: a7ccebb654cc148ceae1196d86bc4a4c, type: 3}
+  sfxAirSuction: {fileID: 8300000, guid: bdf123caa8ef04830bf74f916be9cf49, type: 3}
+  sfxAirSuctionReverse: {fileID: 8300000, guid: cd3a70d6cd9a7418690de46a17faf7bb, type: 3}
   delaiAspire: 0
   leJeu: {fileID: 865667311}
 --- !u!61 &1590324039
@@ -14285,7 +14309,10 @@ MonoBehaviour:
   tempsRebond: 1
   collisionBilleFourmi: 0
   jeu: {fileID: 865667311}
+  fourmiAnim: {fileID: 1994004748}
   vocalEviteBillesEnMetal: {fileID: 8300000, guid: 49c3f76f0104642e3b233fa06abbcd5a, type: 3}
+  sfxBilleMetalRoll: {fileID: 8300000, guid: 7c110baefd8ec41d189a7cffa199c387, type: 3}
+  sfxCollisionBois: {fileID: 8300000, guid: d2f69527a80c245f6b8543c90a7b5b3c, type: 3}
 --- !u!50 &1596150406
 Rigidbody2D:
   serializedVersion: 5
@@ -14409,6 +14436,8 @@ MonoBehaviour:
   - {fileID: 1731279253}
   vocalMauvaiseDirectionDroite: {fileID: 0}
   vocalMauvaiseDirectionGauche: {fileID: 0}
+  sfxAirSuction: {fileID: 8300000, guid: bdf123caa8ef04830bf74f916be9cf49, type: 3}
+  sfxAirSuctionReverse: {fileID: 8300000, guid: cd3a70d6cd9a7418690de46a17faf7bb, type: 3}
   delaiAspire: 0
   leJeu: {fileID: 0}
 --- !u!82 &1596150410
@@ -14423,7 +14452,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.42
   m_Pitch: 1
   Loop: 0
@@ -14777,7 +14806,10 @@ MonoBehaviour:
   tempsRebond: 1
   collisionBilleFourmi: 0
   jeu: {fileID: 865667311}
+  fourmiAnim: {fileID: 1994004748}
   vocalEviteBillesEnMetal: {fileID: 8300000, guid: 49c3f76f0104642e3b233fa06abbcd5a, type: 3}
+  sfxBilleMetalRoll: {fileID: 8300000, guid: 7c110baefd8ec41d189a7cffa199c387, type: 3}
+  sfxCollisionBois: {fileID: 8300000, guid: d2f69527a80c245f6b8543c90a7b5b3c, type: 3}
 --- !u!50 &1704911556
 Rigidbody2D:
   serializedVersion: 5
@@ -14901,6 +14933,8 @@ MonoBehaviour:
   - {fileID: 1731279253}
   vocalMauvaiseDirectionDroite: {fileID: 0}
   vocalMauvaiseDirectionGauche: {fileID: 0}
+  sfxAirSuction: {fileID: 8300000, guid: bdf123caa8ef04830bf74f916be9cf49, type: 3}
+  sfxAirSuctionReverse: {fileID: 8300000, guid: cd3a70d6cd9a7418690de46a17faf7bb, type: 3}
   delaiAspire: 0
   leJeu: {fileID: 0}
 --- !u!82 &1704911560
@@ -14915,7 +14949,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.42
   m_Pitch: 1
   Loop: 0

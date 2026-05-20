@@ -4361,6 +4361,8 @@ MonoBehaviour:
   pointsRetour: []
   vocalMauvaiseDirectionDroite: {fileID: 8300000, guid: af87bba6427734237b3516bb6a26fe8c, type: 3}
   vocalMauvaiseDirectionGauche: {fileID: 8300000, guid: 1b03fc3fda277461fa4d122cc6aa3ff0, type: 3}
+  sfxAirSuction: {fileID: 0}
+  sfxAirSuctionReverse: {fileID: 0}
   delaiAspire: 0
   leJeu: {fileID: 865667311}
 --- !u!114 &211945950
@@ -20655,7 +20657,7 @@ Transform:
   m_GameObject: {fileID: 953994249}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0000000035202365, y: -0.000000037515793, z: -2.6943612e-16, w: 1}
-  m_LocalPosition: {x: 115.56043, y: 0.99516016, z: -10}
+  m_LocalPosition: {x: 115.5606, y: 0.99516016, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23402,7 +23404,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1102084910
 MonoBehaviour:
   m_ObjectHideFlags: 0
