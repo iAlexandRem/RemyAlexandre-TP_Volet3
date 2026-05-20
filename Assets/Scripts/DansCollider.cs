@@ -21,6 +21,8 @@ public class DansCollider : MonoBehaviour
     public Transform[] pointsRetour; // Un point de retour (trou) où le joueur revient (et les autres seront aléatoires pour les billes et le sucre)
     bool ignoreProchainTrou = false; // Pour ignorer temporairement le trigger du trou de sortie
 
+    public int NombreDeChutesFourmi = 0;
+
     AudioSource audioSource;
     public AudioClip vocalMauvaiseDirectionDroite;
     public AudioClip vocalMauvaiseDirectionGauche;
@@ -28,6 +30,7 @@ public class DansCollider : MonoBehaviour
     public AudioClip sfxAirSuctionReverse;
 
     public bool delaiAspire = false;
+    public bool vientDEtreTeleporte = false;
     public LeJeu leJeu; // Pour utiliser le bool vocalInstructionsTerminees
 
 
@@ -45,6 +48,7 @@ public class DansCollider : MonoBehaviour
             targetScaleLimites = initialScaleLimites;
         }
         delaiAspire = false;
+        NombreDeChutesFourmi = 0;
     }
 
 
@@ -190,12 +194,13 @@ public class DansCollider : MonoBehaviour
 
 
 
-    void ReviensSurface() // Téléportation
+    void ReviensSurface() // Téléportation par trou
     {
         if (pointsRetour == null || pointsRetour.Length == 0) // Si le tableau de trous n'existe pas ou est vide
         {
             return; // Pas de téléportation
         }
+
 
         if (CompareTag("Player"))
         {
@@ -204,7 +209,19 @@ public class DansCollider : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, 0f, 45f); // Différent angle de rotation à la remontée
 
             rb.AddForce(new Vector2(-1f, -1f).normalized * 60f, ForceMode2D.Impulse); // Petite force en diagonale sud-ouest
+
             audioSource.PlayOneShot(sfxAirSuctionReverse);
+
+            if (!vientDEtreTeleporte)
+            {
+                NombreDeChutesFourmi = 0;
+            }
+            else
+            {
+                NombreDeChutesFourmi++; // +1 chute à chaque remontée au trou de départ
+            }
+            vientDEtreTeleporte = true;
+            Debug.Log(NombreDeChutesFourmi);
         }
         else
         {
@@ -215,6 +232,7 @@ public class DansCollider : MonoBehaviour
                 rb.AddForce(new Vector2(-1f, -1f).normalized * 80f, ForceMode2D.Impulse); // Grosse force hehe
             }
         }
+
 
         if (CompareTag("Sucre") || CompareTag("Bille"))
         {

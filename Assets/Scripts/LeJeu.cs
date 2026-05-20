@@ -58,6 +58,8 @@ public class LeJeu : MonoBehaviour
             flecheDejaPressee = true;
         }
 
+        // Debug.Log(autreVocalQuiJoue);
+
         if (!audioSource.isPlaying && audioSource.clip == vocalMessageDebut && !MessageDebutFini)
         {
             MessageDebutFini = true;
@@ -69,8 +71,6 @@ public class LeJeu : MonoBehaviour
             }
         }
 
-
-        // Debug.Log(autreVocalQuiJoue);
         // Au premier clic durant Mini-Jeu1 et Mini-Jeu2
         if (!premierClickDetecte && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame && SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "Selecteur de jeux" && SceneManager.GetActiveScene().name != "Mini-Jeu3")
         {
@@ -175,6 +175,7 @@ public class LeJeu : MonoBehaviour
         else if (SceneManager.GetActiveScene().name == "Mini-Jeu2")
         {
             audioSource.Play(); // On passe aux INSTRUCTIONS des flèches clavier
+            anim.SetTrigger("FlechesInstructions");
         }
 
         else if (SceneManager.GetActiveScene().name == "Mini-Jeu1")

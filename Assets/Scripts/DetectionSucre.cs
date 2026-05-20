@@ -7,6 +7,7 @@ public class DetectionSucre : MonoBehaviour
     AudioSource audioSource;
     public AudioClip vocalSucreBrunTrouve;
     public AudioClip vocalRappelTrouverSucreBrun;
+    public Animator barreEspace;
     public bool premiereRencontreSucre = false; // La première fois que tu trouves le sucre brun
     public bool deuxiemeRencontreSucre = false;
     public GameObject SucreBrun;
@@ -33,6 +34,7 @@ public class DetectionSucre : MonoBehaviour
         if (collision.CompareTag("Player") && !premiereRencontreSucre && jeu.MessageDebutFini && !LeJeu.autreVocalQuiJoue && !finale.aGagne)
         {
             premiereRencontreSucre = true;
+            barreEspace.SetTrigger("AppuieEspace");
             audioSource.PlayOneShot(vocalSucreBrunTrouve); // Message qui joue quand tu trouves le sucre brun pour la 1ère fois
             LeJeu.autreVocalQuiJoue = true;
             Invoke("AucunVocalJoue", 11f);

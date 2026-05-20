@@ -4,7 +4,9 @@ using UnityEngine.SceneManagement;
 public class CaseFinale : MonoBehaviour
 {
     public bool aGagne;
+    public SucreBrun sucre;
     Animator anim;
+    public Animator barreEspace;
     public Animator boutonAnim;
     public Animator cinemachine;
     AudioSource audioSource;
@@ -25,7 +27,7 @@ public class CaseFinale : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
         aGagne = false;
-        
+
         if (SceneManager.GetActiveScene().name == "Mini-Jeu1")
         {
             compter42.volume = 0f;
@@ -58,6 +60,11 @@ public class CaseFinale : MonoBehaviour
 
         else if (SceneManager.GetActiveScene().name == "Mini-Jeu2")
         {
+            if (collision.CompareTag("Player") && sucre.estPorte && !aGagne) // Si on est arrivé à la fin, et qu'on ne dépose pas encore le sucre dans la case
+            {
+                barreEspace.SetTrigger("RappelRelacheSucre");
+            }
+
             if (collision.gameObject.CompareTag("Sucre")) // La Fourmi gagne en DÉPOSANT le sucre brun dans la case Fin
             {
                 aGagne = true;
@@ -66,9 +73,10 @@ public class CaseFinale : MonoBehaviour
                 Invoke("SoundEffectVictoireFourmi", 1f);
                 Invoke("ZoomCinemachine", 3f);
                 musique.volume = 0.67f;
-                tuAsGagne.volume = 1f;
+                Invoke("TuAsGagneChant", 3f);
                 Invoke("InciteRetournerMenu", 7f);
                 GetComponent<Collider2D>().enabled = false; // Une seule victoire
+                barreEspace.SetTrigger("DesactiverInstructionsClavier");
             }
         }
     }
@@ -98,4 +106,8 @@ public class CaseFinale : MonoBehaviour
         audioSource.PlayOneShot(vocalOuiBravoPapillon);
     }
 
+    void TuAsGagneChant()
+    {
+        tuAsGagne.volume = 1f;
+    }
 }
