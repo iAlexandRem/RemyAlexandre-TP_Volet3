@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class MouvementBillesEnnemies : MonoBehaviour
 {
-    public LeJeu jeu; // Référence au script LeJeu
     public float vitesse;
     public float acceleration;
     public float forcePoussee;
@@ -16,7 +15,7 @@ public class MouvementBillesEnnemies : MonoBehaviour
     Rigidbody2D rb;
     private Transform joueur;
     private float timerRebond = 0f; // Pour un countdown à chaque rebond
-    public LeJeu leJeu; // Pour utiliser le bool vocalInstructionsTerminees
+    public LeJeu jeu; // Pour utiliser des bools comme vocalInstructionsTerminees ou autreVocalQuiJoue
     AudioSource audioSource;
     public AudioClip vocalEviteBillesEnMetal;
 
@@ -69,12 +68,12 @@ public class MouvementBillesEnnemies : MonoBehaviour
         {
             if (!BilleToucheFourmi)
             {
-                if (leJeu != null && leJeu.vocalInstructionsTerminees && !LeJeu.autreVocalQuiJoue) // Attendre que les instructions soient finies
+                if (jeu != null && jeu.MessageDebutFini && !LeJeu.autreVocalQuiJoue) // Attendre que les instructions soient finies
                 {
                     BilleToucheFourmi = true;
-                    audioSource.PlayOneShot(vocalEviteBillesEnMetal); // Avertissement des billes au premier contact
+                    audioSource.PlayOneShot(vocalEviteBillesEnMetal, 1.5f); // Avertissement des billes au premier contact
                     LeJeu.autreVocalQuiJoue = true;
-                    Invoke("VersSonLibre", 5f);
+                    Invoke("AucunVocalJoue", 6f);
                 }
             }
             collisionBilleFourmi = true;
@@ -129,7 +128,7 @@ public class MouvementBillesEnnemies : MonoBehaviour
     }
 
 
-    void VersSonLibre()
+    void AucunVocalJoue()
     {
         jeu.SonEstLibre();
     }

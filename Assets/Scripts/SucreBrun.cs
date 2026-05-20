@@ -7,6 +7,7 @@ public class SucreBrun : MonoBehaviour
 
     Transform joueur;
     Rigidbody2D rb;
+    public Collider2D col;
 
     public bool estPorte = false; // On ne porte pas le sucre au début
     public float distancePrise; // 4f
@@ -15,12 +16,13 @@ public class SucreBrun : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        col = GetComponent<Collider2D>();
 
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         joueur = playerObj.transform; // Transform du joueur
         billes = FindObjectsByType<MouvementBillesEnnemies>(FindObjectsSortMode.None);
 
-        Invoke("PetitePoussee", 6f); // Délai
+        Invoke("PetitePoussee", 7f); // Délai
     }
 
     void PetitePoussee()
@@ -60,6 +62,14 @@ public class SucreBrun : MonoBehaviour
                 }
             }
         }
+
+
+        if (rb.linearVelocity.magnitude > 20f) // Au cas-où que le sucre prend trop de vitesse dans les trous
+        {
+            rb.linearVelocity *= 0.1f; // Ralentissement
+            col.enabled = false; // Je désactive temporairement le collider
+            Invoke("ReactiverCollider", 0.5f);
+        }
     }
 
 
@@ -69,5 +79,10 @@ public class SucreBrun : MonoBehaviour
             estPorte = false;
             rb.simulated = true;
         }
+    }
+
+    void ReactiverCollider()
+    {
+        col.enabled = true;
     }
 }

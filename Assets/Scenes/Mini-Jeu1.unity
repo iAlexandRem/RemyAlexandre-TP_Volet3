@@ -4361,6 +4361,7 @@ MonoBehaviour:
   pointsRetour: []
   vocalMauvaiseDirectionDroite: {fileID: 8300000, guid: af87bba6427734237b3516bb6a26fe8c, type: 3}
   vocalMauvaiseDirectionGauche: {fileID: 8300000, guid: 1b03fc3fda277461fa4d122cc6aa3ff0, type: 3}
+  delaiAspire: 0
   leJeu: {fileID: 865667311}
 --- !u!114 &211945950
 MonoBehaviour:
@@ -19176,8 +19177,10 @@ MonoBehaviour:
   autreAudioSource: {fileID: 0}
   vocalMessageDebut: {fileID: 8300000, guid: aad0b580ed10b471399a8efd199b9825, type: 3}
   vocalInstructionsDebut: {fileID: 8300000, guid: 2430066209bfe4fc294d493d491229a2, type: 3}
+  vocalPasLaSouris: {fileID: 0}
   hoverBoutons:
   - {fileID: 0}
+  MessageDebutFini: 0
   vocalInstructionsTerminees: 0
   anim: {fileID: 972165766}
 --- !u!4 &865667312
@@ -20629,7 +20632,7 @@ Transform:
   m_GameObject: {fileID: 953994249}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0000000035202365, y: -0.000000037515793, z: -2.6943612e-16, w: 1}
-  m_LocalPosition: {x: 115.54975, y: 0.99516016, z: -10}
+  m_LocalPosition: {x: 115.56919, y: 0.99516016, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33090,6 +33093,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CaseFinale
   aGagne: 0
+  musique: {fileID: 1760905723}
+  vocalFourmiAGagne: {fileID: 0}
 --- !u!58 &1618808257
 CircleCollider2D:
   m_ObjectHideFlags: 0

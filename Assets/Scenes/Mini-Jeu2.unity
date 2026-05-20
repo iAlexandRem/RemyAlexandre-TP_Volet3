@@ -464,6 +464,37 @@ PolygonCollider2D:
       - {x: 0.4832512, y: -0.47920877}
       - {x: 0.48321548, y: 0.49130297}
   m_UseDelaunayMesh: 1
+--- !u!1 &37407283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 37407284}
+  m_Layer: 0
+  m_Name: autres-zones
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &37407284
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37407283}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &39000423
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,6 +505,7 @@ GameObject:
   m_Component:
   - component: {fileID: 39000424}
   - component: {fileID: 39000425}
+  - component: {fileID: 39000426}
   m_Layer: 0
   m_Name: Trou (21)
   m_TagString: Trou
@@ -533,6 +565,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &39000426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39000423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &39091858
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,6 +951,7 @@ GameObject:
   m_Component:
   - component: {fileID: 69073668}
   - component: {fileID: 69073669}
+  - component: {fileID: 69073670}
   m_Layer: 0
   m_Name: Trou (2)
   m_TagString: Trou
@@ -965,6 +1011,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &69073670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69073667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &73364730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,6 +1464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 99697875}
   - component: {fileID: 99697876}
+  - component: {fileID: 99697877}
   m_Layer: 0
   m_Name: Trou (19)
   m_TagString: Trou
@@ -1464,6 +1524,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &99697877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99697874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &116117721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1674,6 +1747,7 @@ GameObject:
   - component: {fileID: 154510326}
   - component: {fileID: 154510325}
   - component: {fileID: 154510327}
+  - component: {fileID: 154510328}
   m_Layer: 0
   m_Name: CaseFinale
   m_TagString: Untagged
@@ -1726,7 +1800,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 3.3, y: 3.3}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 1
 --- !u!4 &154510326
 Transform:
   m_ObjectHideFlags: 0
@@ -1756,6 +1830,106 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   aGagne: 0
+  tuAsGagne: {fileID: 1003441240}
+  musique: {fileID: 1830907559}
+  vocalFourmiAGagne: {fileID: 8300000, guid: f559284e705e245d3ba5bf8de93903bd, type: 3}
+--- !u!82 &154510328
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154510324}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &171944429
 GameObject:
   m_ObjectHideFlags: 0
@@ -1924,6 +2098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 188670266}
   - component: {fileID: 188670267}
+  - component: {fileID: 188670268}
   m_Layer: 0
   m_Name: Trou (7)
   m_TagString: Trou
@@ -1983,6 +2158,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &188670268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188670265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &191911455
 GameObject:
   m_ObjectHideFlags: 0
@@ -2917,6 +3105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 330909166}
   - component: {fileID: 330909167}
+  - component: {fileID: 330909168}
   m_Layer: 0
   m_Name: Trou (16)
   m_TagString: Trou
@@ -2976,6 +3165,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &330909168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330909165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &342021532
 GameObject:
   m_ObjectHideFlags: 0
@@ -3418,6 +3620,39 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &416720782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 416720783}
+  m_Layer: 0
+  m_Name: sucre
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &416720783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416720782}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1325403495}
+  - {fileID: 1394456546}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &420721940
 GameObject:
   m_ObjectHideFlags: 0
@@ -3633,6 +3868,7 @@ GameObject:
   m_Component:
   - component: {fileID: 452096575}
   - component: {fileID: 452096576}
+  - component: {fileID: 452096577}
   m_Layer: 0
   m_Name: Trou (22)
   m_TagString: Trou
@@ -3692,6 +3928,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &452096577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452096574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &454370401
 GameObject:
   m_ObjectHideFlags: 0
@@ -3702,6 +3951,7 @@ GameObject:
   m_Component:
   - component: {fileID: 454370402}
   - component: {fileID: 454370403}
+  - component: {fileID: 454370404}
   m_Layer: 0
   m_Name: Trou (4)
   m_TagString: Trou
@@ -3761,6 +4011,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &454370404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454370401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &508831430
 GameObject:
   m_ObjectHideFlags: 0
@@ -4106,7 +4369,7 @@ Transform:
   m_GameObject: {fileID: 539089575}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0000000035202365, y: -0.000000037515793, z: -2.6943612e-16, w: 1}
-  m_LocalPosition: {x: 65.82, y: 60, z: -10}
+  m_LocalPosition: {x: 67, y: 60, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4548,6 +4811,7 @@ GameObject:
   m_Component:
   - component: {fileID: 554433292}
   - component: {fileID: 554433293}
+  - component: {fileID: 554433294}
   m_Layer: 0
   m_Name: Trou (14)
   m_TagString: Trou
@@ -4607,6 +4871,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &554433294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554433291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &556887507
 GameObject:
   m_ObjectHideFlags: 0
@@ -4927,6 +5204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 647915914}
   - component: {fileID: 647915915}
+  - component: {fileID: 647915916}
   m_Layer: 0
   m_Name: Trou (5)
   m_TagString: Trou
@@ -4986,6 +5264,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &647915916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647915913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &658546698
 GameObject:
   m_ObjectHideFlags: 0
@@ -6094,6 +6385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 813043254}
   - component: {fileID: 813043255}
+  - component: {fileID: 813043256}
   m_Layer: 0
   m_Name: Trou (8)
   m_TagString: Trou
@@ -6153,6 +6445,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &813043256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813043253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &823903910
 GameObject:
   m_ObjectHideFlags: 0
@@ -6585,8 +6890,10 @@ MonoBehaviour:
   autreAudioSource: {fileID: 0}
   vocalMessageDebut: {fileID: 8300000, guid: 3e1fe971ff8444a9f8190afe76e117bd, type: 3}
   vocalInstructionsDebut: {fileID: 8300000, guid: 3e810fb1c0d254bbb968bb8943040138, type: 3}
+  vocalPasLaSouris: {fileID: 8300000, guid: 23abad3581c1544cca55b2075e95423e, type: 3}
   hoverBoutons:
   - {fileID: 0}
+  MessageDebutFini: 0
   vocalInstructionsTerminees: 0
   anim: {fileID: 0}
 --- !u!4 &865667312
@@ -7472,7 +7779,7 @@ Transform:
   m_GameObject: {fileID: 953994249}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0000000035202365, y: -0.000000037515793, z: -2.6943612e-16, w: 1}
-  m_LocalPosition: {x: 65.82, y: 60.000004, z: -10}
+  m_LocalPosition: {x: 67, y: 60.000004, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7876,6 +8183,135 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1003441239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1003441241}
+  - component: {fileID: 1003441240}
+  m_Layer: 0
+  m_Name: AudioSourceTuAsGagne
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1003441240
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003441239}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 5e0ce897dd22d41b49ef5a909a161318, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1003441241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003441239}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1830907558}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1010585478
 GameObject:
   m_ObjectHideFlags: 0
@@ -7886,6 +8322,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1010585479}
   - component: {fileID: 1010585480}
+  - component: {fileID: 1010585482}
+  - component: {fileID: 1010585481}
   m_Layer: 0
   m_Name: ZoneProtegee (2)
   m_TagString: ZoneProtegee
@@ -7954,6 +8392,119 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 30, y: 15}
   m_EdgeRadius: 0
+--- !u!82 &1010585481
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010585478}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.88
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1010585482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010585478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0019ad6d608494c27b4b0fcb3fffa1b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  jeu: {fileID: 865667311}
+  sucre: {fileID: 1394456547}
+  vocalOubliSucreBrun: {fileID: 8300000, guid: bcd78c6cda37d4f43bda07b6f9754ba2, type: 3}
+  vocalRappelTrouverSucreBrun: {fileID: 8300000, guid: 2c980fd5746e2464ebf53155880eb92b, type: 3}
 --- !u!1 &1020881352
 GameObject:
   m_ObjectHideFlags: 0
@@ -7964,6 +8515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1020881353}
   - component: {fileID: 1020881354}
+  - component: {fileID: 1020881355}
   m_Layer: 0
   m_Name: Trou (23)
   m_TagString: Trou
@@ -8023,6 +8575,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &1020881355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020881352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &1027735597
 GameObject:
   m_ObjectHideFlags: 0
@@ -8124,6 +8689,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1036367383}
   - component: {fileID: 1036367384}
+  - component: {fileID: 1036367385}
   m_Layer: 0
   m_Name: Trou (6)
   m_TagString: Trou
@@ -8183,6 +8749,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &1036367385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036367382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &1045968538
 GameObject:
   m_ObjectHideFlags: 0
@@ -8454,6 +9033,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1070636759}
   - component: {fileID: 1070636760}
+  - component: {fileID: 1070636761}
   m_Layer: 0
   m_Name: Trou (3)
   m_TagString: Trou
@@ -8513,6 +9093,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &1070636761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070636758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &1078122459
 GameObject:
   m_ObjectHideFlags: 0
@@ -8996,7 +9589,7 @@ MonoBehaviour:
   distanceActivation: 20
   tempsRebond: 1
   collisionBilleFourmi: 0
-  leJeu: {fileID: 865667311}
+  jeu: {fileID: 865667311}
   vocalEviteBillesEnMetal: {fileID: 8300000, guid: 49c3f76f0104642e3b233fa06abbcd5a, type: 3}
 --- !u!50 &1110611097
 Rigidbody2D:
@@ -9121,6 +9714,7 @@ MonoBehaviour:
   - {fileID: 1731279253}
   vocalMauvaiseDirectionDroite: {fileID: 0}
   vocalMauvaiseDirectionGauche: {fileID: 0}
+  delaiAspire: 0
   leJeu: {fileID: 0}
 --- !u!82 &1110611101
 AudioSource:
@@ -9229,6 +9823,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1123077624}
   - component: {fileID: 1123077625}
+  - component: {fileID: 1123077626}
   m_Layer: 0
   m_Name: Trou (9)
   m_TagString: Trou
@@ -9288,6 +9883,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &1123077626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123077623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &1153850570
 GameObject:
   m_ObjectHideFlags: 0
@@ -10373,6 +10981,192 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1325403492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1325403495}
+  - component: {fileID: 1325403494}
+  - component: {fileID: 1325403493}
+  - component: {fileID: 1325403496}
+  m_Layer: 0
+  m_Name: zone trigger sucre
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1325403493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325403492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a064386c8f8bb40b7b36f3b7d29eec5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectionSucre
+  jeu: {fileID: 865667311}
+  finale: {fileID: 154510327}
+  vocalSucreBrunTrouve: {fileID: 8300000, guid: 5d2f9537cd7be43a594a670762a37b78, type: 3}
+  vocalRappelTrouverSucreBrun: {fileID: 8300000, guid: 2c980fd5746e2464ebf53155880eb92b, type: 3}
+  premiereRencontreSucre: 0
+  deuxiemeRencontreSucre: 0
+  SucreBrun: {fileID: 1394456543}
+--- !u!58 &1325403494
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325403492}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 10
+--- !u!4 &1325403495
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325403492}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 20.97, y: 55.897, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 416720783}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1325403496
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325403492}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.67
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1330841157
 GameObject:
   m_ObjectHideFlags: 0
@@ -10412,7 +11206,7 @@ MonoBehaviour:
   distanceActivation: 20
   tempsRebond: 1
   collisionBilleFourmi: 0
-  leJeu: {fileID: 865667311}
+  jeu: {fileID: 865667311}
   vocalEviteBillesEnMetal: {fileID: 8300000, guid: 49c3f76f0104642e3b233fa06abbcd5a, type: 3}
 --- !u!50 &1330841159
 Rigidbody2D:
@@ -10537,6 +11331,7 @@ MonoBehaviour:
   - {fileID: 1731279253}
   vocalMauvaiseDirectionDroite: {fileID: 0}
   vocalMauvaiseDirectionGauche: {fileID: 0}
+  delaiAspire: 0
   leJeu: {fileID: 0}
 --- !u!82 &1330841163
 AudioSource:
@@ -11086,7 +11881,7 @@ MonoBehaviour:
   distanceActivation: 20
   tempsRebond: 1
   collisionBilleFourmi: 0
-  leJeu: {fileID: 865667311}
+  jeu: {fileID: 865667311}
   vocalEviteBillesEnMetal: {fileID: 8300000, guid: 49c3f76f0104642e3b233fa06abbcd5a, type: 3}
 --- !u!50 &1377660324
 Rigidbody2D:
@@ -11211,6 +12006,7 @@ MonoBehaviour:
   - {fileID: 1731279253}
   vocalMauvaiseDirectionDroite: {fileID: 0}
   vocalMauvaiseDirectionGauche: {fileID: 0}
+  delaiAspire: 0
   leJeu: {fileID: 0}
 --- !u!82 &1377660328
 AudioSource:
@@ -11502,13 +12298,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394456543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 20.97, y: 55.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 729564119}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 416720783}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1394456547
 MonoBehaviour:
@@ -11522,6 +12318,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc1d5589189cd4203888a3608e7530da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  col: {fileID: 0}
+  estPorte: 0
   distancePrise: 4
 --- !u!82 &1394456548
 AudioSource:
@@ -11664,6 +12462,7 @@ MonoBehaviour:
   - {fileID: 1731279253}
   vocalMauvaiseDirectionDroite: {fileID: 0}
   vocalMauvaiseDirectionGauche: {fileID: 0}
+  delaiAspire: 0
   leJeu: {fileID: 0}
 --- !u!1 &1424941667
 GameObject:
@@ -11675,6 +12474,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1424941668}
   - component: {fileID: 1424941669}
+  - component: {fileID: 1424941670}
   m_Layer: 0
   m_Name: Trou (17)
   m_TagString: Trou
@@ -11734,6 +12534,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &1424941670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424941667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &1436082230
 GameObject:
   m_ObjectHideFlags: 0
@@ -11955,7 +12768,7 @@ MonoBehaviour:
   distanceActivation: 20
   tempsRebond: 1
   collisionBilleFourmi: 0
-  leJeu: {fileID: 865667311}
+  jeu: {fileID: 865667311}
   vocalEviteBillesEnMetal: {fileID: 8300000, guid: 49c3f76f0104642e3b233fa06abbcd5a, type: 3}
 --- !u!50 &1440885575
 Rigidbody2D:
@@ -12080,6 +12893,7 @@ MonoBehaviour:
   - {fileID: 1731279253}
   vocalMauvaiseDirectionDroite: {fileID: 0}
   vocalMauvaiseDirectionGauche: {fileID: 0}
+  delaiAspire: 0
   leJeu: {fileID: 0}
 --- !u!82 &1440885579
 AudioSource:
@@ -12226,6 +13040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1443372110}
   - component: {fileID: 1443372111}
+  - component: {fileID: 1443372112}
   m_Layer: 0
   m_Name: Trou (12)
   m_TagString: Trou
@@ -12285,6 +13100,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &1443372112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443372109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &1455670890
 GameObject:
   m_ObjectHideFlags: 0
@@ -12660,6 +13488,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1530322722}
   - component: {fileID: 1530322723}
+  - component: {fileID: 1530322724}
   m_Layer: 0
   m_Name: Trou (18)
   m_TagString: Trou
@@ -12719,6 +13548,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &1530322724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530322721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &1530329603
 GameObject:
   m_ObjectHideFlags: 0
@@ -12820,6 +13662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1550666501}
   - component: {fileID: 1550666502}
+  - component: {fileID: 1550666503}
   m_Layer: 0
   m_Name: Trou (15)
   m_TagString: Trou
@@ -12879,6 +13722,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &1550666503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550666500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &1590324036
 GameObject:
   m_ObjectHideFlags: 0
@@ -12909,7 +13765,7 @@ Transform:
   m_GameObject: {fileID: 1590324036}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 65.82, y: 60, z: 0}
+  m_LocalPosition: {x: 67, y: 60, z: 0}
   m_LocalScale: {x: 0.58457, y: 0.58457, z: 0.58457}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12936,6 +13792,7 @@ MonoBehaviour:
   - {fileID: 2088070263}
   vocalMauvaiseDirectionDroite: {fileID: 0}
   vocalMauvaiseDirectionGauche: {fileID: 0}
+  delaiAspire: 0
   leJeu: {fileID: 865667311}
 --- !u!61 &1590324039
 BoxCollider2D:
@@ -13228,7 +14085,7 @@ MonoBehaviour:
   distanceActivation: 20
   tempsRebond: 1
   collisionBilleFourmi: 0
-  leJeu: {fileID: 865667311}
+  jeu: {fileID: 865667311}
   vocalEviteBillesEnMetal: {fileID: 8300000, guid: 49c3f76f0104642e3b233fa06abbcd5a, type: 3}
 --- !u!50 &1596150406
 Rigidbody2D:
@@ -13353,6 +14210,7 @@ MonoBehaviour:
   - {fileID: 1731279253}
   vocalMauvaiseDirectionDroite: {fileID: 0}
   vocalMauvaiseDirectionGauche: {fileID: 0}
+  delaiAspire: 0
   leJeu: {fileID: 0}
 --- !u!82 &1596150410
 AudioSource:
@@ -13719,7 +14577,7 @@ MonoBehaviour:
   distanceActivation: 20
   tempsRebond: 1
   collisionBilleFourmi: 0
-  leJeu: {fileID: 865667311}
+  jeu: {fileID: 865667311}
   vocalEviteBillesEnMetal: {fileID: 8300000, guid: 49c3f76f0104642e3b233fa06abbcd5a, type: 3}
 --- !u!50 &1704911556
 Rigidbody2D:
@@ -13844,6 +14702,7 @@ MonoBehaviour:
   - {fileID: 1731279253}
   vocalMauvaiseDirectionDroite: {fileID: 0}
   vocalMauvaiseDirectionGauche: {fileID: 0}
+  delaiAspire: 0
   leJeu: {fileID: 0}
 --- !u!82 &1704911560
 AudioSource:
@@ -14031,6 +14890,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1731279253}
   - component: {fileID: 1731279254}
+  - component: {fileID: 1731279255}
   m_Layer: 0
   m_Name: Trou (24)
   m_TagString: Trou
@@ -14090,6 +14950,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &1731279255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731279252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &1752420599
 GameObject:
   m_ObjectHideFlags: 0
@@ -14903,7 +15776,8 @@ Transform:
   m_LocalPosition: {x: 60.3, y: 34.2, z: 0}
   m_LocalScale: {x: 0.961598, y: 0.9548547, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1003441241}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1830907559
@@ -15013,6 +15887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1854406448}
   - component: {fileID: 1854406449}
+  - component: {fileID: 1854406450}
   m_Layer: 0
   m_Name: Trou (1)
   m_TagString: Trou
@@ -15072,6 +15947,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &1854406450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854406447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &1857309738
 GameObject:
   m_ObjectHideFlags: 0
@@ -15210,6 +16098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1862655323}
   - component: {fileID: 1862655324}
+  - component: {fileID: 1862655325}
   m_Layer: 0
   m_Name: Trou (10)
   m_TagString: Trou
@@ -15269,6 +16158,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &1862655325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862655322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &1903668381
 GameObject:
   m_ObjectHideFlags: 0
@@ -15449,6 +16351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1917127230}
   - component: {fileID: 1917127231}
+  - component: {fileID: 1917127232}
   m_Layer: 0
   m_Name: Trou (13)
   m_TagString: Trou
@@ -15508,6 +16411,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &1917127232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917127229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &1940996716
 GameObject:
   m_ObjectHideFlags: 0
@@ -16463,6 +17379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2002891680}
   - component: {fileID: 2002891681}
+  - component: {fileID: 2002891682}
   m_Layer: 0
   m_Name: Trou (20)
   m_TagString: Trou
@@ -16522,6 +17439,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &2002891682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002891679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &2012347129
 GameObject:
   m_ObjectHideFlags: 0
@@ -17181,6 +18111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2056308895}
   - component: {fileID: 2056308896}
+  - component: {fileID: 2056308897}
   m_Layer: 0
   m_Name: Trou (11)
   m_TagString: Trou
@@ -17240,6 +18171,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &2056308897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056308894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &2087670153
 GameObject:
   m_ObjectHideFlags: 0
@@ -17341,6 +18285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2088070263}
   - component: {fileID: 2088070264}
+  - component: {fileID: 2088070265}
   m_Layer: 0
   m_Name: Trou (0)
   m_TagString: Trou
@@ -17400,6 +18345,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &2088070265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088070262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1530650f1e4c5469a9dcb1f11096cdcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrouDetecte
+  sucre: {fileID: 1394456547}
 --- !u!1 &2102994583
 GameObject:
   m_ObjectHideFlags: 0
@@ -18077,9 +19035,10 @@ SceneRoots:
   - {fileID: 87549306}
   - {fileID: 2025762364}
   - {fileID: 789210086}
+  - {fileID: 37407284}
   - {fileID: 1754232713}
   - {fileID: 209168002}
   - {fileID: 154510326}
-  - {fileID: 1394456546}
   - {fileID: 1366563543}
+  - {fileID: 416720783}
   - {fileID: 1590324037}

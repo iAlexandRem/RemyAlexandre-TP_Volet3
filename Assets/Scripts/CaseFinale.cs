@@ -5,6 +5,10 @@ public class CaseFinale : MonoBehaviour
 {
     public bool aGagne;
     Animator anim;
+    AudioSource audioSource;
+    public AudioSource tuAsGagne;
+    public AudioSource musique;
+    public AudioClip vocalFourmiAGagne;
 
     void Start()
     {
@@ -12,6 +16,7 @@ public class CaseFinale : MonoBehaviour
         {
             anim = GetComponentInChildren<Animator>();
         }
+        audioSource = GetComponent<AudioSource>();
 
         aGagne = false;
     }
@@ -30,16 +35,20 @@ public class CaseFinale : MonoBehaviour
                 aGagne = true;
                 Debug.Log("VICT0IRE");
                 anim.SetTrigger("RayonsBlancs");
+                musique.volume = 0.67f;
                 GetComponent<Collider2D>().enabled = false; // Une seule victoire
             }
         }
 
         else if (SceneManager.GetActiveScene().name == "Mini-Jeu2")
         {
-            if (collision.gameObject.CompareTag("Sucre")) // La Fourmi gagne en rapportant le sucre brun dans la case Fin
+            if (collision.gameObject.CompareTag("Sucre")) // La Fourmi gagne en DÉPOSANT le sucre brun dans la case Fin
             {
                 aGagne = true;
                 Debug.Log("VICT0IRE");
+                audioSource.PlayOneShot(vocalFourmiAGagne);
+                musique.volume = 0.67f;
+                tuAsGagne.volume = 1f;
                 GetComponent<Collider2D>().enabled = false; // Une seule victoire
             }
         }

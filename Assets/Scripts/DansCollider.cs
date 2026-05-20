@@ -93,7 +93,7 @@ public class DansCollider : MonoBehaviour
                 {
                     rb.AddForce(dir * 20f, ForceMode2D.Impulse); // Une force vers le centre du trou
                     delaiAspire = true;
-                    Invoke("DelaiAspire", 2f);
+                    Invoke("DelaiAspire", 4f);
                 }
                 else
                 {
@@ -187,7 +187,7 @@ public class DansCollider : MonoBehaviour
             transform.position = pointsRetour[index].position; // La chose est transportée à ce trou
             if (CompareTag("Sucre"))
             {
-                rb.AddForce(new Vector2(-1f, -1f).normalized * 420f, ForceMode2D.Impulse); // Grosse force hehe
+                rb.AddForce(new Vector2(-1f, -1f).normalized * 80f, ForceMode2D.Impulse); // Grosse force hehe
             }
         }
 
