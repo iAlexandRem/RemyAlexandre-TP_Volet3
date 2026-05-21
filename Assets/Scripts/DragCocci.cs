@@ -162,7 +162,9 @@ public class DragCocci : MonoBehaviour
             dropDepuisHautGrille = true; // Le bool enclenche la détection des colliders triggers des Trous dans ColliderConnect4
 
             if (rb != null)
-                rb.AddForce(Vector2.right * 3f, ForceMode2D.Impulse); // Chute dans la grille garantie
+            {
+                rb.AddForce(Vector2.right * 3f, ForceMode2D.Impulse); // Chute de ta cocci dans la grille garantie
+            }
         }
 
         if (collision.CompareTag("TombeePerdue")) // Si on échappe Cocci dans le vide
@@ -172,7 +174,7 @@ public class DragCocci : MonoBehaviour
 
             if (coupEnregistre) // Si un coup de la partie a été enregistré
             {
-                partie.AnnulerDernierCoup(); // Il faut annuler le coup si Cocci n'est plus dans la grille
+                partie.AnnulerDernierCoup(); // Il faut annuler le coup si Cocci est passé à travers la grille
             }
 
             respawn.dropJoueurDuHautGrilleDetecte = false;

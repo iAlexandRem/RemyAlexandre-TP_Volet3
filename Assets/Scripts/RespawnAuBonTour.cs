@@ -46,11 +46,11 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
 
         dropJoueurDuHautGrilleDetecte = true;
 
-        aSpawnCeTour = false; // Bloque les spams, un adversaire ne va pas spawn tant que c'est le joueur qui n'aura pas drop sa cocci dans la grille
-
         if (!drag.dropDepuisHautGrille) // Il faut que cocci tombe dedans
         {
             if (partie.aGagne) return;
+            if (partie.coupRetire) return;
+            aSpawnCeTour = false; // Bloque les spams je crois, un adversaire ne va pas spawn tant que c'est le joueur qui n'aura pas drop sa cocci dans la grille
             Invoke("SpawnAdversaire", 2f); // Tour adverse
         }
     }
@@ -68,10 +68,10 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
             drag.prefabCocci = drag.prefabRouge; // Couleur inverse
         }
 
-        anim.SetTrigger("Translation"); // Point de tombée en mouvement
         drag.spawnPointActuel = spawnPointAdversaire; // À un pointX aléatoire qui est parfois en animation au-dessus de la grille
-        if (dropJoueurDuHautGrilleDetecte && !PartieConnect4.tourJoueur && !partie.coupRetire)
+        if (dropJoueurDuHautGrilleDetecte)
         {
+            if (partie.coupRetire) return;
             drag.Spawn(); // Clone adverse qui est en chute libre
         }
 
@@ -108,7 +108,7 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
         {
             value = Random.Range(0.2f, 0.6f);
 
-            Invoke("LegereTranslationX", 4f);
+            Invoke("LegereTranslationX", 7f);
         }
 
         anim.speed = value;
@@ -117,16 +117,18 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
 
         if (!partie.aGagne)
         {
+            if (partie.coupRetire) return;
             SpawnCocciSFX();
             drag.Spawn(); // Clone pour le joueur
-            aSpawnCeTour = true; // Reset
+            aSpawnCeTour = true; // Reset de bool
         }
         else
         {
-            anim.SetTrigger("Translation");
-            anim.speed = 4f;
+            CancelInvoke();
+            anim.speed = 1f;
         }
-        dropJoueurDuHautGrilleDetecte = false; // Reset
+
+        dropJoueurDuHautGrilleDetecte = false; // Reset de bool
     }
 
     public void SpawnCocciSFX()
@@ -143,14 +145,12 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
 
     public void StopTranslationX()
     {
-        anim.SetTrigger("Stop"); // Point d'adversaire s'arrête
         anim.speed = 0;
     }
 
-    public void LegereTranslationX()
+    public void LegereTranslationX() // Point d'adversaire est en translation
     {
-        anim.SetTrigger("Translation"); // Point d'adversaire est en translation
-        anim.speed = 0.4f;
+        anim.speed = 0.1f;
         Invoke("StopTranslationX", 1f);
     }
 
@@ -169,6 +169,6 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
         }
 
         drag.spawnPointActuel = spawnPointAdversaire;
-        drag.Spawn(); // Sans respawn le joueur
+        drag.Spawn(); // Une cocci d'en haut sans respawn le joueur
     }
 }

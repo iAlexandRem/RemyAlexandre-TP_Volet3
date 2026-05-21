@@ -90,7 +90,6 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
     public void JouerCoup(int colonne) // À l'aide de la colonne du trou joué dans la partie, détecté par collider du trou dans script ColliderConnect4
     {
         if (aGagne) return;
-        coupRetire = false;
 
         int joueur = tourRouge ? 1 : 2; // Si c'est le tourRouge, joueur = 1, sinon 2
 
@@ -98,7 +97,6 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
         if (plateau[0, colonne] != 0) // Une colonne est pleine si le haut est occupé
         {
             Debug.Log("Colonne pleine");
-            return; // Stop de la fonction en entier
         }
 
 

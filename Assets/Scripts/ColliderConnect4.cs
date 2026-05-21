@@ -29,15 +29,9 @@ public class ColliderConnect4 : MonoBehaviour
 
         if (collision.CompareTag("CocciRouge"))
         {
-            if (!partie.tourRouge)
-            {
-                return; // Aucune détection des rouges si c'est le tour des Jaunes
-            }
-
-            trou.trouOccupe = true;
+            trou.OccuperTrouLePlusBas(); // Dans la colonne, le trou le plus haut est détecté par collision trigger, cette fonction indique que c'est le trou le plus bas qui doit être occupé!
 
             drag.dropDepuisHautGrille = false; // Le drop dans la grille est terminé
-
 
             partie.JouerCoup(trou.colonne); // Retenir la colonne du trou où la coccinelle est tombée 
             drag.coupEnregistre = true;
@@ -47,12 +41,7 @@ public class ColliderConnect4 : MonoBehaviour
 
         if (collision.CompareTag("CocciJaune"))
         {
-            if (partie.tourRouge)
-            {
-                return; // Aucune détection des jaunes si c'est le tour des Rouges
-            }
-
-            trou.trouOccupe = true;
+            trou.OccuperTrouLePlusBas(); // Dans la colonne, le trou le plus haut est détecté par collision trigger, cette fonction indique que c'est le trou le plus bas qui doit être occupé!
 
             drag.dropDepuisHautGrille = false; // Le drop dans la grille est terminé
 
