@@ -19,9 +19,9 @@ public class ColliderConnect4 : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision) // Détection des coccis par les trous de la grille
     {
-        DragCocci drag = collision.GetComponent<DragCocci>(); // Référence au script de la coccinelle
+        DragCocci drag = collision.GetComponent<DragCocci>(); // Référence au script de la coccinelle prefab
 
         if (trou.trouOccupe) return; // Si le trou est déjà occupé, on ne fait rien
 
@@ -55,6 +55,7 @@ public class ColliderConnect4 : MonoBehaviour
             trou.trouOccupe = true;
 
             drag.dropDepuisHautGrille = false; // Le drop dans la grille est terminé
+
 
             partie.JouerCoup(trou.colonne); // Retenir la colonne du trou où la coccinelle est tombée
             drag.coupEnregistre = true;

@@ -10,6 +10,8 @@ public class LeJeu : MonoBehaviour
     public AudioClip vocalMessageDebut;
     public AudioClip vocalInstructionsDebut;
     public AudioClip vocalPasLaSouris;
+    public AudioClip vocalMoletteInstructions;
+    public AudioClip vocal4CoccisEnLigne;
     bool premierClickDetecte = false;
     bool instructionsJouees = false;
     public HoverBoutons[] hoverBoutons; // Pour éviter la cacophonie grâce au bool hoverUI
@@ -22,6 +24,7 @@ public class LeJeu : MonoBehaviour
     public bool vocalInstructionsTerminees = false;
     public static bool autreVocalQuiJoue = true; // Si une autre narration est en train de jouer
     public Animator anim;
+    public PartieConnect4 partie; // Référence au script PartieConnect4
 
 
 
@@ -103,13 +106,7 @@ public class LeJeu : MonoBehaviour
 
             if (!instructionsJouees)
             {
-                instructionsJouees = true;
-
-                audioSource.loop = false;
-                audioSource.clip = vocalInstructionsDebut;
-                audioSource.Play(); // On passe aux INSTRUCTIONS de Drag&Drop
-
-                wasPlaying = true;
+                Invoke("JouerInstructions", 1.1f);
             }
         }
 
@@ -173,11 +170,23 @@ public class LeJeu : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "Mini-Jeu3")
         {
-            if (SelectionCoccinelle.couleurEstChoisie)
+            if (!SelectionCoccinelle.couleurNonChoisie)
             {
                 audioSource.Play(); // On passe aux INSTRUCTIONS de Drag&Drop
+
+                if (partie.couleurChoisie == 1)
+                {
+                    anim.SetTrigger("SourisSpotRouge");
+                }
+                else if (partie.couleurChoisie == 2)
+                {
+                    anim.SetTrigger("SourisSpotJaune");
+                }
+
+                Invoke("Instructions4Coccis", audioSource.clip.length + 7f); // Explication qu'il faut 4 coccinelles consécutives pour gagner
             }
         }
+
         else if (SceneManager.GetActiveScene().name == "Mini-Jeu2")
         {
             audioSource.Play(); // On passe aux INSTRUCTIONS des flèches clavier
@@ -204,6 +213,27 @@ public class LeJeu : MonoBehaviour
            Keyboard.current.downArrowKey.isPressed ||
            Keyboard.current.leftArrowKey.isPressed ||
            Keyboard.current.rightArrowKey.isPressed;
+    }
+
+
+
+    void Instructions4Coccis()
+    {
+        if (partie.aGagne) return;
+
+        audioSource.clip = vocal4CoccisEnLigne;
+        audioSource.Play();
+
+        Invoke("InstructionsMolette", audioSource.clip.length + 14f);
+    }
+
+    void InstructionsMolette()
+    {
+        if (partie.aGagne) return;  // Si tu gagnes rapidement tel un champion, pas de message sur molette
+
+        audioSource.clip = vocalMoletteInstructions;
+        audioSource.Play(); // Instructions Molette de Souris pour zoomer
+        anim.SetTrigger("MoletteIndication");
     }
 
 

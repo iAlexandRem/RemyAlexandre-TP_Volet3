@@ -12,6 +12,7 @@ public class SelectionCoccinelle : MonoBehaviour
     public float delaiSec;
 
     public bool estRouge; // estRouge, true ou false sur la coccinelle par l'Inspector
+    public static bool couleurNonChoisie = true;
 
     public static bool couleurEstChoisie = false; // Passe de false à true (static pour partager le bool aux autres scripts)
     public static DragCocci dragSelectionne; // Pour s'assurer de spawn la couleur choisie avec SelectionCoccinelle.dragSelectionne.Spawn();
@@ -49,7 +50,8 @@ public class SelectionCoccinelle : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
         eventTrigger.enabled = false;
-        Invoke(nameof(ActiverTrigger), delaiSec);
+        Invoke("ActiverTrigger", delaiSec);
+        couleurNonChoisie = true;
     }
 
     void ActiverTrigger() // Pour pas de clic trop hâtif
@@ -69,9 +71,9 @@ public class SelectionCoccinelle : MonoBehaviour
     {
         couleurEstChoisie = true;
 
-        if (partie.couleurChoisie == 0) // Une seule fois le choix de couleur
+        if (partie.couleurChoisie == 0 && couleurNonChoisie) // Une seule fois le choix de couleur
         {
-            Invoke("CouleurChoisie", 0.1f);
+            Invoke("CouleurChoisie", 0.001f); // L'invoke des instructionsJouees en dépend
         }
     }
 
@@ -81,6 +83,8 @@ public class SelectionCoccinelle : MonoBehaviour
         {
             partie.couleurChoisie = 1;
             Debug.Log("Rouge choisi");
+            couleurNonChoisie = false;
+
             dragSelectionne = dragRouge;
 
             pourbougerPoisDuRouge.gameObject.SetActive(false);
@@ -91,6 +95,8 @@ public class SelectionCoccinelle : MonoBehaviour
         {
             partie.couleurChoisie = 2;
             Debug.Log("Jaune choisi");
+            couleurNonChoisie = false;
+
             dragSelectionne = dragJaune;
 
             pourbougerPoisDuJaune.gameObject.SetActive(true);
@@ -116,7 +122,7 @@ public class SelectionCoccinelle : MonoBehaviour
         eventTrigger.enabled = false;
     }
 
-    public void PremierSpawn() // Le joueur a accès aux coccinelles prefabs de la couleur de son choix
+    public void PremierSpawn() // Le joueur a accès à la première coccinelle de la couleur de son choix
     {
         if (partie.couleurChoisie == 1 && animRouge != null)
         {

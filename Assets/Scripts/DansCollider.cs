@@ -221,7 +221,7 @@ public class DansCollider : MonoBehaviour
                 NombreDeChutesFourmi++; // +1 chute à chaque remontée au trou de départ
             }
             vientDEtreTeleporte = true;
-            Debug.Log(NombreDeChutesFourmi);
+            //Debug.Log(NombreDeChutesFourmi);
         }
         else
         {

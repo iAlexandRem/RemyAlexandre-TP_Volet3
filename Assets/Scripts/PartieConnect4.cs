@@ -17,17 +17,56 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
     public bool aGagne = false;
     public int couleurGagnante; // À détermine
     public RespawnAuBonTour respawn; // Référence au script RespawnAuBonTour
+    public AudioSource leJeu; // Pour couper le son de LeJeu
 
     public int derniereRangee = -1; // Aucun coup enregistré pour le moment
     public int derniereColonne = -1; // Aucun coup enregistré pour le moment
+
+    public float tempsEcouleAChaqueTour; // Avec Time.time = moment actuel
+    float lastTime; // Moment du dernier appel de fonction
+
+    public bool coupRetire = false;
+
+    AudioSource audioSource;
+    public AudioSource musique;
+    public AudioClip sfxCocciAGagne;
+    public AudioClip vocalCoccisRougesVictoire;
+    public AudioClip vocalCoccisJaunesVictoire;
+    public AudioClip UnDeuxTroisQuatreCoccis;
+    public AudioClip InfestationCoccinelles;
+
+    public AudioClip vocalLigneHorizontale;
+    bool ligneHorizontale = false;
+    public AudioClip vocalLigneVerticale;
+    bool ligneVerticale = false;
+    public AudioClip vocalLigneDiagonaleDescendante;
+    bool ligneDiagonaleDescendante = false;
+    public AudioClip vocalLigneDiagonaleAscendante;
+    bool ligneDiagonaleAscendante = false;
+    public Animator boutonAnim;
+
+    bool sonsVictoireJouees = false; // Bools pour éviter le spam sonore
+    bool quelleEquipeAGagne = false;
+    public bool autoriseInfestation = false;
 
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         partieCommence = false;
+        coupRetire = false;
+
         aGagne = false;
+
+        sonsVictoireJouees = false;
+        quelleEquipeAGagne = false;
+        ligneHorizontale = false;
+        ligneVerticale = false;
+        ligneDiagonaleAscendante = false;
+        ligneDiagonaleDescendante = false;
+        autoriseInfestation = false;
     }
 
     // Update is called once per frame
@@ -50,6 +89,9 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
     // 0 = VIDE, 1 = ROUGE, 2 = JAUNE
     public void JouerCoup(int colonne) // À l'aide de la colonne du trou joué dans la partie, détecté par collider du trou dans script ColliderConnect4
     {
+        if (aGagne) return;
+        coupRetire = false;
+
         int joueur = tourRouge ? 1 : 2; // Si c'est le tourRouge, joueur = 1, sinon 2
 
         // Si la colonne est pleine jusqu'en haut
@@ -72,12 +114,46 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                 derniereColonne = colonne;
 
 
-                if (VerifierVictoire(joueur)) // Si la fonction bool est true, VICTOIRE
+
+
+                if (VerifierVictoire(joueur)) // Si la fonction bool est true, une VICTOIRE ! ! ! !
                 {
                     aGagne = true;
                     Debug.Log("Les " + (joueur == 1 ? "Rouges" : "Jaunes") + " ont GAGNÉ !");
+
+                    if (joueur == 1 && !quelleEquipeAGagne)
+                    {
+                        quelleEquipeAGagne = true;
+                        audioSource.PlayOneShot(vocalCoccisRougesVictoire, 0.7f);
+                        Invoke("Vocal1234", 6f);
+                        Invoke("QuelleSorteDeLigne", 9f);
+                        Invoke("Infestation", 15f);
+                    }
+                    else if (joueur == 2 && !quelleEquipeAGagne)
+                    {
+                        quelleEquipeAGagne = true;
+                        audioSource.PlayOneShot(vocalCoccisJaunesVictoire, 0.7f);
+                        Invoke("Vocal1234", 6f);
+                        Invoke("QuelleSorteDeLigne", 9f);
+                        Invoke("Infestation", 15f);
+                    }
+
+                    if (joueur == couleurChoisie)
+                    {
+                        Debug.Log("VICT0IRE DE TOI"); // Victoire de ton équipe
+                        if (!sonsVictoireJouees)
+                        {
+                            sonsVictoireJouees = true; // Une seule victoire
+                            Invoke("SoundEffectVictoireCocci", 1f);
+                            musique.volume = 1f;
+                        }
+                    }
+                    leJeu.enabled = false;
+                    Invoke("InciteRetournerMenu", 7f);
                     return; // Stop de la fonction en entier
                 }
+
+
 
                 tourRouge = !tourRouge; // Tour des rouges à celui des jaunes ou vice versa
                 tourJoueur = !tourJoueur; // C'est le tour de l'adversaire, ça inverse le bool à chaque fois
@@ -96,6 +172,9 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                     Debug.Log("C'est maintenant TON tour!");
                 }
 
+                tempsEcouleAChaqueTour = Time.time - lastTime;
+                lastTime = Time.time;
+
                 break; // Arrêt de la boucle
             }
         }
@@ -107,6 +186,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
         {
             plateau[derniereRangee, derniereColonne] = 0;
             Debug.Log("COUP RETIRÉ"); // J'espère que ça fonctionnera, en théorie
+            coupRetire = true;
 
             derniereRangee = -1;
             derniereColonne = -1;
@@ -128,6 +208,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                     plateau[r, c + 3] == joueur) // Ex. [r, 3+3]; c = 6, donc jusqu'à la 7e dernière colonne à droite
                 {
                     Debug.Log("Les " + (joueur == 1 ? "Rouges" : "Jaunes") + " forment une ligne HORIZONTALE");
+                    ligneHorizontale = true;
                     couleurGagnante = joueur;
                     return true; // 4 trous consécutifs
                 }
@@ -145,6 +226,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                     plateau[r + 3, c] == joueur) // Ex. [2+3, c]; r = 5, donc jusqu'à la 6e dernière rangée en bas
                 {
                     Debug.Log("Les " + (joueur == 1 ? "Rouges" : "Jaunes") + " forment une ligne VERTICALE");
+                    ligneVerticale = true;
                     couleurGagnante = joueur;
                     return true; // 4 trous consécutifs
                 }
@@ -162,6 +244,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                     plateau[r + 3, c + 3] == joueur) // Ex. [0+3, 0+3]; r = 3, c = 3 
                 {
                     Debug.Log("Les " + (joueur == 1 ? "Rouges" : "Jaunes") + " forment une ligne DIAGONALE DESCENDANTE");
+                    ligneDiagonaleDescendante = true;
                     couleurGagnante = joueur;
                     return true; // 4 trous consécutifs
                 }
@@ -179,6 +262,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                     plateau[r - 3, c + 3] == joueur) // Ex. [5-3, 0+3]; r = 2, c = 3 
                 {
                     Debug.Log("Les " + (joueur == 1 ? "Rouges" : "Jaunes") + " forment une ligne DIAGONALE MONTANTE");
+                    ligneDiagonaleAscendante = true;
                     couleurGagnante = joueur;
                     return true; // 4 trous consécutifs
                 }
@@ -186,6 +270,49 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
         }
 
         return false; // Si aucune victoire n'est trouvée
+    }
+
+
+
+    void SoundEffectVictoireCocci()
+    {
+        audioSource.PlayOneShot(sfxCocciAGagne, 1.1f);
+    }
+
+    void InciteRetournerMenu()
+    {
+        boutonAnim.SetTrigger("TempsDeQuitter");
+    }
+
+    void Vocal1234()
+    {
+        audioSource.PlayOneShot(UnDeuxTroisQuatreCoccis);
+    }
+
+    void QuelleSorteDeLigne()
+    {
+        if (ligneHorizontale)
+        {
+            audioSource.PlayOneShot(vocalLigneHorizontale);
+        }
+        else if (ligneVerticale)
+        {
+            audioSource.PlayOneShot(vocalLigneVerticale);
+        }
+        else if (ligneDiagonaleDescendante)
+        {
+            audioSource.PlayOneShot(vocalLigneDiagonaleDescendante);
+        }
+        else if (ligneDiagonaleAscendante)
+        {
+            audioSource.PlayOneShot(vocalLigneDiagonaleAscendante);
+        }
+    }
+
+    void Infestation()
+    {
+        autoriseInfestation = true;
+        audioSource.PlayOneShot(InfestationCoccinelles);
     }
 }
 

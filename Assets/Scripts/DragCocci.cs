@@ -19,7 +19,6 @@ public class DragCocci : MonoBehaviour
     public Transform spawnPointActuel; // Où je veux que ça spawn
     public Transform spawnPointAdversaire; // Au-dessus de la grille
     public static bool RespawnTime = false; // Pour contrôler le respawn par unité à volonté
-
     private bool peutDrag = true;
     public bool dropDepuisHautGrille = false; // La collision trigger avec DepuisHaut le fait passer à true
     public bool coupEnregistre = false;
@@ -52,14 +51,16 @@ public class DragCocci : MonoBehaviour
     {
         GameObject nouvelleCocci = Instantiate(prefabCocci, spawnPointActuel.position, Quaternion.identity);
 
+        nouvelleCocci.SetActive(true);
         nouvelleCocci.GetComponent<Animator>().enabled = true;
+
         nouvelleCocci.GetComponent<Animator>().SetTrigger("Spawn"); // Animation spawn rotation de la cocci
 
         nouvelleCocci.transform.localScale = Vector3.one; // Il y a un bug, il faut forcer le scale normal pour spawn l'équipe inverse
 
         if (spawnPointActuel == spawnPointAdversaire) // Spawn au-dessus de la grille si c'est le tour adverse
         {
-            nouvelleCocci.GetComponent<Animator>().enabled = false; // Car ça bloque la rotation dans la grille
+            nouvelleCocci.GetComponent<Animator>().enabled = false; // Je fais ça car sinon ça bloque leur rotation dans la grille
             nouvelleCocci.GetComponent<DragCocci>().ForceDrop(); // Cocci est forcée de tomber
         }
     }
@@ -166,13 +167,15 @@ public class DragCocci : MonoBehaviour
 
         if (collision.CompareTag("TombeePerdue")) // Si on échappe Cocci dans le vide
         {
-            respawn.RespawnJoueur(); // Le joueur peut en ravoir une autre
-            
+            Spawn(); // Le joueur peut en ravoir une autre
+            respawn.SpawnCocciSFX();
+
             if (coupEnregistre) // Si un coup de la partie a été enregistré
             {
                 partie.AnnulerDernierCoup(); // Il faut annuler le coup si Cocci n'est plus dans la grille
             }
 
+            respawn.dropJoueurDuHautGrilleDetecte = false;
             gameObject.SetActive(false);
         }
     }
