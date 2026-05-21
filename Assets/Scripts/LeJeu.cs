@@ -145,8 +145,9 @@ public class LeJeu : MonoBehaviour
             {
                 if (wasHovering)
                 {
-                    audioSource.time = 21f; // À f secondes dans l'audio
-                    audioSource.Play(); // Le message ("Sélectionne un mini-jeu parmi les trois suivants") rejoue seulement si on sort du hover
+                    audioSource.Stop();
+                    CancelInvoke("RejouerVocal");
+                    Invoke("RejouerVocal", 2f); // Le message ("Sélectionne un mini-jeu parmi les trois suivants") rejoue seulement si on sort du hover
 
                     autreAudioSource.volume = 0f; // Pas de cacophonie accidentelle
                     Invoke("RemettreVolume", 5f);
@@ -154,6 +155,11 @@ public class LeJeu : MonoBehaviour
             }
             wasHovering = isHovering; // Le bool du passé devient à chaque fois le bool du présent
         }
+    }
+
+    void RejouerVocal()
+    {
+        audioSource.PlayOneShot(vocalMessageDebut);
     }
 
 

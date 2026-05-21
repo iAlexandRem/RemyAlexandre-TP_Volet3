@@ -8,7 +8,7 @@ public class HoverBoutons : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public bool hoverUI = false;
     public GameObject visuelHover;
     public GameObject visuelActive;
-    Animator anim;
+    public Animator anim;
     AudioSource audioSource;
     public AudioClip vocalHover;
     public AudioClip vocalActive;
