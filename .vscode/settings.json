@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "RemyAlexandre-TP_Volet3.slnx"
+    "dotnet.defaultSolution": "RemyAlexandre-TPFinal_Volet3.slnx"
 }
