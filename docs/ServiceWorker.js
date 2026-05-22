@@ -1,9 +1,9 @@
 const cacheName = "Insectissime! La Collection.-RemyAlexandre-TPFinal-2J2_Volet3-1.0";
 const contentToCache = [
     "Build/docs.loader.js",
-    "Build/docs.framework.js.br",
-    "Build/docs.data.br",
-    "Build/docs.wasm.br",
+    "Build/docs.framework.js.gz",
+    "Build/docs.data.gz",
+    "Build/docs.wasm.gz",
     "TemplateData/style.css"
 
 ];
