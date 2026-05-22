@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur les tableaux (à 2 integers) et boucles sur grille...
 {
@@ -15,15 +16,12 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
 
     public static bool partieCommence; // Static pour partager le bool aux autres scripts
     public bool aGagne = false;
-    public int couleurGagnante; // À détermine
+    public int couleurGagnante; // À déterminer
     public RespawnAuBonTour respawn; // Référence au script RespawnAuBonTour
     public AudioSource leJeu; // Pour couper le son de LeJeu
 
     public int derniereRangee = -1; // Aucun coup enregistré pour le moment
     public int derniereColonne = -1; // Aucun coup enregistré pour le moment
-
-    public float tempsEcouleAChaqueTour; // Avec Time.time = moment actuel
-    float lastTime; // Moment du dernier appel de fonction
 
     public bool coupRetire = false;
 
@@ -45,6 +43,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
     bool ligneDiagonaleAscendante = false;
     public Animator boutonAnim;
 
+    GameObject[] cercles;
     bool sonsVictoireJouees = false; // Bools pour éviter le spam sonore
     bool quelleEquipeAGagne = false;
     public bool autoriseInfestation = false;
@@ -54,6 +53,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        cercles = GameObject.FindGameObjectsWithTag("Cercle"); // Les trous de grille
         audioSource = GetComponent<AudioSource>();
         partieCommence = false;
         coupRetire = false;
@@ -81,7 +81,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
 
     void CommencerAvecCouleur()
     {
-        tourRouge = (couleurChoisie == 1) ? true : false; // Le joueur jouera-t-il avec les rouges ou jaunes au premier tour?
+        tourRouge = (couleurChoisie == 1) ? true : false; // Le joueur jouera-trousVictorieux-il avec les rouges ou jaunes au premier tour?
         Debug.Log("Tu seras en charge de l'équipe des " + (tourRouge ? "Rouges" : "Jaunes") + " !");
     }
 
@@ -123,26 +123,26 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                     {
                         quelleEquipeAGagne = true;
                         audioSource.PlayOneShot(vocalCoccisRougesVictoire, 0.7f);
-                        Invoke("Vocal1234", 6f);
-                        Invoke("QuelleSorteDeLigne", 9f);
-                        Invoke("Infestation", 15f);
+                        Invoke("Vocal1234", 5.97f);
+                        Invoke("QuelleSorteDeLigne", 10f);
+                        Invoke("Infestation", 17f);
                     }
                     else if (joueur == 2 && !quelleEquipeAGagne)
                     {
                         quelleEquipeAGagne = true;
                         audioSource.PlayOneShot(vocalCoccisJaunesVictoire, 0.7f);
-                        Invoke("Vocal1234", 6f);
-                        Invoke("QuelleSorteDeLigne", 9f);
-                        Invoke("Infestation", 15f);
+                        Invoke("Vocal1234", 5.97f);
+                        Invoke("QuelleSorteDeLigne", 10f);
+                        Invoke("Infestation", 17f);
                     }
 
-                    if (joueur == couleurChoisie)
+                    if (joueur == couleurGagnante)
                     {
                         Debug.Log("VICT0IRE DE TOI"); // Victoire de ton équipe
                         if (!sonsVictoireJouees)
                         {
                             sonsVictoireJouees = true; // Une seule victoire
-                            Invoke("SoundEffectVictoireCocci", 1f);
+                            Invoke("SoundEffectVictoireCocci", 2f);
                             musique.volume = 1f;
                         }
                     }
@@ -170,9 +170,6 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                     Debug.Log("C'est maintenant TON tour!");
                 }
 
-                tempsEcouleAChaqueTour = Time.time - lastTime;
-                lastTime = Time.time;
-
                 break; // Arrêt de la boucle
             }
         }
@@ -180,6 +177,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
 
     public void AnnulerDernierCoup() // Annuler le coup, si Cocci n'est accidentellement pas resté dans la grille; script DragCocci peut déclencher lors d'une collision avec TombeePerdue
     {
+        if (aGagne) return;
         if (derniereRangee != -1 && derniereColonne != -1)
         {
             plateau[derniereRangee, derniereColonne] = 0;
@@ -208,6 +206,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                     Debug.Log("Les " + (joueur == 1 ? "Rouges" : "Jaunes") + " forment une ligne HORIZONTALE");
                     ligneHorizontale = true;
                     couleurGagnante = joueur;
+                    StartCoroutine(LancerVictoire(r, c));
                     return true; // 4 trous consécutifs
                 }
             }
@@ -226,6 +225,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                     Debug.Log("Les " + (joueur == 1 ? "Rouges" : "Jaunes") + " forment une ligne VERTICALE");
                     ligneVerticale = true;
                     couleurGagnante = joueur;
+                    StartCoroutine(LancerVictoire(r, c));
                     return true; // 4 trous consécutifs
                 }
             }
@@ -244,12 +244,13 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                     Debug.Log("Les " + (joueur == 1 ? "Rouges" : "Jaunes") + " forment une ligne DIAGONALE DESCENDANTE");
                     ligneDiagonaleDescendante = true;
                     couleurGagnante = joueur;
+                    StartCoroutine(LancerVictoire(r, c));
                     return true; // 4 trous consécutifs
                 }
             }
         }
 
-        // Diagonale montante (/)
+        // Diagonale ascendante (/)
         for (int r = 3; r < 6; r++) // (r de 3 à 5)
         {
             for (int c = 0; c < 4; c++) // (c de 0 à 3)
@@ -262,6 +263,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                     Debug.Log("Les " + (joueur == 1 ? "Rouges" : "Jaunes") + " forment une ligne DIAGONALE MONTANTE");
                     ligneDiagonaleAscendante = true;
                     couleurGagnante = joueur;
+                    StartCoroutine(LancerVictoire(r, c));
                     return true; // 4 trous consécutifs
                 }
             }
@@ -269,6 +271,110 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
 
         return false; // Si aucune victoire n'est trouvée
     }
+
+
+
+    
+    IEnumerator LancerVictoire(int r, int c)
+    {
+        yield return new WaitForSeconds(6.4f); // Pour afficher visuellement les trous gagnants avec DÉLAI
+
+        yield return AfficherVictoire(r, c);
+    }
+
+    IEnumerator AfficherVictoire(int r, int c)
+    {
+        if (ligneHorizontale)
+        {
+            yield return AfficherVictoireHorizontale(r, c);
+        }
+        else if (ligneVerticale)
+        {
+            yield return AfficherVictoireVerticale(r, c);
+        }
+
+        else if (ligneDiagonaleDescendante)
+        {
+            yield return AfficherVictoireDiagonaleDescendante(r, c);
+        }
+
+        else if (ligneDiagonaleAscendante)
+        {
+            yield return AfficherVictoireDiagonaleAscendante(r, c);
+        }
+    }
+
+
+    // Pour afficher visuellement les trous gagnants avec LUMIÈRE
+    IEnumerator AfficherVictoireHorizontale(int r, int c)
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            for (int j = 0; j < cercles.Length; j++)
+            {
+                TrouConnect4 t = cercles[j].GetComponent<TrouConnect4>();
+
+                if (t.rangee == r && t.colonne == c + i)
+                {
+                    t.ActiverLumiereTrou();
+                }
+            }
+            yield return new WaitForSeconds(0.67f);
+        }
+    }
+
+    IEnumerator AfficherVictoireVerticale(int r, int c)
+    {
+        for (int i = 0; i < 4; i++) // Une boucle qui cherche les 4 cercles
+        {
+            for (int j = 0; j < cercles.Length; j++) // Tous les cercles de la grille
+            {
+                TrouConnect4 t = cercles[j].GetComponent<TrouConnect4>(); // Chaque trou qui possède ce script
+
+                if (t.rangee == r + i && t.colonne == c) // Comparaison si la rangée et colonne correspond 
+                {
+                    t.ActiverLumiereTrou(); // Activation de lumière
+                }
+            }
+            yield return new WaitForSeconds(0.67f); // Délai entre chaque trou illuminé
+        }
+
+    }
+
+    IEnumerator AfficherVictoireDiagonaleDescendante(int r, int c)
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            for (int j = 0; j < cercles.Length; j++)
+            {
+                TrouConnect4 t = cercles[j].GetComponent<TrouConnect4>();
+
+                if (t.rangee == r + i && t.colonne == c + i)
+                {
+                    t.ActiverLumiereTrou();
+                }
+            }
+            yield return new WaitForSeconds(0.67f);
+        }
+    }
+
+    IEnumerator AfficherVictoireDiagonaleAscendante(int r, int c)
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            for (int j = 0; j < cercles.Length; j++)
+            {
+                TrouConnect4 t = cercles[j].GetComponent<TrouConnect4>();
+
+                if (t.rangee == r - i && t.colonne == c + i)
+                {
+                    t.ActiverLumiereTrou();
+                }
+            }
+            yield return new WaitForSeconds(0.67f);
+        }
+    }
+
 
 
 

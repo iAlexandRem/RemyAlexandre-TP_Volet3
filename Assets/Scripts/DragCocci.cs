@@ -24,6 +24,7 @@ public class DragCocci : MonoBehaviour
     public bool coupEnregistre = false;
 
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -137,6 +138,8 @@ public class DragCocci : MonoBehaviour
 
         rb.gravityScale = 1f; // Gravité
 
+        rb.AddTorque(Random.Range(-0.5f, 0.5f), ForceMode2D.Impulse); // Petite rotation aléatoire
+
         this.enabled = false; // Pour que le script n'interfère pas avec la physique 
     }
 
@@ -169,7 +172,7 @@ public class DragCocci : MonoBehaviour
 
         if (collision.CompareTag("TombeePerdue")) // Si on échappe Cocci dans le vide
         {
-            Spawn(); // Le joueur peut en ravoir une autre
+            respawn.RespawnJoueur(); // Le joueur peut en ravoir une autre
             respawn.SpawnCocciSFX();
 
             if (coupEnregistre) // Si un coup de la partie a été enregistré
@@ -179,6 +182,10 @@ public class DragCocci : MonoBehaviour
 
             respawn.dropJoueurDuHautGrilleDetecte = false;
             gameObject.SetActive(false);
+        }
+        if (collision.CompareTag("EssaieDeBloquerChuteCocciDuCiel")) // Si le joueur échappe Cocci dans le vide, et que ça risque de ruiner mon système
+        {
+            respawn.EssaieDeBloquerChuteCocciDuCiel = true;
         }
     }
 

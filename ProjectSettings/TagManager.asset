@@ -23,6 +23,7 @@ TagManager:
   - DeclencheurPlateforme
   - TombeePerdue
   - DessousGrille
+  - EssaieDeBloquerChuteCocciDuCiel
   layers:
   - Default
   - TransparentFX

@@ -10,6 +10,11 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
     public Transform spawnPointAdversaire;
     private bool aSpawnCeTour = true;
     public bool dropJoueurDuHautGrilleDetecte = false;
+
+    public bool EssaieDeBloquerChuteCocciDuCiel = false; // Je dois bloquer l'adversaire s'il vient, si ta cocci n'est pas restée dans la grille au drop (partie.coupRetire = true), sinon la partie se ruine carrément, et je n'ai pas su encore comment empêcher le spawn de la cocci en chute libre à ce moment-là
+    public GameObject cOLLISIOnInViSiBle;
+    bool blocageAEteNecessaire = false;
+
     Animator anim;
     AudioSource audioSource;
     public AudioClip sfxNouvelleCocci;
@@ -17,6 +22,9 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        cOLLISIOnInViSiBle.SetActive(false);
+        EssaieDeBloquerChuteCocciDuCiel = false;
+        blocageAEteNecessaire = false;
         audioSource = GetComponent<AudioSource>();
         anim = GetComponentInChildren<Animator>();
         anim.speed = 1f; // Vitesse normale du spawnPointAdversaire en translation
@@ -25,7 +33,7 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
     // Update is called once per frame
     void Update()
     {
-        if (partie.aGagne && partie.autoriseInfestation) // Coccis tombent de partout avec victoire
+        if (partie.aGagne && partie.autoriseInfestation) // CHAOS DE COCCINELLES, après victoire
         {
             if (partie.couleurGagnante == 1)
             {
@@ -38,6 +46,14 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
             drag.spawnPointActuel = spawnPointAdversaire;
             drag.Spawn(); // Infestation de coccinelles
         }
+
+
+        if (EssaieDeBloquerChuteCocciDuCiel && !blocageAEteNecessaire)
+        {
+            blocageAEteNecessaire = true;
+            cOLLISIOnInViSiBle.SetActive(true); // Méthode non orthodoxe
+            Invoke("ResetBlocage", 3f);
+        }
     }
 
     public void JoueurCocciDroppedDansGrille() // Dès que le joueur échappe sa cocci dans la grille, voir les collisions triggers dans ColliderConnect4
@@ -49,7 +65,6 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
         if (!drag.dropDepuisHautGrille) // Il faut que cocci tombe dedans
         {
             if (partie.aGagne) return;
-            if (partie.coupRetire) return;
             aSpawnCeTour = false; // Bloque les spams je crois, un adversaire ne va pas spawn tant que c'est le joueur qui n'aura pas drop sa cocci dans la grille
             Invoke("SpawnAdversaire", 2f); // Tour adverse
         }
@@ -57,7 +72,7 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
 
 
     // La tombée de l'adversaire 
-    void SpawnAdversaire()
+    public void SpawnAdversaire()
     {
         if (partie.couleurChoisie == 1)
         {
@@ -71,7 +86,6 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
         drag.spawnPointActuel = spawnPointAdversaire; // À un pointX aléatoire qui est parfois en animation au-dessus de la grille
         if (dropJoueurDuHautGrilleDetecte)
         {
-            if (partie.coupRetire) return;
             drag.Spawn(); // Clone adverse qui est en chute libre
         }
 
@@ -79,6 +93,11 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
         {
             anim.speed = 0f;
             Invoke("RespawnJoueur", 6f);
+        }
+        else if (partie.coupRetire)
+        {
+            Invoke("RespawnJoueur", 3f);
+            partie.coupRetire = false;
         }
     }
 
@@ -96,22 +115,26 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
             drag.spawnPointActuel = spawnPointJaune;
         }
 
+        
+        // Randomness avec le point de spawn pour les coccis adverses
+        float value; 
 
-        float value;
-        if (Random.value < 0.75f) // + de chance que spawnPointAdversaire se déplace lentement que rapidement
+        if (Random.value < 0.77f) // + de chance que spawnPointAdversaire se déplace lentement que rapidement
         {
-            value = Random.Range(0.01f, 0.15f);
+            value = Random.Range(0.01f, 0.06f);
 
-            Invoke("StopTranslationX", 1f);
+            value *= Random.Range(0.8f, 1.1f);
+
+            Invoke("StopTranslationX", Random.Range(0.8f, 1.6f));
         }
         else
         {
-            value = Random.Range(0.2f, 0.6f);
+            value = Random.Range(0.08f, 0.15f); // un peu de boost
 
-            Invoke("LegereTranslationX", 7f);
+            value *= Random.Range(0.9f, 1.1f);
+
+            Invoke("LegereTranslationX", Random.Range(0.1f, 1f));
         }
-
-        anim.speed = value;
 
 
 
@@ -157,7 +180,7 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
 
 
 
-    public void RespawnAdversaire() // Au cas-où que l'adversaire ne veut pas spawn du tout
+    public void RespawnAdversaire()
     {
         if (partie.couleurChoisie == 1)
         {
@@ -170,5 +193,13 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
 
         drag.spawnPointActuel = spawnPointAdversaire;
         drag.Spawn(); // Une cocci d'en haut sans respawn le joueur
+    }
+
+
+    void ResetBlocage()
+    {
+        cOLLISIOnInViSiBle.SetActive(false);
+        EssaieDeBloquerChuteCocciDuCiel = false;
+        blocageAEteNecessaire = false;
     }
 }
