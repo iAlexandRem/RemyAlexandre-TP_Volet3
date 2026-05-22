@@ -1,0 +1,15 @@
+{
+    "name": "RemyAlexandre-TPFinal-2J2_Volet3",
+    "short_name": "RemyAlexandre-TPFinal-2J2_Volet3",
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "background_color": "#5C8037",
+    "theme_color": "#000",
+    "description": "Insectissime! En production.",
+    "icons": [{
+      "src": "TemplateData/icons/unity-logo-dark.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }]
+  }

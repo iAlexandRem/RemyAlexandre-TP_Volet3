@@ -7466,11 +7466,14 @@ MonoBehaviour:
   vocalMessageDebut: {fileID: 8300000, guid: 3e1fe971ff8444a9f8190afe76e117bd, type: 3}
   vocalInstructionsDebut: {fileID: 8300000, guid: 3e810fb1c0d254bbb968bb8943040138, type: 3}
   vocalPasLaSouris: {fileID: 8300000, guid: 23abad3581c1544cca55b2075e95423e, type: 3}
+  vocalMoletteInstructions: {fileID: 0}
+  vocal4CoccisEnLigne: {fileID: 0}
   hoverBoutons:
   - {fileID: 0}
   MessageDebutFini: 0
   vocalInstructionsTerminees: 0
   anim: {fileID: 524246972}
+  partie: {fileID: 0}
 --- !u!4 &865667312
 Transform:
   m_ObjectHideFlags: 0
@@ -10074,7 +10077,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.07
+  m_MatchWidthOrHeight: 0.11
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -16391,6 +16394,7 @@ MonoBehaviour:
   hoverUI: 0
   visuelHover: {fileID: 1213726575}
   visuelActive: {fileID: 0}
+  anim: {fileID: 0}
   vocalHover: {fileID: 0}
   vocalActive: {fileID: 0}
 --- !u!114 &1773612310
