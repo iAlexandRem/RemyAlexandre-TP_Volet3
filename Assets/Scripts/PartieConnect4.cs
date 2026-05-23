@@ -23,7 +23,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
     public int derniereRangee = -1; // Aucun coup enregistré pour le moment
     public int derniereColonne = -1; // Aucun coup enregistré pour le moment
 
-    public bool coupRetire = false;
+    public bool coupRetire = false; // Ton coup est retiré si ta cocci tombe hors de la grille après que ton coup ait été enregistré
 
     AudioSource audioSource;
     public AudioSource musique;
@@ -32,6 +32,8 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
     public AudioClip vocalCoccisJaunesVictoire;
     public AudioClip UnDeuxTroisQuatreCoccis;
     public AudioClip InfestationCoccinelles;
+    public AudioClip sfxOpenGrille;
+    public GameObject dessousQuiSupporteToutLeMonde;
 
     public AudioClip vocalLigneHorizontale;
     bool ligneHorizontale = false;
@@ -47,6 +49,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
     bool sonsVictoireJouees = false; // Bools pour éviter le spam sonore
     bool quelleEquipeAGagne = false;
     public bool autoriseInfestation = false;
+    public Animator AssemblageConnect4;
 
 
 
@@ -67,6 +70,8 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
         ligneDiagonaleAscendante = false;
         ligneDiagonaleDescendante = false;
         autoriseInfestation = false;
+        dessousQuiSupporteToutLeMonde.SetActive(true);
+        AssemblageConnect4.speed = 0.42f;
     }
 
     // Update is called once per frame
@@ -76,6 +81,11 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
         {
             CommencerAvecCouleur(); // Fonction se joue une seule fois
             partieCommence = true;
+        }
+
+        if (!aGagne)
+        {
+            CancelInvoke();
         }
     }
 
@@ -112,9 +122,20 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                 derniereColonne = colonne;
 
 
+                /* // Je débuggais en voyant les trous s'illuminer à chaque tour joué
+                for (int k = 0; k < cercles.Length; k++) // Tous les cercles de la grille
+                {
+                    TrouConnect4 t = cercles[k].GetComponent<TrouConnect4>(); // Chaque trou qui possède ce script
+
+                    if (t.rangee == rangee && t.colonne == colonne) // Comparaison si la rangée et colonne correspond 
+                    {
+                        t.ActiverLumiereTrou(); // Activation de lumière
+                    }
+                }
+                */
 
 
-                if (VerifierVictoire(joueur)) // Si la fonction bool est true, une VICTOIRE ! ! ! !
+                if (VerifierVictoire(joueur) && !coupRetire && !aGagne) // Si la fonction bool est true, une VICTOIRE ! ! ! !
                 {
                     aGagne = true;
                     Debug.Log("Les " + (joueur == 1 ? "Rouges" : "Jaunes") + " ont GAGNÉ !");
@@ -147,28 +168,17 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
                         }
                     }
                     leJeu.enabled = false;
-                    Invoke("InciteRetournerMenu", 7f);
-                    return; // Stop de la fonction en entier
+                    Invoke("InciteRetournerMenu", 21f);
+                    return; 
                 }
 
 
-
-                tourRouge = !tourRouge; // Tour des rouges à celui des jaunes ou vice versa
-                tourJoueur = !tourJoueur; // C'est le tour de l'adversaire, ça inverse le bool à chaque fois
-
-                if (tourRouge)
+                if (!coupRetire)
                 {
-                    Debug.Log("Les Rouges, c'est votre tour!");
+                    tourRouge = !tourRouge; // Tour des rouges à celui des jaunes ou vice versa
+                    tourJoueur = !tourJoueur; // C'est le tour de l'adversaire, ça inverse le bool à chaque fois
                 }
-                else
-                {
-                    Debug.Log("Les Jaunes, c'est votre tour!");
-                }
-
-                if (tourJoueur)
-                {
-                    Debug.Log("C'est maintenant TON tour!");
-                }
+                RappelCestLeTourDeQui();
 
                 break; // Arrêt de la boucle
             }
@@ -177,15 +187,28 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
 
     public void AnnulerDernierCoup() // Annuler le coup, si Cocci n'est accidentellement pas resté dans la grille; script DragCocci peut déclencher lors d'une collision avec TombeePerdue
     {
-        if (aGagne) return;
+        aGagne = false;
         if (derniereRangee != -1 && derniereColonne != -1)
         {
             plateau[derniereRangee, derniereColonne] = 0;
             Debug.Log("COUP RETIRÉ"); // J'espère que ça fonctionnera, en théorie
             coupRetire = true;
 
+            for (int j = 0; j < cercles.Length; j++)
+            {
+                TrouConnect4 t = cercles[j].GetComponent<TrouConnect4>();
+
+                if (t.rangee == derniereRangee && t.colonne == derniereColonne)
+                {
+                    t.DesactiverLumiereTrou();
+                    t.VerifierSiCoupRetire();
+                }
+            }
+
             derniereRangee = -1;
             derniereColonne = -1;
+            tourRouge = !tourRouge;
+            tourJoueur = !tourJoueur;
         }
     }
 
@@ -274,7 +297,7 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
 
 
 
-    
+
     IEnumerator LancerVictoire(int r, int c)
     {
         yield return new WaitForSeconds(6.4f); // Pour afficher visuellement les trous gagnants avec DÉLAI
@@ -377,10 +400,31 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
 
 
 
+   
+
+    public void RappelCestLeTourDeQui()
+    {
+        if (tourRouge)
+        {
+            Debug.Log("Les Rouges, c'est votre tour!");
+        }
+        else
+        {
+            Debug.Log("Les Jaunes, c'est votre tour!");
+        }
+
+        if (tourJoueur)
+        {
+            Debug.Log("C'est maintenant TON tour!");
+        }
+    }
+
+
 
     void SoundEffectVictoireCocci()
     {
         audioSource.PlayOneShot(sfxCocciAGagne, 1.1f);
+        AssemblageConnect4.speed = 2f;
     }
 
     void InciteRetournerMenu()
@@ -417,6 +461,13 @@ public class PartieConnect4 : MonoBehaviour // Avec recherches de théorie sur l
     {
         autoriseInfestation = true;
         audioSource.PlayOneShot(InfestationCoccinelles);
+        Invoke("OpenGrille", 23f);
+    }
+
+    void OpenGrille()
+    {
+        audioSource.PlayOneShot(sfxOpenGrille);
+        dessousQuiSupporteToutLeMonde.SetActive(false);
     }
 }
 

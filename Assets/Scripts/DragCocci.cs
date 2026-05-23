@@ -22,6 +22,7 @@ public class DragCocci : MonoBehaviour
     private bool peutDrag = true;
     public bool dropDepuisHautGrille = false; // La collision trigger avec DepuisHaut le fait passer à true
     public bool coupEnregistre = false;
+    public bool JoueurADejaRespawn = false;
 
 
 
@@ -40,6 +41,7 @@ public class DragCocci : MonoBehaviour
         peutDrag = true;
         eventTrigger.enabled = true;
         coupEnregistre = false;
+        JoueurADejaRespawn = false;
     }
 
     // Update is called once per frame
@@ -170,14 +172,21 @@ public class DragCocci : MonoBehaviour
             }
         }
 
-        if (collision.CompareTag("TombeePerdue")) // Si on échappe Cocci dans le vide
+        if (collision.CompareTag("TombeePerdue")) // Si tu échappes Cocci dans le vide
         {
-            respawn.RespawnJoueur(); // Le joueur peut en ravoir une autre
-            respawn.SpawnCocciSFX();
+            if (!respawn.EssaieDeBloquerChuteCocciDuCiel)
+            {
+                if (JoueurADejaRespawn) return;
+                respawn.RespawnJoueur(); // Le joueur peut en ravoir une autre
+                JoueurADejaRespawn = true;
+            }
 
             if (coupEnregistre) // Si un coup de la partie a été enregistré
             {
                 partie.AnnulerDernierCoup(); // Il faut annuler le coup si Cocci est passé à travers la grille
+                
+                partie.RappelCestLeTourDeQui();
+                Invoke("ResetCoupRetire", 4f);
             }
 
             respawn.dropJoueurDuHautGrilleDetecte = false;
@@ -206,6 +215,12 @@ public class DragCocci : MonoBehaviour
     void ReactiverCollider()
     {
         GetComponent<Collider2D>().enabled = true; // Pour pouvoir détecter le besoin d'un respawn
+    }
+
+     public void ResetCoupRetire()
+    {
+        partie.coupRetire = false;
+        coupEnregistre = false;
     }
 }
 

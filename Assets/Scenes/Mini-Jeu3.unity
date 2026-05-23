@@ -1234,7 +1234,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: -27.7, z: 0}
-  m_LocalScale: {x: 44.21448, y: 18.446762, z: 5.9232}
+  m_LocalScale: {x: 44.21448, y: 14.987994, z: 5.9232}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 789143175}
@@ -7008,12 +7008,15 @@ MonoBehaviour:
   vocalCoccisJaunesVictoire: {fileID: 8300000, guid: 3b8d04d6507bb4259b88988bf83adfc0, type: 3}
   UnDeuxTroisQuatreCoccis: {fileID: 8300000, guid: eaac0cf0ba2c148668328b806e80f795, type: 3}
   InfestationCoccinelles: {fileID: 8300000, guid: bfee80e3fc7bb4394bffd8777f2ff789, type: 3}
+  sfxOpenGrille: {fileID: 8300000, guid: 172024164aafe4c329dbed018c3ae5f3, type: 3}
+  dessousQuiSupporteToutLeMonde: {fileID: 208155694}
   vocalLigneHorizontale: {fileID: 8300000, guid: fed7d961863f244c0aa4fd1521eb444f, type: 3}
   vocalLigneVerticale: {fileID: 8300000, guid: be1b326e1f45047ecb3a687644c6ab58, type: 3}
   vocalLigneDiagonaleDescendante: {fileID: 8300000, guid: 104f20dd166034623a2af9b64d75b1b1, type: 3}
   vocalLigneDiagonaleAscendante: {fileID: 8300000, guid: 6a0cf312939944df2b90a5389420643f, type: 3}
   boutonAnim: {fileID: 1819070601}
   autoriseInfestation: 0
+  AssemblageConnect4: {fileID: 663738357}
 --- !u!4 &1004767419
 Transform:
   m_ObjectHideFlags: 0
@@ -9831,7 +9834,7 @@ MonoBehaviour:
   vitesse: 1
   zoomMin: 23
   zoomMax: 9
-  vitesseZoom: 3
+  vitesseZoom: 4
   LimitesPositionCamera: {fileID: 22216288}
   hausseScaleLimites: {x: 15, y: 20, z: 0}
   smoothSpeed: 0.1
@@ -10596,7 +10599,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b7b2ec015c5482a8fc901e386681c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  partie: {fileID: 1004767418}
 --- !u!1 &1535960932
 GameObject:
   m_ObjectHideFlags: 0
@@ -11296,13 +11298,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1631526267}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.27679494, w: 0.96092904}
+  m_LocalRotation: {x: 0, y: 0, z: 0.25817838, w: 0.9660973}
   m_LocalPosition: {x: 3.6000004, y: 47, z: 0}
   m_LocalScale: {x: 120.60002, y: 0.9886283, z: 12.719043}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1736977346}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -32.138}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 29.924}
 --- !u!61 &1631526269
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12521,7 +12523,9 @@ MonoBehaviour:
   spawnPointRouge: {fileID: 1497869981}
   spawnPointJaune: {fileID: 1257324686}
   spawnPointAdversaire: {fileID: 659810396}
+  aSpawnCeTour: 1
   dropJoueurDuHautGrilleDetecte: 0
+  sfxCartoonFall: {fileID: 8300000, guid: 4b663d355bfb44b33904c07202ec673a, type: 3}
   EssaieDeBloquerChuteCocciDuCiel: 0
   cOLLISIOnInViSiBle: {fileID: 1631526267}
   sfxNouvelleCocci: {fileID: 8300000, guid: c2d8b8933d3b64ca3a8dd0fc41412a3c, type: 3}
@@ -13927,8 +13931,8 @@ Transform:
   m_GameObject: {fileID: 1952559695}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8000002, y: -90.221375, z: 0}
-  m_LocalScale: {x: 125.092354, y: 2.9813247, z: 5.9232}
+  m_LocalPosition: {x: -0.8000002, y: -108.35, z: 0}
+  m_LocalScale: {x: 125.092354, y: 37.788292, z: 5.9232}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 789143175}

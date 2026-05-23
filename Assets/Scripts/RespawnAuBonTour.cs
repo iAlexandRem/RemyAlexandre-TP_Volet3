@@ -8,8 +8,10 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
     public Transform spawnPointRouge;
     public Transform spawnPointJaune;
     public Transform spawnPointAdversaire;
-    private bool aSpawnCeTour = true;
+    public bool aSpawnCeTour = true;
     public bool dropJoueurDuHautGrilleDetecte = false;
+    private bool bordInverse;
+    public AudioClip sfxCartoonFall;
 
     public bool EssaieDeBloquerChuteCocciDuCiel = false; // Je dois bloquer l'adversaire s'il vient, si ta cocci n'est pas restée dans la grille au drop (partie.coupRetire = true), sinon la partie se ruine carrément, et je n'ai pas su encore comment empêcher le spawn de la cocci en chute libre à ce moment-là
     public GameObject cOLLISIOnInViSiBle;
@@ -47,11 +49,21 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
             drag.Spawn(); // Infestation de coccinelles
         }
 
-
+        if (partie.aGagne) return;
         if (EssaieDeBloquerChuteCocciDuCiel && !blocageAEteNecessaire)
         {
+            bordInverse = !bordInverse;
             blocageAEteNecessaire = true;
-            cOLLISIOnInViSiBle.SetActive(true); // Méthode non orthodoxe
+
+            if (bordInverse)
+            {
+                cOLLISIOnInViSiBle.transform.rotation = Quaternion.Euler(0, 0, 30); // De chaque bord
+            }
+            else
+            {
+                cOLLISIOnInViSiBle.transform.rotation = Quaternion.Euler(0, 0, -30);
+            }
+            cOLLISIOnInViSiBle.SetActive(true); // Méthode non orthodoxe, pour bloquer le fall
             Invoke("ResetBlocage", 3f);
         }
     }
@@ -87,16 +99,21 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
         if (dropJoueurDuHautGrilleDetecte)
         {
             drag.Spawn(); // Clone adverse qui est en chute libre
+
+
+            if (drag.coupEnregistre) // Juste pour éviter un double spawn du joueur
+            {
+                drag.JoueurADejaRespawn = true;
+            }
         }
 
         if (!aSpawnCeTour && !drag.dropDepuisHautGrille) // Il faut que cocci tombe dedans
         {
-            anim.speed = 0f;
+            anim.speed = 0.05f;
             Invoke("RespawnJoueur", 6f);
         }
         else if (partie.coupRetire)
         {
-            Invoke("RespawnJoueur", 3f);
             partie.coupRetire = false;
         }
     }
@@ -115,32 +132,33 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
             drag.spawnPointActuel = spawnPointJaune;
         }
 
-        
+
+
         // Randomness avec le point de spawn pour les coccis adverses
-        float value; 
+        float value;
 
-        if (Random.value < 0.77f) // + de chance que spawnPointAdversaire se déplace lentement que rapidement
+        if (Random.value < 0.70f) // Vitesse normale
         {
-            value = Random.Range(0.01f, 0.06f);
+            value = Random.Range(0.01f, 0.07f);
 
-            value *= Random.Range(0.8f, 1.1f);
-
-            Invoke("StopTranslationX", Random.Range(0.8f, 1.6f));
+            Invoke("StopTranslationX", Random.Range(6f, 7f));
         }
-        else
+        else if (Random.value < 0.91f) // Plus rapide
         {
-            value = Random.Range(0.08f, 0.15f); // un peu de boost
+            value = Random.Range(0.07f, 0.21f);
 
-            value *= Random.Range(0.9f, 1.1f);
-
-            Invoke("LegereTranslationX", Random.Range(0.1f, 1f));
+            Invoke("LegereTranslationX", Random.Range(0.4f, 4f));
         }
+        else // Rare
+        {
+            value = Random.Range(0.18f, 0.28f);
+        }
+        anim.speed = value;
 
 
 
         if (!partie.aGagne)
         {
-            if (partie.coupRetire) return;
             SpawnCocciSFX();
             drag.Spawn(); // Clone pour le joueur
             aSpawnCeTour = true; // Reset de bool
@@ -173,7 +191,13 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
 
     public void LegereTranslationX() // Point d'adversaire est en translation
     {
-        anim.speed = 0.1f;
+        anim.speed = 0.05f;
+        Invoke("StopTranslationX", 4f);
+    }
+
+    public void TranslationX()
+    {
+        anim.speed = 1f;
         Invoke("StopTranslationX", 1f);
     }
 
@@ -198,6 +222,8 @@ public class RespawnAuBonTour : MonoBehaviour // Au cas-où que les coccis ne re
 
     void ResetBlocage()
     {
+        audioSource.PlayOneShot(sfxCartoonFall); // On peut voir une cocci tomber à ce moment-là
+
         cOLLISIOnInViSiBle.SetActive(false);
         EssaieDeBloquerChuteCocciDuCiel = false;
         blocageAEteNecessaire = false;
