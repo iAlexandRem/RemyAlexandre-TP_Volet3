@@ -63,7 +63,7 @@ public class CaseScript : MonoBehaviour
         globe.color = new Color(1f, 1f, 1f, globe.color.a); // Couleur globe + claire
 
         //Debug.Log("J'ai atteint la case " + nombre);
-        audioSource.PlayOneShot(vocalNombreCompter); // On entend moi qui dit le nombre avec echo
+        audioSource.PlayOneShot(vocalNombreCompter, 1.42f); // On entend moi qui dit le nombre avec echo
     }
 
 

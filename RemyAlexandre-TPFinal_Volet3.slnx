@@ -1,7 +1,0 @@
-﻿<Solution>
-  <Project Path="Cinemachine.Runtime.Tests.csproj" />
-  <Project Path="Cinemachine.csproj" />
-  <Project Path="Assembly-CSharp.csproj" />
-  <Project Path="com.unity.cinemachine.editor.csproj" />
-  <Project Path="Cinemachine.Editor.Tests.csproj" />
-</Solution>

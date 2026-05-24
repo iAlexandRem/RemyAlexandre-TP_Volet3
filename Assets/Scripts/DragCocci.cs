@@ -184,7 +184,7 @@ public class DragCocci : MonoBehaviour
             if (coupEnregistre) // Si un coup de la partie a été enregistré
             {
                 partie.AnnulerDernierCoup(); // Il faut annuler le coup si Cocci est passé à travers la grille
-                
+
                 partie.RappelCestLeTourDeQui();
                 Invoke("ResetCoupRetire", 4f);
             }
@@ -192,9 +192,14 @@ public class DragCocci : MonoBehaviour
             respawn.dropJoueurDuHautGrilleDetecte = false;
             gameObject.SetActive(false);
         }
+        
         if (collision.CompareTag("EssaieDeBloquerChuteCocciDuCiel")) // Si le joueur échappe Cocci dans le vide, et que ça risque de ruiner mon système
         {
-            respawn.EssaieDeBloquerChuteCocciDuCiel = true;
+            if (respawn.dropJoueurDuHautGrilleDetecte)
+            {
+                respawn.EssaieDeBloquerChuteCocciDuCiel = true;
+                JoueurADejaRespawn = true;
+            }
         }
     }
 
@@ -217,7 +222,7 @@ public class DragCocci : MonoBehaviour
         GetComponent<Collider2D>().enabled = true; // Pour pouvoir détecter le besoin d'un respawn
     }
 
-     public void ResetCoupRetire()
+    public void ResetCoupRetire()
     {
         partie.coupRetire = false;
         coupEnregistre = false;

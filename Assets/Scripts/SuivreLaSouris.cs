@@ -17,6 +17,7 @@ public class SuivreLaSouris : MonoBehaviour
     public float vitesseDeplacement; // 3f
     float directionX;
     bool enDeplacementX;
+    GameObject dernierTrigger; // Dernier trigger de PlateformeInvisible
 
     public HoverBoutons hoverBoutons; // Pour empêcher le déplacement quand on hover des boutons
 
@@ -27,6 +28,7 @@ public class SuivreLaSouris : MonoBehaviour
         sprites = GetComponentsInChildren<SpriteRenderer>();
         anim = GetComponentInChildren<Animator>();
         audioSource = GetComponent<AudioSource>();
+        vitesseDeplacement = 3f;
     }
 
 
@@ -61,7 +63,7 @@ public class SuivreLaSouris : MonoBehaviour
             {
                 float dir = Mathf.Sign(directionX);
                 if (dir != 0 && dir != dernierFlip)
-                    audioSource.PlayOneShot(sfxFlip); // Juste pour éviter le bug du son
+                    audioSource.PlayOneShot(sfxFlip, 2f); // Juste pour éviter le bug du son
                 dernierFlip = dir;
             }
         }
@@ -106,5 +108,22 @@ public class SuivreLaSouris : MonoBehaviour
         }
 
         rb.linearVelocity = vel; // Ligne obligatoire, pour appliquer les changements au Rigidbody
+    }
+
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("DeclencheurPlateforme"))
+        {
+            // Si c'est un nouveau trigger
+            if (collision.gameObject != dernierTrigger)
+            {
+                vitesseDeplacement += 0.42f; // La chenille va un peu plus rapidement à chaque étage plus haut
+
+                // On mémorise ce trigger
+                dernierTrigger = collision.gameObject;
+            }
+        }
     }
 }
